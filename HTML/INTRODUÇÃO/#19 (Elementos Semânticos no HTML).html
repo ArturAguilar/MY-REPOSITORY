@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Semânticos no HTML</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 0, 0);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: red;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(255, 65, 65);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <h1>Elementos Semânticos no HTML</h1>
+        <p>Elementos semânticos são aqueles que possuem um significado claro, tanto para desenvolvedores quanto para navegadores e mecanismos de busca. Eles ajudam a estruturar o conteúdo da página de forma mais compreensível.</p>
+
+        <hr>
+        <h2>Principais Elementos Semânticos do HTML5</h2>
+
+        <h3>header</h3>
+        <ul>
+            <li>Representa o cabeçalho de uma página ou seção.</li>
+            <li>Geralmente contém logotipos, títulos, menus de navegação, etc.</li>
+        </ul>
+        <div class="code">
+            <p>
+                &lt;header&gt;<br>
+                &lt;h1&gt;Bem-vindo ao Meu Site&lt;/h1&gt;<br>
+                &lt;nav&gt;<br>
+                  &lt;a href="#home"&gt;Home&lt;/a&gt; |<br>
+                  &lt;a href="#about"&gt;Sobre&lt;/a&gt; |<br>
+                  &lt;a href="#contact"&gt;Contato&lt;/a&gt;<br>
+                &lt;/nav&gt;<br>
+              &lt;/header&gt;              
+            </p>
+        </div>
+
+        <h3>nav</h3>
+        <ul>
+            <li>Define uma seção de links de navegação.</li>
+        </ul>
+        <div class="code">
+            <p>
+                &lt;nav&gt;<br>
+                &lt;ul&gt;<br>
+                  &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+                  &lt;li&gt;&lt;a href="#services"&gt;Serviços&lt;/a&gt;&lt;/li&gt;<br>
+                  &lt;li&gt;&lt;a href="#contact"&gt;Contato&lt;/a&gt;&lt;/li&gt;<br>
+                &lt;/ul&gt;<br>
+              &lt;/nav&gt;              
+            </p>
+        </div>
+
+        <h3>section</h3>
+        <ul>
+            <li>Agrupa conteúdo relacionado, como capítulos ou seções de um documento.</li>
+        </ul>
+        <div class="code">
+            <p>
+                &lt;section&gt;<br>
+                &lt;h2&gt;Sobre Nós&lt;/h2&gt;<br>
+                &lt;p&gt;Somos uma empresa especializada em tecnologia.&lt;/p&gt;<br>
+              &lt;/section&gt;              
+            </p>
+        </div>
+
+        <h3>article</h3>
+        <ul>
+            <li>Representa um conteúdo independente e autocontido, como postagens de blogs, artigos de notícias, etc.</li>
+        </ul>
+        <div class="code">
+            <p>
+                &lt;article&gt;<br>
+                &lt;h2&gt;Última Notícia&lt;/h2&gt;<br>
+                &lt;p&gt;Hoje lançamos um novo produto incrível!&lt;/p&gt;<br>
+              &lt;/article&gt;              
+            </p>
+        </div>
+
+        <h3>aside</h3>
+        <ul>
+            <li>Define conteúdo relacionado ou complementar, como barras laterais, citações ou anúncios.</li>
+        </ul>
+        <div class="code">
+            <p>
+                &lt;aside&gt;<br>
+                &lt;h3&gt;Aviso Importante&lt;/h3&gt;<br>
+                &lt;p&gt;Estamos em manutenção no dia 01/02.&lt;/p&gt;<br>
+              &lt;/aside&gt;              
+            </p>
+        </div>
+
+        <h3>footer</h3>
+        <ul>
+            <li>Representa o rodapé de uma página ou seção.</li>
+            <li>Contém informações como direitos autorais, links de política de privacidade, etc.</li>
+        </ul>
+        <div class="code">
+            <p>
+                &lt;footer&gt;<br>
+                &lt;p&gt;&copy; 2025 Meu Site. Todos os direitos reservados.&lt;/p&gt;<br>
+              &lt;/footer&gt;              
+            </p>
+        </div>
+
+        <h3>main</h3>
+        <ul>
+            <li>Define o conteúdo principal de uma página.</li>
+            <li>Deve conter o conteúdo mais relevante, excluindo cabeçalhos, rodapés, menus de navegação, etc.</li>
+        </ul>
+        <div class="code">
+            <p>
+                &lt;main&gt;<br>
+                &lt;h1&gt;Bem-vindo ao Meu Site&lt;/h1&gt;<br>
+                &lt;p&gt;Aqui você encontrará informações úteis sobre nossos serviços.&lt;/p&gt;<br>
+              &lt;/main&gt;              
+            </p>
+        </div>
+
+        <h3>figure e figcaption</h3>
+        <ul>
+            <li>figure: Usado para agrupar mídia (imagens, diagramas, etc.) com legendas.</li>
+            <li>figcaption: Define a legenda de um elemento figure.</li>
+        </ul>
+        <div class="code">
+            <p>
+                &lt;figure&gt;<br>
+                &lt;img src="imagem.jpg" alt="Descrição da imagem"&gt;<br>
+                &lt;figcaption&gt;Figura 1: Uma bela paisagem.&lt;/figcaption&gt;<br>
+              &lt;/figure&gt;              
+            </p>
+        </div>
+
+        <h3>mark</h3>
+        <ul>
+            <li>Destaca texto importante.</li>
+        </ul>
+        <div class="code">
+            <p>&lt;p&gt;Este é um &lt;mark&gt;texto destacado&lt;/mark&gt;.&lt;/p&gt;</p>
+        </div>
+
+        <hr>
+
+        <h2>Exemplo Completo de Uso</h2>
+        <div class="code">
+            <p>
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html lang="pt-br"&gt;<br>
+                &lt;head&gt;<br>
+                  &lt;meta charset="UTF-8"&gt;<br>
+                  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                  &lt;title&gt;Exemplo de Elementos Semânticos&lt;/title&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br>
+                  &lt;header&gt;<br>
+                    &lt;h1&gt;Meu Site&lt;/h1&gt;<br>
+                    &lt;nav&gt;<br>
+                      &lt;ul&gt;<br>
+                        &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+                        &lt;li&gt;&lt;a href="#about"&gt;Sobre&lt;/a&gt;&lt;/li&gt;<br>
+                        &lt;li&gt;&lt;a href="#contact"&gt;Contato&lt;/a&gt;&lt;/li&gt;<br>
+                      &lt;/ul&gt;<br>
+                    &lt;/nav&gt;<br>
+                  &lt;/header&gt;<br><br>
+                
+                  &lt;main&gt;<br>
+                    &lt;section id="about"&gt;<br>
+                      &lt;h2&gt;Sobre Nós&lt;/h2&gt;<br>
+                      &lt;p&gt;Somos apaixonados por tecnologia e inovação.&lt;/p&gt;<br>
+                    &lt;/section&gt;<br><br>
+                
+                    &lt;article&gt;
+                      &lt;h2&gt;Última Notícia&lt;/h2&gt;
+                      &lt;p&gt;Nosso novo produto já está disponível no mercado.&lt;/p&gt;
+                    &lt;/article&gt;<br><br>
+                
+                    &lt;aside&gt;<br>
+                      &lt;h3&gt;Aviso Importante&lt;/h3&gt;<br>
+                      &lt;p&gt;Manutenção agendada para 01/02.&lt;/p&gt;<br>
+                    &lt;/aside&gt;<br>
+                  &lt;/main&gt;<br><br>
+                
+                  &lt;footer&gt;<br>
+                    &lt;p&gt;&copy; 2025 Meu Site. Todos os direitos reservados.&lt;/p&gt;<br>
+                  &lt;/footer&gt;<br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;                
+            </p>
+        </div>
+    </div>
+</body>
+</html>

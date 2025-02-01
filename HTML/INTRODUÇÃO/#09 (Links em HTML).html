@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links em HTML</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 0, 0);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: red;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(255, 65, 65);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <h1>Links em HTML</h1>
+        <p>Links são criados usando a tag &lt;a&gt; (anchor).</p>
+        <p>Eles são usados para navegar entre páginas, redirecionar para outros sites, baixar arquivos ou executar ações.</p>
+
+        <hr>
+
+        <h2>Sintaxe Básica</h2>
+        
+        <div class="code">
+            <p>&lt;a href="URL do destino"&gt;Texto ou conteúdo clicável&lt;/a&gt;</p>
+        </div>
+        <ul>
+            <li>O atributo href especifica o endereço do link.</li>
+            <li>O texto entre a abertura e o fechamento da tag &lt;a&gt; é exibido como o link clicável.</li>
+        </ul>
+
+        <h3>Exemplo</h3>
+        <div class="code">
+            <p>&lt;a href="https://www.exemplo.com"&gt;Visite o Exemplo&lt;/a&gt;</p>
+        </div>
+
+        <hr>
+
+        <h2>Tipos de links</h2>
+        
+        <div class="version">
+            <h3>Links para outra página</h3>
+            <p></p>
+            <div class="code">
+                <p>&lt;a href="https://www.google.com"&gt;Acesse o Google&lt;/a&gt;</p>
+            </div>
+
+            <h3>Links para um e-mail</h3>
+            <p>Use o prefixo mailto: no atributo href.</p>
+            <div class="code">
+                <p>&lt;a href="mailto:exemplo@email.com"&gt;Envie um e-mail&lt;/a&gt;</p>
+            </div>
+
+            <h3>Links para a mesma página</h3>
+            <p>Use #id para criar âncoras para seções específicas da página.</p>
+            <div class="code">
+                <p>&lt;a href="#section1"&gt;Ir para a Seção 1&lt;/a&gt; <br>
+                &lt;h2 id="section1"&gt;Seção 1&lt;/h2&gt;</p>
+            </div>
+
+            <h3>Links para download</h3>
+            <p>O atributo download permite que um arquivo seja baixado em vez de aberto.</p>
+            <div class="code">
+                <p>&lt;a href="arquivo.pdf" download&gt;Baixe o arquivo&lt;/a&gt;</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Atributos Importantes</h2>
+
+        <div class="version">
+            <h3>target</h3>
+            <p>Define com o link será aberto.</p>
+            <ul>
+                <li>_self (padrão): Abre na mesma janela/aba.</li>
+                <li>_blank: Abre em uma nova aba ou janela.</li>
+            </ul>
+            <div class="code">
+                <p>&lt;a href="https://www.exemplo.com" target="_blank"&gt;Abrir em nova aba&lt;/a&gt;</p>
+            </div>
+
+            <h3>rel</h3>
+            <p>Especifica a relação entre o documento atual e o link.</p>
+            <p>Exemplo: nofollow (para links que não devem passar SEO).</p>
+            <div class="code">
+                <p>&lt;a href="https://www.exemplo.com" rel="nofollow"&gt;Link sem SEO&lt;/a&gt;</p>
+            </div>
+
+            <h3>title</h3>
+            <p>Fornece uma descrição extra ao passar o mouse sobre o link.</p>
+            <div class="code">
+                <p>&lt;a href="https://www.exemplo.com" title="Acesse o site Exemplo"&gt;Exemplo&lt;/a&gt;</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Estilização de Links</h2>
+        <p>Links podem ser estilizados com CSS usando diferentes pseudo-classes:</p>
+        <ul>
+            <li>:link → Link ainda não visitado.</li>
+            <li>:visited → Link já visitado.</li>
+            <li>:hover → Quando o cursor está sobre o link</li>
+            <li>:active → Quando o link é clicado.</li>
+        </ul>
+
+        <h3>Exemplo</h3>
+        <div class="code">
+            <p>
+                &lt;style&gt; <br>
+                a { <br>
+                    text-decoration: none; /* Remove o sublinhado */ <br>
+                    color: blue; <br>
+                } <br>
+                a:hover { <br>
+                    color: red; /* Muda a cor ao passar o mouse */ <br>
+                } <br>
+                &lt;/style&gt; <br>
+
+                &lt;a href="https://www.exemplo.com"&gt;Link Estilizado&lt;/a&gt;
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Exemplo Completo</h2>
+        <div class="code">
+            <p>
+                &lt;!DOCTYPE html&gt; <br>
+                &lt;html&gt; <br>
+                &lt;head&gt; <br>
+                &lt;title&gt;Exemplo de Links&lt;/title&gt; <br>
+                &lt;/head&gt; <br>
+                &lt;body&gt; <br><br>
+
+                &lt;a href="https://www.google.com" target="_blank"&gt;Google em nova aba&lt;/a&gt;&lt;br&gt; <br><br>
+
+                &lt;a href="#section1"&gt;Ir para a Seção 1&lt;/a&gt;&lt;br&gt; <br><br>
+
+                &lt;a href="arquivo.pdf" download&gt;Baixe o PDF&lt;/a&gt;&lt;br&gt; <br><br>
+
+                &lt;h2 id="section1"&gt;Seção 1&lt;/h2&gt; <br><br>
+
+                &lt;/body&gt; <br>
+                &lt;/html&gt;
+            </p>
+        </div>
+    </div>
+</body>
+</html>

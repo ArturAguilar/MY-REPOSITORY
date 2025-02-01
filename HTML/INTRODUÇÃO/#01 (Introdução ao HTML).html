@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao HTML</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 0, 0);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: red;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(255, 65, 65);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="/index.html">Voltar para ínicio</a>
+        </nav>
+
+        <h1>Introdução ao HTML</h1>
+
+        <h2>O que é HTML?</h2>
+        <p>HTML (HyperText Markup Language) é a linguagem padrão para criar páginas web.<br>
+        Utiliza elementos que definem a estrutura e o conteúdo de uma página.</p>
+
+        <hr>
+
+        <h2>Elementos HTML</h2>
+        <p>Um elemento HTML é representado por uma tag (ex.: &lt;tag&gt;).br
+        Exemplos: <br>
+        &lt;h1&gt;: Título principal. <br>
+        &lt;p&gt;: Parágrafo. <br>
+        &lt;a&gt;: Link.</p>
+
+        <hr>
+
+        <h2>Estrutura Básica de um Documento HTML</h2>
+        <div class="code">
+            <p>
+                &lt;!DOCTYPE html&gt; <br>
+                &lt;html&gt;<br>
+                &lt;head&gt;<br>
+                &lt;title&gt;Meu Título&lt;/title&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br><br>
+                &lt;h1&gt;Bem-vindo ao HTML&lt;/h1&gt;<br>
+                &lt;p&gt;Este é um parágrafo.&lt;/p&gt;<br><br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;<br>
+            </p>
+        </div><br>
+
+        <hr>
+
+        <h2>Principais Características</h2>
+        
+        <div class="function">
+            <p>Facilidade de Uso: Simples de aprender e usar.</p>
+
+            <p>Compatibilidade: Suportado por todos os navegadores modernos.</p>
+
+            <p>Flexibilidade: Usado em conjunto com CSS e JavaScript para criar designs dinâmicos e interativos.</p>
+        </div>
+
+        <hr>
+
+        <h2>Outros Conceitos</h2>
+        <div class="function">
+            <p>HTML é uma linguagem de marcação, não uma linguagem de programação.</p>
+
+            <p>Cada elemento HTML pode ter atributos (ex.: id, class) que adicionam funcionalidade ou estilo.</p>
+        </div>
+    </div>
+</body>
+</html>

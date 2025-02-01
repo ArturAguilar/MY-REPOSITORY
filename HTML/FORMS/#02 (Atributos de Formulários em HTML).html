@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos de Formulários em HTML</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 0, 0);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: red;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(255, 65, 65);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <h1>Introdução aos Atributos de Formulários</h1>
+        <p>Os atributos de formulários em HTML controlam o comportamento e a funcionalidade dos campos em um formulário. Estes atributos podem ser aplicados aos elementos de formulário como form, input, textarea, select, entre outros.</p>
+
+        <hr>
+
+        <h2>Atributos Comuns para o Elemento form</h2>
+
+        <h3>action</h3>
+        <p>Define o local onde os dados do formulário serão enviados.</p>
+        <div class="code">
+            <p>&LT;form action="submit_form.asp"&GT;</p>
+        </div>
+
+        <h3>method</h3>
+        <p>Define o método de envio do formulário (GET ou POST).</p>
+        <ul>
+            <li>GET: Envia dados na URL.</li>
+            <li>POST: Envia dados no corpo da requisição (mais seguro para grandes volumes de dados).</li>
+        </ul>
+        <div class="code">
+            <p>&LT;form method="post"&GT;</p>
+        </div>
+
+        <h3>target</h3>
+        <p>Define onde o formulário será exibido após o envio (exemplo: em uma nova janela ou aba).</p>
+        <ul>
+            <li>_self (padrão): Abre na mesma aba.</li>
+            <li>_blank: Abre em nova aba.</li>
+            <li>_parent: Abre no frame pai.</li>
+            <li>_top: Abre na janela principal.</li>
+        </ul>
+        <div class="code">
+            <p>&LT;form target="_blank"&GT;</p>
+        </div>
+
+        <h3>enctype</h3>
+        <p>Especifica o tipo de codificação para o envio de formulários (usado quando o formulário contém arquivos).</p>
+        <div class="code">
+            <p>&LT;form enctype="multipart/form-data"&GT;</p>
+        </div>
+
+        <h3>autocomplete</h3>
+        <p>Ativa (on) ou desativa (off) a sugestão automática de dados.</p>
+        <div class="code">
+            <p>&LT;form action="processar.php" autocomplete="off"&GT;</p>
+        </div>
+
+        <h3>novalidate</h3>
+        <p>Remove a validação automática do formulário.</p>
+        <div class="code">
+            <p>&LT;form action="processar.php" novalidate&GT;</p>
+        </div>
+
+        <hr>
+
+        <h2>Atributos Comuns para o Elemento input</h2>
+
+        <h3>type</h3>
+        <p>Define o tipo de entrada (ex: texto, senha, email, etc.).</p>
+        <div class="code">
+            <p>&LT;input type="text"&GT;</p>
+        </div>
+
+        <h3>value</h3>
+        <p>Define o valor padrão do campo ou o valor que será enviado ao servidor quando o formulário for submetido.</p>
+        <div class="code">
+            <p>&LT;input type="text" value="João"&GT;</p>
+        </div>
+
+        <h3>name</h3>
+        <p>Define o nome do campo, que é usado para identificar os dados no servidor.</p>
+        <div class="code">
+            <p>&LT;input type="text" name="username"&GT;</p>
+        </div>
+
+        <h3>placeholder</h3>
+        <p>Exibe um texto temporário dentro do campo de entrada que desaparece quando o usuário começa a digitar.</p>
+        <div class="code">
+            <p>&LT;input type="text" placeholder="Digite seu nome"&GT;</p>
+        </div>
+
+        <h3>required</h3>
+        <p>Indica que o campo é obrigatório e não pode ser deixado em branco.</p>
+        <div class="code">
+            <p>&LT;input type="text" required&GT;</p>
+        </div>
+
+        <h3>readonly</h3>
+        <p>Impede que o usuário edite o campo, mas permite que ele visualize seu conteúdo.</p>
+        <div class="code">
+            <p>&LT;input type="text" value="Texto fixo" readonly&GT;</p>
+        </div>
+
+        <h3>disabled</h3>
+        <p>Desativa o campo, impedindo qualquer interação com ele.</p>
+        <div class="code">
+            <p>&LT;input type="text" disabled&GT;</p>
+        </div>
+
+        <hr>
+
+        <h2>Atributos Comuns para o Elemento textarea</h2>
+
+        <h3>rows</h3>
+        <p>Define a altura da área de texto em linhas.</p>
+        <div class="code">
+            <p>&LT;textarea rows="4"&GT;&LT;/textarea&GT;</p>
+        </div>
+
+        <h3>cols</h3>
+        <p>Define a largura da área de texto em colunas.</p>
+        <div class="code">
+            <p>&LT;textarea cols="50"&GT;&LT;/textarea&GT;</p>
+        </div>
+
+        <h3>maxlength</h3>
+        <p>Define o número máximo de caracteres que o usuário pode inserir.</p>
+        <div class="code">
+            <p>&LT;textarea maxlength="100"&GT;&LT;/textarea&GT;
+            </p>
+        </div>
+
+        <h3>min e max</h3>
+        <p>Define valores mínimos e máximos para números e datas.</p>
+        <div class="code">
+            <p>&LT;input type="number" min="1" max="100"&GT;</p>
+        </div>
+
+        <h3>step</h3>
+        <p>Define o intervalo entre valores permitidos.</p>
+        <div class="code">
+            <p>&LT;input type="number" min="0" max="10" step="2"&GT;</p>
+        </div>
+        <p>(Os valores possíveis são: 0, 2, 4, 6, 8, 10)</p>
+
+        <h3>pattern</h3>
+        <p>Define um padrão de entrada para validar o campo.</p>
+        <div class="code">
+            <p>&LT;input type="text" pattern="[A-Za-z]+" title="Apenas letras"&GT;</p>
+        </div>
+
+        <hr>
+
+        <h2>Atributos Comuns para o Elemento select</h2>
+
+        <h3>name</h3>
+        <p>Define o nome do campo, que será usado para identificar os dados no servidor.</p>
+        <div class="code">
+            <p>&LT;select name="cars"&GT;</p>
+        </div>
+
+        <h3>multiple</h3>
+        <p>Permite que o usuário selecione várias opções.</p>
+        <div class="code">
+            <p>&LT;select name="cars" multiple&GT;</p>
+        </div>
+
+        <h3>size</h3>
+        <p>Define o número de opções visíveis.</p>
+        <div class="code">
+            <p>&LT;select name="cars" size="5"&GT;</p>
+        </div>
+
+        <hr>
+
+        <h2>Atributos Específicos de Botões</h2>
+
+        <h3>type</h3>
+        <p>Define o tipo do botão (submit, reset ou button).</p>
+        <div class="code">
+            <p><&LT;button type="submit"&GT;Enviar&LT;/button&GT;/p>
+        </div>
+
+        <h3>disabled</h3>
+        <p>Desativa o botão.</p>
+        <div class="code">
+            <p>&LT;button type="submit" disabled&GT;Enviar&LT;/button&GT;</p>
+        </div>
+
+        <h3>autofocus</h3>
+        <p>Define que o campo ou botão terá o foco automaticamente ao carregar a página.</p>
+        <div class="code">
+            <p>&LT;input type="text" autofocus&GT;</p>
+        </div>
+    </div>
+</body>
+</html>
