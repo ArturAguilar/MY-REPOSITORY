@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define o idioma da página como Português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz a página ser responsiva, ajustando-se ao tamanho da tela do dispositivo -->
+    <title>O que é DNS?</title> <!-- Define o título da página que aparece na aba do navegador -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 26, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <h1>O que é DNS?</h1>
+        <p>O DNS (Domain Name System, ou Sistema de Nomes de Domínio) é como a "agenda de contatos" da internet. Ele traduz nomes de domínio amigáveis (como www.exemplo.com) em endereços IP (como 192.0.2.1) que os computadores utilizam para localizar servidores na rede. <br>
+        Sem o DNS, você precisaria lembrar os endereços IP de todos os sites que deseja acessar, o que seria muito complicado.</p>
+
+        <hr>
+
+        <h2>Como o DNS funciona?</h2>
+        <p>Quando você digita um endereço de site no navegador, o DNS realiza as seguintes etapas:</p>
+
+        <div class="version">
+            <h3>Resolução do Nome:</h3>
+            <p>O navegador consulta um servidor DNS para encontrar o endereço IP associado ao domínio digitado.</p>
+
+            <h3>Conexão com o Servidor:</h3>
+            <p>Depois que o endereço IP é obtido, o navegador se conecta ao servidor correspondente e carrega o site.</p>
+
+            <h3>Cache DNS:</h3>
+            <p>Para acelerar o processo, os navegadores e sistemas operacionais mantêm um cache (memória temporária) dos endereços IP já resolvidos, evitando consultas repetidas ao servidor DNS.</p>
+        </div>
+
+        <hr>
+
+        <h2>Componentes principais do DNS</h2>
+        <div class="version">
+            <h3>Domínio Raiz:</h3>
+            <p>É o ponto de partida de toda consulta DNS e está representado por um ponto ("."). Embora invisível, ele é a base da hierarquia.</p>
+
+            <h3>TLD (Domínio de Topo):</h3>
+            <p>São os sufixos como .com, .org, .br, etc.</p>
+
+            <h3>Servidores de Nome Autoritativo:</h3>
+            <p>São responsáveis por armazenar as informações definitivas de um domínio, como qual servidor hospeda o site.</p>
+
+            <h3>Servidores Recursivos:</h3>
+            <p>Fazem o trabalho de "procurar" a resposta completa para a consulta DNS, interagindo com os servidores autoritativos.</p>
+        </div>
+
+        <hr>
+
+        <h2>Tipos de Registros DNS</h2>
+        <p>Os registros DNS armazenam informações importantes sobre o domínio. Alguns dos principais tipos incluem:</p>
+
+        <div class="version">
+            <h3>A (Address Record):</h3>
+            <p>Mapeia um domínio para um endereço IPv4; Exemplo: exemplo.com -> 192.0.2.1</p>
+
+            <h3>AAAA (IPv6 Address Record):</h3>
+            <p>Similar ao registro A, mas mapeia para endereços IPv6.</p>
+
+            <h3>CNAME (Canonical Name Record):</h3>
+            <p>Aponta um domínio para outro domínio; Exemplo: blog.exemplo.com -> exemplo.com</p>
+
+            <h3>MX (Mail Exchange):</h3>
+            <p>Indica o servidor de e-mail para o domínio.</p>
+
+            <h3>TXT (Text Record):</h3>
+            <p>Armazena informações de texto, geralmente usadas para verificações e autenticações, como SPF ou DKIM.</p>
+            
+            <h3>NS (Name Server):</h3>
+            <p>Define quais servidores DNS são responsáveis por gerenciar o domínio.</p>
+        </div>
+
+        <hr>
+
+        <h2>Por que o DNS é importante?</h2>
+        <p>O DNS é essencial porque permite que a internet seja amigável para os usuários. Ele abstrai os números complexos (endereços IP) e os converte em nomes fáceis de lembrar. Além disso, ele desempenha um papel crítico na segurança e no desempenho da internet.</p>
+    </div>
+</body>
+</html>
