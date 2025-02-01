@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color:#f7f7f7;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner, .conteine{
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1, label {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .internet > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        .css > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        .html > a {
+            text-decoration: none;
+            color: red;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        .internet > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        .css > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        .html > a:hover {
+            color: #ffffff;
+            background-color: rgb(255, 67, 67);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #66444400;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+        input[type="text"]:focus {
+            border-color: #000000;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="conteine">
+        <label for="search">Filtrar:</label>
+        <input type="text" id="search" placeholder="Digite para filtrar...">
+    </div>
+    
+    <div class="conteiner">
+        <h1>Internet</h1>
+        
+        <nav class="internet">
+            <a href="/HTML/INTRODUÇÃO/#01 (Introdução ao HTML).html">Como funciona a Internet?</a>
+
+            <a href="http://127.0.0.1:5500/INTERNET/%2302%20(O%20que%20%C3%A9%20HTTP%3F).html">O que é HTTP?</a>
+
+            <a href="http://127.0.0.1:5500/INTERNET/%2303%20(O%20que%20%C3%A9%20Nome%20de%20Dom%C3%ADnio%3F).html">O que é Nome de Domínio?</a>
+
+            <a href="http://127.0.0.1:5500/INTERNET/%2304%20(O%20que%20%C3%A9%20Hospedagem%3F).html">O que é Hospedagem?</a>
+
+            <a href="http://127.0.0.1:5500/INTERNET/%2305%20(O%20que%20%C3%A9%20DNS%3F).html">O que é DNS?</a>
+
+            <a href="http://127.0.0.1:5500/INTERNET/%2306%20(O%20que%20s%C3%A3o%20Navegadores%3F).html">O que são Navegadores?</a>
+        </nav>
+    </div>
+
+    <div class="conteiner">
+        <h1>HTML</h1>
+
+        <h2>Introdução</h2>
+        <nav class="html">
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2301%20(Introdu%C3%A7%C3%A3o%20ao%20HTML).html">Introdução</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2302%20(Atributos%20HTML).html">Atributos</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2303%20(T%C3%ADtulos%20HTML).html">Títulos</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2304%20(Par%C3%A1grafos%20HTML).html">Parágrafos</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2305%20(HTML%20Styles).html">Styles</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2306%20(Formata%C3%A7%C3%A3o%20de%20Texto).html">Formatação</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2307%20(Elementos%20de%20Cita%C3%A7%C3%A3o%20em%20HTML).html">Elementos de Citação</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2308%20(Cores%20em%20HTML).html">Cores</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2309%20(Links%20em%20HTML).html">Links</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2310%20(Imagens%20em%20HTML).html">Imagens</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2311%20(Tabelas%20em%20HTML)%20.html">Tabelas</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2312%20(Listas%20em%20HTML).html">Listas</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2313%20(Elementos%20de%20Bloco%20e%20Inline%20no%20HTML).html">Elementos de Bloco e Inline</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2314%20(Elemento%20%3Cdiv%3E%20no%20HTML).html">Elemento div</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2315%20(Iframe%20HTML).html">Iframe</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2316%20(Elemento%20%3Chead%3E).html">Elemento head</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2317%20(HTML%20Responsivo).html">HTML Responsivo</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2318%20(Elementos%20de%20C%C3%B3digo%20no%20HTML).html">Elementos de Código</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2319%20(Elementos%20Sem%C3%A2nticos%20no%20HTML).html">Elementos Semânticos</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2320%20(Tudo%20sobre%20s%C3%ADmbolos%20e%20emojis).html">Símbolos e Emojis</a>
+
+            <a href="http://127.0.0.1:5500/HTML/INTRODU%C3%87%C3%83O/%2321%20(XHTML%20vs%20HTML).html">XHTML vs HTML</a>
+        </nav>
+
+        <h2>Forms</h2>
+        <nav class="html">
+            <a href="http://127.0.0.1:5500/HTML/FORMS/%2301%20(Formul%C3%A1rios%20em%20HTML).html">Formulários</a>
+
+            <a href="http://127.0.0.1:5500/HTML/FORMS/%2302%20(Atributos%20de%20Formul%C3%A1rios%20em%20HTML).html">Atributos de Formulários</a>
+
+            <a href="http://127.0.0.1:5500/HTML/FORMS/%2303%20(Elementos%20de%20Formul%C3%A1rio%20em%20HTML).html">Elementos de Formulário</a>
+
+            <a href="http://127.0.0.1:5500/HTML/FORMS/%2304%20(Tipos%20de%20Entrada%20em%20HTML).html">Tipos de Entrada</a>
+
+            <a href="http://127.0.0.1:5500/HTML/FORMS/%2305%20(Atributos%20Relacionados%20ao%20Formul%C3%A1rio).html">Atributos Relacionados</a>
+        </nav>
+
+        <h2>Grafícos</h2>
+        <nav class="html">
+            <a href="http://127.0.0.1:5500/HTML/GRAF%C3%8DCOS/%2301%20(Elemento%20%3Ccanvas%3E%20no%20HTML).html">Elemento canvas</a>
+
+            <a href="http://127.0.0.1:5500/HTML/GRAF%C3%8DCOS/%2302%20(Elemento%20%3Csvg%3E%20no%20HTML).html">Elemento svg</a>
+        </nav>
+
+        <h2>API</h2>
+        <nav class="html">
+            <a href="http://127.0.0.1:5500/HTML/API/%2301%20(Geolocaliza%C3%A7%C3%A3o%20no%20HTML%20).html">Geolocalização</a>
+
+            <a href="http://127.0.0.1:5500/HTML/API/%2302%20(Drag%20and%20Drop%20no%20HTML).html">Drag and Drop</a>
+
+            <a href="http://127.0.0.1:5500/HTML/API/%2303%20(Web%20Storage%20no%20HTML).html">Web Storage</a>
+
+            <a href="http://127.0.0.1:5500/HTML/API/%2304%20(Web%20Workers%20no%20HTML).html">Web Workers</a>
+
+            <a href="http://127.0.0.1:5500/HTML/API/%2305%20(Server-Sent%20Events%20(SSE)%20no%20HTML).html">Server-Sent Events (SSE)</a>
+        </nav>
+    </div>
+
+    <div class="conteiner">
+        <h1>CSS</h1>
+
+        <h2>Introdução</h2>
+
+        <nav class="css">
+            <a href="/CSS/INTRODUÇÃO/#01 (Introdução ao CSS).html">kjjbhk</a>
+        </nav>
+    </div>
+
+    <script>
+        document.getElementById('search').addEventListener('input', function() {
+            let filter = this.value;
+            let sections = document.querySelectorAll('.conteiner');
+            
+            sections.forEach(section => {
+                let links = section.querySelectorAll('a');
+                let hasVisibleLink = false;
+                
+                links.forEach(link => {
+                    let linkText = link.textContent;
+                    if (linkText.includes(filter)) {
+                        link.style.display = "inline-block";
+                        hasVisibleLink = true;
+                    } else {
+                        link.style.display = "none";
+                    }
+                });
+                
+                section.style.display = hasVisibleLink ? "block" : "none";
+            });
+        });
+    </script>    
+</body>
+</html>
