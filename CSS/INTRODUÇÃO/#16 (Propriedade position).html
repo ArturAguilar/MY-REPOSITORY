@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade position</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <h1>Propriedade position</h1>
+        <p>A propriedade positiondefine o método de posicionamento de um elemento na página, determinando como ele está posicionado em relação ao seu contêiner ou à janela de visualização.</p>
+
+        <h2>Valores da Propriedade position:</h2>
+        <p><strong>static:</strong> Valor padrão. O elemento está posicionado de acordo com o fluxo normal do documento, ou seja, na ordem em que aparece no código. As propriedades top, right, bottome leftnão têm efeito quando positioné static.</p>
+
+        <p><strong>relative:</strong> O elemento está posicionado em relação à sua posição original no fluxo do documento. As propriedades top, right, bottome leftdeslocam o elemento a partir de sua posição inicial.</p>
+
+        <p><strong>absolute:</strong> O elemento está posicionado em relação ao seu contêiner pai mais próximo que tenha positiondiferente de static. Se não houver tal contêiner, ele ficará posicionado em relação ao elemento html. As propriedades top, right, bottome leftdeterminam a posição exata do elemento dentro desse contêiner.</p>
+
+        <p><strong>fixed:</strong> O elemento está posicionado em relação à janela de visualização (viewport). Isso significa que ele permanecerá fixo na tela mesmo quando a página for rolada. As propriedades top, right, bottome leftdeterminam a posição do elemento em relação à janela de visualização.</p>
+
+        <p><strong>sticky:</strong> O elemento é tratado como relativeaté que ele atinja um limite definido pelas propriedades top, right, bottomou left, momento em que ele se comporte como fixed. Isso permite que o elemento "grude" em uma posição específica durante o rolar da página.</p>
+
+        <h3>Exemplo de uso:</h3>
+        <div class="code">
+            <p>
+                &lt;div class="container"&gt; <br>
+                &lt;div class="box"&gt;Caixa Absoluta&lt;/div&gt; <br>
+              &lt;/div&gt;              
+            </p>
+        </div>
+        <div class="code">
+            <p>
+                .container { <br>
+                    position: relative; <br>
+                    width: 500px; <br>
+                    height: 500px; <br>
+                    background-color: lightgray; <br>
+                  } <br><br> <br>
+                  
+                  .box { <br>
+                    position: absolute; <br>
+                    top: 50px; <br>
+                    left: 50px; <br>
+                    width: 100px; <br>
+                    height: 100px; <br>
+                    background-color: blue; <br>
+                  }                  
+            </p>
+        </div>
+        <p>Neste exemplo, a .boxestá posicionada 50 pixels abaixo e 50 pixels à direita do canto superior esquerdo da .container.</p>
+
+        <p>Nota: Ao usar position: absolute, o elemento é removido do fluxo normal do documento, o que pode afetar o layout dos elementos subsequentes.</p>
+
+        <hr>
+
+        <h2>Propriedades de Posicionamento:</h2>
+        <p>As propriedades top, right, bottome leftsão usadas em conjunto com positionpara definir a posição exata de um elemento.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                .box { <br>
+                    position: absolute; <br>
+                    top: 20px; <br>
+                    right: 30px; <br>
+                    bottom: 40px; <br>
+                    left: 50px; <br>
+                  }                  
+            </p>
+        </div>
+        <p>Neste exemplo, .boxserá posicionado 20 pixels abaixo do topo, 30 pixels à esquerda da borda direita, 40 pixels acima da borda inferior e 50 pixels à direita da borda esquerda do seu contêiner pai.</p>
+
+        <p>Nota: As propriedades top, right, bottome lefttêm efeito apenas quando positionsão diferentes de static.</p>
+
+        <hr>
+
+        <h2>Alinhamento Horizontal e Vertical:</h2>
+        <p>Para centralizar um elemento horizontal e verticalmente dentro de um contêiner, você pode usar uma combinação de positione transform.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                .container { <br>
+                    position: relative; <br>
+                    width: 500px; <br>
+                    height: 500px; <br>
+                    background-color: lightgray; <br>
+                  } <br><br>
+                  
+                  .box { <br>
+                    position: absolute; <br>
+                    top: 50%; <br>
+                    left: 50%; <br>
+                    width: 100px; <br>
+                    height: 100px; <br>
+                    background-color: blue; <br>
+                    transform: translate(-50%, -50%); <br>
+                  }                  
+            </p>
+        </div>
+        <p>Neste exemplo, a .boxé posicionada no centro da .container usando top: 50%e left: 50% para posicionar o canto superior esquerdo da .boxno centro da .container, e transform: translate(-50%, -50%) para deslocar a .box para cima e para a esquerda pela metade de sua largura e altura, respectivamente.</p>
+
+        <p>Nota: A propriedade transformé usada para mover o elemento em relação à sua posição atual, sem afetar o fluxo do documento.</p>
+            
+    </div>
+</body>
+</html>

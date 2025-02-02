@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <h1>Navbar</h1>
+        <p>Uma navbar (barra de navegação) é um elemento essencial em muitos sites, oferecendo links para facilitar a navegação entre as páginas. Ela pode ser criada de várias formas utilizando HTML e CSS, e pode ser personalizada com estilos como cores, bordas, tamanhos e até mesmo efeitos interativos.</p>
+
+        <hr>
+
+        <h2>Estrutura Básica de uma Navbar</h2>
+        <p>A estrutura básica de uma navbar pode ser criada com um simples elemento nav e listas não ordenadas (ul) com itens (li) que contêm os links de navegação.</p>
+        <div class="code">
+            <p>
+                &lt;nav&gt; <br>
+                &lt;ul&gt; <br>
+                  &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt; <br>
+                  &lt;li&gt;&lt;a href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt; <br>
+                  &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt; <br>
+                  &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt; <br>
+                &lt;/ul&gt; <br>
+                &lt;/nav&gt;
+            </p>
+        </div>
+        <h3>Explicação:</h3>
+        <ul>
+            <li>O elemento nav é usado para agrupar links de navegação.</li>
+            <li>Cada item de navegação é representado por um item de lista (li), e cada item contém um link (a).</li>
+        </ul>
+
+        <hr>
+
+        <h2>Estilizando a Navbar com CSS</h2>
+        <p>Você pode personalizar a navbar com o uso de CSS para alterar o estilo dos links, a cor de fundo, a disposição, entre outros.</p>
+        <div class="code">
+            <p>
+                nav { <br>
+                    background-color: #333; <br>
+                  } <br><br>
+                
+                  nav ul { <br>
+                    list-style-type: none; <br>
+                    margin: 0; <br>
+                    padding: 0; <br>
+                  } <br><br>
+                
+                  nav ul li { <br>
+                    display: inline; <br>
+                  } <br><br>
+                
+                  nav ul li a { <br>
+                    color: white; <br>
+                    padding: 14px 20px; <br>
+                    text-decoration: none; <br>
+                    display: inline-block; <br>
+                  } <br><br>
+                
+                  nav ul li a:hover { <br>
+                    background-color: #ddd; <br>
+                    color: black; <br>
+                  }
+            </p>
+        </div>
+        <h4>Explicação:</h4>
+        <ul>
+            <li>Aqui, estamos definindo estilos para a navbar e seus elementos filhos.background-color: #333; define o fundo da navbar como cinza escuro.</li>
+            <li>display: inline; no item de lista faz com que os links apareçam em uma linha.</li>
+            <li>text-decoration: none; remove o sublinhado dos links.</li>
+            <li>:hover adiciona um efeito quando o usuário passa o mouse sobre o link.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Navbar Responsiva</h2>
+        <p>Para tornar a navbar responsiva, pode-se utilizar o conceito de media queries para ajustar o layout da navbar conforme o tamanho da tela.</p>
+        <div class="code">
+            <p>
+                @media screen and (max-width: 600px) { <br>
+                    nav ul { <br>
+                      text-align: center; <br>
+                    } <br><br>
+                
+                    nav ul li { <br>
+                      display: block; <br>
+                      margin: 10px 0; <br>
+                    } <br>
+                  }
+            </p>
+        </div>
+        <h4>Explicação:</h4>
+        <ul>
+            <li>Quando a largura da tela for menor que 600px, os itens da navbar são exibidos como blocos, um abaixo do outro.</li>
+            <li>text-align: center; centraliza os links dentro da navbar.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Adicionando uma Barra de Navegação Fixa</h2>
+        <p>A barra de navegação pode ser fixada no topo da página usando a propriedade position: fixed.</p>
+        <div class="code">
+            <p>
+                nav { <br>
+                    background-color: #333; <br>
+                    position: fixed; <br>
+                    top: 0; <br>
+                    width: 100%; <br>
+                    z-index: 1000; <br>
+                  }
+            </p>
+        </div>
+        <h3>Explicação:</h3>
+        <ul>
+            <li>A position: fixed; fixa a navbar no topo da página.</li>
+            <li>top: 0; garante que a navbar fique no topo da janela de visualização.</li>
+            <li>z-index: 1000; garante que a navbar fique sobre outros elementos na página.</li>
+        </ul>        
+    </div>
+</body>
+</html>

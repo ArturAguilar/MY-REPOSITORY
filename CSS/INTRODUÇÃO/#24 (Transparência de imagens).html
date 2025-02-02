@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <h1>Transparência de imagens</h1>
+        <p>A transparência de imagens em CSS pode ser ajustada usando a propriedade opacity, a qual controla o nível de opacidade de um elemento. Além disso, é possível criar imagens transparentes diretamente no HTML usando imagens no formato PNG com transparência, ou aplicar efeitos de transparência em imagens com a ajuda de CSS.</p>
+
+        <hr>
+
+        <h2>Propriedade opacity</h2>
+        <p>Controla a opacidade (transparência) de um elemento, onde 0 é totalmente transparente e 1 é totalmente opaco.</p>
+        <div class="code">
+            <p>
+                img { <br>
+                    opacity: 0.5; <br>
+                  }
+            </p>
+        </div>
+        <h3>Explicação: </h3>     
+        <ul>
+            <li>Define que a imagem terá 50% de opacidade, ou seja, será 50% transparente.</li>
+            <li>A opacidade pode ser aplicada a qualquer elemento, não apenas imagens.</li>
+        </ul> 
+        
+        <hr>
+
+        <h2>Transparência em Imagens PNG</h2>
+        <p>Imagens PNG podem ter transparência nativa, o que permite que o fundo ou outras partes da imagem se misturem com o conteúdo da página.</p>
+
+        <ul>
+            <li>Para usar imagens PNG com transparência, basta incluir a imagem normalmente no HTML e ela terá a transparência.</li>
+        </ul>
+        <div class="code">
+            <p>&lt;img src="imagem-transparente.png" alt="Imagem Transparente"&gt;</p>
+        </div>
+        <h3>Explicação:</h3>
+        <ul>
+            <li>As imagens no formato PNG podem ser salvas com um canal alpha, permitindo transparência.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Usando rgba() para Cores Transparentes</h2>
+        <p>A função rgba() permite criar cores com um nível de transparência (opacidade) usando os valores de cor RGB (vermelho, verde, azul) e um valor alfa (opacidade de 0 a 1).</p>
+        <div class="code">
+            <p>
+                div { <br>
+                    background-color: rgba(255, 0, 0, 0.5); <br>
+                  }
+            </p>
+        </div>
+        <h3>Explicação: </h3> 
+        <ul>
+            <li>O rgba(255, 0, 0, 0.5) define uma cor vermelha com 50% de transparência para o fundo de um div.</li>
+            <li>O valor alfa (0.5) define o nível de transparência, variando de 0 (totalmente transparente) a 1 (totalmente opaco).</li>
+        </ul>
+        
+        <hr>
+
+        <h2>Usando hsla() para Cores Transparentes</h2>
+        <p>A função hsla() também pode ser usada para cores com transparência, utilizando valores de matiz, saturação, luminosidade e alfa.</p>
+        <div class="code">
+            <p>
+                div { <br>
+                    background-color: hsla(120, 100%, 50%, 0.5); <br>
+                  }
+            </p>
+        </div>
+        <h3>Explicação:</h3>
+        <ul>
+            <li>A cor hsla(120, 100%, 50%, 0.5) define um verde com 50% de transparência.</li>
+        </ul>
+    </div>
+</body>
+</html>
