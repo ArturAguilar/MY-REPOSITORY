@@ -13,6 +13,11 @@ body {
     font-family: 'Poppins', sans-serif  ;
 }
 
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
 .conteiner, .conteine{
     width: 90%;
     max-width: 750px;
@@ -53,59 +58,6 @@ ul {
     font-size: 13px; /* Tamanho padrão */
 }
 
-nav {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.internet > a {
-    text-decoration: none;
-    color: blue;
-    display: inline-block;
-    margin-right: 10px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: 0.5s;
-    font-size: 14px; /* Tamanho padrão */
-}
-
-.css > a {
-    text-decoration: none;
-    color: blue;
-    display: inline-block;
-    margin-right: 10px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: 0.5s;
-    font-size: 14px; /* Tamanho padrão */
-}
-
-.html > a {
-    text-decoration: none;
-    color: red;
-    display: inline-block;
-    margin-right: 10px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: 0.5s;
-    font-size: 14px; /* Tamanho padrão */
-}
-
-.internet > a:hover {
-    color: #ffffff;
-    background-color: rgb(65, 84, 255);
-}
-
-.css > a:hover {
-    color: #ffffff;
-    background-color: rgb(65, 84, 255);
-}
-
-.html > a:hover {
-    color: #ffffff;
-    background-color: rgb(255, 67, 67);
-}
-
 th, td {
     border: 1px solid black;
     padding: 10px;
@@ -130,6 +82,7 @@ label {
     margin-bottom: 10px;
     display: block;
 }
+
 input[type="text"] {
     width: 100%;
     padding: 10px;
@@ -139,9 +92,74 @@ input[type="text"] {
     outline: none;
     transition: 0.3s;
 }
+
 input[type="text"]:focus {
     border-color: #000000;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.internet > a {
+    text-decoration: none;
+    color: blue;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 14px; /* Tamanho padrão */
+}
+
+.internet > a:hover {
+    color: #ffffff;
+    background-color: rgb(65, 84, 255);
+}
+
+.html > a {
+    text-decoration: none;
+    color: red;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 14px; /* Tamanho padrão */
+}
+
+.html > a:hover {
+    color: #ffffff;
+    background-color: rgb(255, 67, 67);
+}
+
+.css > a {
+    text-decoration: none;
+    color: blue;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 14px; /* Tamanho padrão */
+}
+
+.css > a:hover {
+    color: #ffffff;
+    background-color: rgb(65, 84, 255);
+}
+
+.projetos > a {
+    text-decoration: none;
+    color: rgb(255, 72, 0);
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 14px; /* Tamanho padrão */
+}
+
+.projetos > a:hover {
+    color: #ffffff;
+    background-color: rgb(253, 76, 52);
 }
 
 @media (min-width: 768px) {
