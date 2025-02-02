@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Definição do conjunto de caracteres como UTF-8 para suporte a acentos e caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Configuração para tornar o layout responsivo em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página exibido na aba do navegador -->
+    <title>O que são Navegadores?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 26, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../index.html">Voltar para o ínicio</a>
+        </nav>
+        
+        <h1>O que é um navegador da Web? Definição, tipos e recursos</h1>
+
+        <h2>Introdução</h2>
+        <p>O navegador da Web é uma das ferramentas mais usadas no mundo digital. Ele é essencial para acessar informações na internet, navegar por sites, assistir vídeos, fazer compras online e muito mais. Desde o surgimento do primeiro navegador, os avanços tecnológicos transformaram esses softwares em ferramentas poderosas e versáteis. Neste artigo, exploraremos a definição, a história, os tipos e os recursos de navegadores da Web.</p>
+
+        <hr>
+
+        <h2>Definindo navegadores da Web</h2>
+        <p>Um navegador da Web é um software que permite aos usuários acessar, recuperar e exibir informações da World Wide Web. Ele interpreta os códigos das páginas web (HTML, CSS, JavaScript) e os apresenta em um formato visual compreensível para o usuário. Exemplos de navegadores incluem Google Chrome, Mozilla Firefox, Safari, Microsoft Edge e Opera.</p>
+
+        <hr>
+
+        <h2>História dos navegadores da Web</h2>
+        <p>A história dos navegadores começou em 1990 com o WorldWideWeb, criado por Tim Berners-Lee. Este navegador foi o primeiro a permitir a navegação pela Web. Em 1993, o Mosaic popularizou o uso da internet, oferecendo uma interface gráfica amigável. <br>
+
+        Posteriormente, surgiram navegadores como o Netscape Navigator, que dominou o mercado nos anos 90, seguido pelo Internet Explorer, que foi amplamente usado no início dos anos 2000. Atualmente, navegadores modernos como o Google Chrome e o Safari lideram em velocidade, recursos e compatibilidade.</p>
+
+        <hr>
+
+        <h2>Como funciona um navegador da Web?</h2>
+
+        <div class="function">
+            <p>Entrada do Usuário: O usuário insere uma URL (Uniform Resource Locator), como "www.exemplo.com".</p>
+
+            <p>Resolução de DNS: O navegador traduz o domínio para um endereço IP usando servidores DNS.</p>
+
+            <p>Solicitação HTTP/HTTPS: O navegador envia uma solicitação ao servidor onde o site está hospedado.</p>
+
+            <p>Recebimento dos Dados: O servidor responde enviando os arquivos da página (HTML, CSS, JavaScript, imagens, etc.).</p>
+
+            <p>Renderização: O navegador processa os arquivos recebidos e os exibe de forma visual na tela do usuário.</p>
+        </div>
+
+        <hr>
+
+        <h2>Tipos de navegadores da Web</h2>
+        <p>Os navegadores podem ser classificados em diferentes categorias com base em suas plataformas e características:</p>
+
+        <div class="version">
+            <h3>Navegadores para Desktop:</h3>
+            <p>Google Chrome; Mozilla Firefox; Microsoft Edge; Safari</p>
+
+            <h3>Navegadores para Dispositivos Móveis:</h3>
+            <p>Safari Mobile (iOS); Google Chrome (Android e iOS); Opera Mini; Samsung Internet</p>
+
+            <h3>Navegadores Textuais:</h3>
+            <p>Lynx (navegadores usados em interfaces de linha de comando, exibindo apenas texto).</p>
+
+            <h3>Navegadores Baseados em Privacidade:</h3>
+            <p>Brave; Tor Browser</p>
+        </div>
+
+        <hr>
+
+        <h2>Características dos navegadores modernos</h2>
+
+        <div class="function">
+            <p>Velocidade: Navegadores modernos são otimizados para carregamento rápido de páginas.</p>
+
+            <p>Compatibilidade: Suporte a tecnologias como HTML5, CSS3 e JavaScript.</p>
+
+            <p>Extensões e Plugins: Personalização de funcionalidades com extensões como bloqueadores de anúncios.</p>
+
+            <p>Modo de Navegação Privada: Evita o armazenamento de histórico, cookies e dados temporários.</p>
+
+            <p>Sincronização: Integração com contas para sincronizar favoritos, senhas e histórico entre dispositivos.</p>
+
+            <p>Design Responsivo: Adaptam-se a diferentes tamanhos de tela.</p>
+        </div>
+
+        <hr>
+
+        <h2>Segurança e privacidade em navegadores da Web</h2>
+        <p>Os navegadores modernos incluem vários recursos de segurança para proteger os usuários:</p>
+
+        <div class="function">
+            <p>HTTPS: Conexões seguras para proteger dados transmitidos.</p>
+
+            <p>Bloqueio de Cookies e Rastreamento: Limita o rastreamento por anunciantes.</p>
+
+            <p>Alertas de Sites Não Seguros: Avisos sobre sites que não possuem certificados válidos.</p>
+
+            <p>Navegação Segura: Bloqueio de sites maliciosos e downloads inseguros.</p>
+        </div>
+
+        <hr>
+
+        <h2>Conclusão</h2>
+        <p>Os navegadores da Web são uma ponte entre os usuários e o vasto mundo da internet. Eles evoluíram para atender às crescentes demandas de desempenho, segurança e funcionalidade. Escolher um navegador que se alinha às suas necessidades pode melhorar significativamente sua experiência online. Seja para trabalho, estudo ou lazer, os navegadores continuam sendo uma parte essencial da vida digital.</p>
+    </div>
+</body>
+</html>

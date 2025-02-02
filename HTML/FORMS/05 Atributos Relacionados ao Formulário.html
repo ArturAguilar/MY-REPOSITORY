@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 0, 0);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: red;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(255, 65, 65);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../index.html">Voltar para o ínicio</a>
+        </nav>
+        
+        <h1>Atributos Relacionados ao Formulário em Elementos HTML</h1>
+        <p>Esses atributos permitem conectar elementos de entrada (input, select, textarea, etc.) a um formulário específico, mesmo que não estejam dentro dele.</p>
+
+        <hr>
+
+        <h2>form (Associa o Campo a um Formulário)</h2>
+        <p>Conecta um elemento a um formulário usando o id do formulário.</p>
+        <div class="code">
+            <p>
+                &LT;form id="meuFormulario" action="processar.php"&GT;<br>
+                &LT;input type="text" name="nome"&GT;<br>
+              &LT;/form&GT;<br><br>
+              
+              &LT;input type="text" name="email" form="meuFormulario"&GT;
+            </p>
+        </div>
+        <p>✅ O campo "email" será enviado junto com o formulário, mesmo estando fora dele.</p>
+
+        <hr>
+
+        <h2>formaction (URL de Envio Específica para um Botão)</h2>
+        <p>Define um destino de envio diferente apenas para botões de envio (input type="submit" e button type="submit").</p>
+        <div class="code">
+            <p>
+                &LT;form action="pagina_padrao.php"&GT;<br>
+                &LT;input type="submit" value="Enviar Padrão"&GT;<br>
+                &LT;input type="submit" value="Enviar Alternativo" formaction="outra_pagina.php"&GT;<br>
+              &LT;/form&GT;              
+            </p>
+        </div>
+        <p>✅ O primeiro botão envia para "pagina_padrao.php", o segundo para "outra_pagina.php".</p>
+
+        <hr>
+
+        <h2>formenctype (Tipo de Codificação de Dados)</h2>
+        <p>Define o tipo de codificação dos dados enviados (usado apenas com method="post").</p>
+        <p>Opções:</p>
+        <ul>
+            <li>application/x-www-form-urlencoded (Padrão)</li>
+            <li>multipart/form-data (Necessário para upload de arquivos)</li>
+            <li>text/plain (Envio como texto simples)</li>
+        </ul>
+        <div class="code">
+            <p>
+                &LT;form action="upload.php" method="post"&GT;<br>
+                &LT;input type="file" name="arquivo"&GT;<br>
+                &LT;input type="submit" value="Upload Normal"&GT;<br>
+                &LT;input type="submit" value="Upload Arquivo" formenctype="multipart/form-data"&GT;<br>
+              &LT;/form&GT;
+            </p>
+        </div>
+        <p>✅ O segundo botão permite o envio de arquivos corretamente.</p>
+
+        <hr>
+
+        <h2>formmethod (Método de Envio para um Botão)</h2>
+        <p>Permite que um botão altere o método de envio do formulário (GET ou POST).</p>
+        <div class="code">
+            <p>
+                &LT;form action="processar.php" method="post"&GT;<br>
+                &LT;input type="submit" value="Enviar com POST"&GT;<br>
+                &LT;input type="submit" value="Enviar com GET" formmethod="get"&GT;<br>
+              &LT;/form&GT;
+            </p>
+        </div>
+        <p>✅ O primeiro botão usa POST, o segundo força o envio via GET.</p>
+
+        <hr>
+
+        <h2>formtarget (Destino da Resposta)</h2>
+        <p>Controla onde abrir a resposta da submissão do formulário.</p>
+        <p>Valores:</p>
+        <ul>
+            <li>_self (Padrão) → Mesma aba.</li>
+            <li>_blank → Nova aba.</li>
+            <li>_parent → Janela pai.</li>
+            <li>_top → Janela principal.</li>
+        </ul>
+        <div class="code">
+            <p>
+                &LT;form action="processar.php"&GT;<br>
+                &LT;input type="submit" value="Abrir na mesma aba"&GT;<br>
+                &LT;input type="submit" value="Abrir em nova aba" formtarget="_blank"&GT;<br>
+              &LT;/form&GT;
+            </p>
+        </div>
+        <p>✅ O segundo botão abrirá a resposta em uma nova aba.</p>
+
+        <hr>
+
+        <h2>formnovalidate (Ignora Validações)</h2>
+        <p>Desativa a validação de campos apenas para um botão de envio.</p>
+        <div class="code">
+            <p>
+                &LT;form action="processar.php"&GT;<br>
+                &LT;input type="email" required placeholder="Digite seu e-mail"&GT;<br>
+                &LT;input type="submit" value="Enviar Normal"&GT;<br>
+                &LT;input type="submit" value="Ignorar Validação" formnovalidate&GT;<br>
+              &LT;/form&GT;
+            </p>
+        </div>
+        <p>✅ O segundo botão permite enviar o formulário sem preencher o campo de e-mail.</p>
+    </div>
+</body>
+</html>

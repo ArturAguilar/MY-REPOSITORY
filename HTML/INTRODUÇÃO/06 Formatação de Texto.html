@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de Texto</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 0, 0);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: red;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(255, 65, 65);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../index.html">Voltar para o ínicio</a>
+        </nav>
+        
+        <h1>Formatação de Texto</h1>
+
+        <p>A formatação de texto em HTML permite alterar a aparência do texto, como negrito, itálico, sobrescrito, entre outros.</p>
+
+        <p>Utiliza tags específicas para estilizar o texto.</p>
+
+        <hr>
+
+        <h2>Principais Tags de Formatação</h2>
+
+        <div class="version">
+            <h3>Negrito (&lt;b&gt; ou &lt;strong&gt;)</h3>
+            <p>Destaca o texto em negrito.</p>
+            <p>&lt;strong&gt; tem mais significado semântico, indicando importância.</p>
+            <div class="code">
+                <p>
+                    &lt;b&gt;Texto em negrito (visual)&lt;/b&gt; <br>
+                    &lt;strong&gt;Texto em negrito (importante)&lt;/strong&gt;
+                </p>
+            </div>
+
+            <h3>Itálico (&lt;i&gt; ou &lt;em&gt;)</h3>
+            <p>Destaca o texto em itálico.</p>
+            <p>&lt;em&gt; é usado para indicar ênfase.</p>
+            <div class="code">
+                <p>&lt;i&gt;Texto em itálico (visual)&lt;/i&gt; <br>
+                &lt;em&gt;Texto em itálico (ênfase)&lt;/em&gt;</p>
+            </div>
+
+            <h3>Texto Pequeno (&lt;small&gt;)</h3>
+            <p>Reduz o tamanho do texto.</p>
+            <div class="code">
+                <p>&lt;small&gt;Texto menor que o normal.&lt;/small&gt;</p>
+            </div>
+
+            <h3>Sobrescrito (&lt;sup&gt;)</h3>
+            <p>Exibe texto como sobrescrito (ex.: expoentes).</p>
+            <div class="code">
+                <p>10&lt;sup&gt;2&lt;/sup&gt; = 100</p>
+            </div>
+
+            <h3>Subscrito (&lt;sub&gt;)</h3>
+            <p>Exibe texto como subscrito (ex.: fórmulas químicas).</p>
+            <div class="code">
+                <p>H&lt;sub&gt;2&lt;/sub&gt;O</p>
+            </div>
+
+            <h3>Texto Tachado (&lt;del&gt; ou &lt;s&gt;)</h3>
+            <p>&lt;s&gt; exibe texto riscado.</p>
+            <p>&lt;del&gt; é usado para texto que foi excluído.</p>
+            <div class="code">
+                <p>&lt;del&gt;Texto excluído&lt;/del&gt; <br>
+                &lt;s&gt;Texto riscado&lt;/s&gt;
+                </p>
+            </div>
+
+            <h3>Texto Inserido (&lt;ins&gt;)</h3>
+            <p>Indica texto adicionado recentemente.</p>
+            <div class="code">
+                <p>&lt;ins&gt;Texto inserido&lt;/ins&gt;</p>
+            </div>
+
+            <h3>Texto Sublinhado (&lt;u&gt;)</h3>
+            <p>Adiciona sublinhado ao texto (visual, sem significado semântico).</p>
+            <div class="code">
+                <p>&lt;u&gt;Texto sublinhado&lt;/u&gt;</p>
+            </div>
+
+            <h3>Texto Importante (&lt;mark&gt;)</h3>
+            <p>Destaca o texto como marcado (similar a um marcador de texto).</p>
+            <div class="code">
+                <p>&lt;mark&gt;Texto marcado&lt;/mark&gt;</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Exemplo de Combinação</h2>
+        <div class="code">
+            <p>&lt;p&gt;&lt;strong&gt;Texto importante&lt;/strong&gt; com &lt;em&gt;ênfase&lt;/em&gt;, um &lt;u&gt;sublinhado&lt;/u&gt; e um &lt;mark&gt;destaque&lt;/mark&gt;.&lt;/p&gt;</p>
+        </div>
+    </div>
+</body>
+</html>

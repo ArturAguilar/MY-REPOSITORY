@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de Bloco e Inline no HTML</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 0, 0);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: red;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(255, 65, 65);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../index.html">Voltar para o ínicio</a>
+        </nav>
+        
+        <h1>Elementos de Bloco e Inline no HTML</h1>
+
+        <h2>Elementos de Bloco (Block Elements)</h2>
+        <ul>
+            <li>Definição: Elementos de bloco sempre começam em uma nova linha e ocupam toda a largura disponível (extensão máxima do elemento pai).</li>
+            <li>São usados principalmente para estruturar o layout de uma página.</li>
+        </ul>
+
+        <h3>Exemplos de Elementos de Bloco Comuns:</h3>
+        <div class="code">
+            <p>
+                &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;, 
+                &lt;p&gt;, 
+                &lt;div&gt;,
+                &lt;header&gt;,
+                &lt;footer&gt;,
+                &lt;section&gt;,
+                &lt;article&gt;,
+                &lt;aside&gt;,
+                &lt;main&gt;,
+                &lt;nav&gt;,
+                &lt;form&gt;                
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Elementos Inline (Inline Elements)</h2>
+        <ul>
+            <li>Definição: Elementos inline não iniciam em uma nova linha. Eles ocupam apenas a largura necessária e podem ser usados dentro de elementos de bloco.</li>
+            <li>São usados principalmente para estilizar ou formatar partes específicas do conteúdo.</li>
+        </ul>
+
+            <h3>Exemplos de Elementos Inline Comuns:</h3>
+            <div class="code">
+                <p>
+                    &lt;span&gt;,
+                    &lt;a&gt;,
+                    &lt;strong&gt;,
+                    &lt;em&gt;,
+                    &lt;b&gt;,
+                    &lt;i&gt;,
+                    &lt;u&gt;,
+                    &lt;img&gt;,
+                    &lt;br&gt;,
+                    &lt;small&gt;                    
+                </p>
+            </div>
+        
+            <hr>
+
+        <h2>Diferenças Entre Bloco e Inline</h2> 
+        <table border="1">
+            <tr>
+                <th>Característica</th>
+                <th>Elementos de Bloco</th>
+                <th>Elementos Inline</th>
+            </tr>
+            <tr>
+                <td>Início de nova linha</td>
+                <td>Sempre inicia em uma nova linha</td>
+                <td>Não inicia em uma nova linha</td>
+            </tr>
+            <tr>
+                <td>Ocupação de largura</td>
+                <td>Ocupa toda a largura disponível (pai)</td>
+                <td>Ocupa apenas o espaço necessário</td>
+            </tr>
+            <tr>
+                <td>Conteúdo permitido</td>
+                <td>Pode conter outros elementos de bloco ou inline</td>
+                <td>Apenas outros elementos inline</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>Combinação de Bloco e Inline</h2>
+        <div class="code">
+            <p>&lt;p&gt;
+                Este é um texto com &lt;strong&gt;destaque&lt;/strong&gt; e um &lt;a href="#"&gt;link&lt;/a&gt;.
+              &lt;/p&gt;</p>
+        </div>
+
+        <hr>
+
+        <h2>Alteração do Comportamento Padrão</h2>
+        <div class="code">
+            <p>
+                &lt;style&gt;<br>
+                a {<br>
+                  display: block;<br>
+                  background-color: #d70000;<br>
+                  color: white;<br>
+                  padding: 10px;<br>
+                  text-decoration: none;<br>
+                }<br>
+              &lt;/style&gt;<br><br>
+              
+              &lt;a href="#"&gt;Link Estilizado&lt;/a&gt;              
+            </p>
+        </div>
+    </div>
+</body>
+</html>

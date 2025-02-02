@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Workers no HTML5 ⚙️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 0, 0);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: red;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(255, 65, 65);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../index.html">Voltar para o ínicio</a>
+        </nav>
+        
+        <h1>Web Workers no HTML5 ⚙️</h1>
+        <p>O Web Workers permite executar scripts em segundo plano, sem travar a interface do usuário.</p>
+        <p>✅ Vantagem: Melhora o desempenho ao rodar tarefas pesadas (como cálculos) sem congelar a página.</p>
+        <p>❌ Limitação: Não tem acesso ao DOM (documento HTML).</p>
+
+        <hr>
+
+        <h2>Criando um Web Worker</h2>
+        <h3>Criar um arquivo JavaScript para o worker</h3>
+        <p><strong>📌 Crie um arquivo separado, ex: worker.js:</strong></p>
+        <div class="code">
+            <p>
+                // worker.js <br>
+                onmessage = function(event) { <br>
+                  let count = 0; <br>
+                  for (let i = 0; i &LT; event.data; i++) { <br>
+                    count += i; <br>
+                  } <br>
+                  postMessage(count); <br>
+                };                
+            </p>
+        </div>
+
+       <h3>Usar o Web Worker na página principal</h3> 
+       <p>📌 No arquivo HTML, chame o Web Worker:</p>
+       <div class="code">
+        <p>
+            &LT;script&GT;<br>
+            if (window.Worker) {<br>
+              let worker = new Worker("worker.js");<br><br>
+          
+              worker.onmessage = function(event) {<br>
+                document.getElementById("result").innerText = "Resultado: " + event.data;<br>
+              };<br><br>
+          
+              worker.postMessage(10000000); // Envia número para processamento<br>
+            } else {<br>
+              alert("Seu navegador não suporta Web Workers!");<br>
+            }<br>
+          &LT;/script&GT;<br><br>
+          
+          &LT;p id="result"&GT;&LT;/p&GT;          
+        </p>
+       </div>
+
+       <h4>Explicação do Código</h4>
+       <p>1️⃣ O worker.js recebe um número e calcula a soma de 0 até esse número.</p>
+       <p>2️⃣ O postMessage(10000000) envia o número para o worker.</p>
+       <p>3️⃣ O worker faz o cálculo sem travar a página e retorna o resultado.</p>
+       <p>4️⃣ O onmessage exibe o resultado no HTML.</p>
+
+       <hr>
+
+       <h2>Encerrando um Web Worker</h2>
+       <p>📌 Para parar um Web Worker manualmente:</p>
+       <div class="code">
+            <p>worker.terminate();</p>
+       </div>
+
+       <p>📌 O Web Worker pode se auto-encerrar dentro do script:</p>
+       <div class="code">
+         <p>self.close();</p>
+       </div>
+
+       <hr>
+
+       <h2>Quando Usar Web Workers?</h2>
+       <p>✅ Tarefas pesadas (cálculos, manipulação de dados, criptografia).</p>
+       <p>✅ Evitar travamentos ao carregar grandes quantidades de dados.</p>
+       <p>✅ Melhorar performance de aplicações web complexas.</p>
+       <p>⚠️ Limitações:</p>
+       <p style="padding-left: 20px;">❌ Sem acesso ao DOM (document, window e localStorage não funcionam).</p>
+       <p style="padding-left: 20px;">❌ Comunicação apenas via postMessage().</p>
+
+       <hr>
+
+       <h2>Conclusão</h2>
+       <p>📌 Web Workers tornam as páginas mais rápidas e responsivas ao rodar tarefas em segundo plano.</p>
+       <p>📌 São ideais para processamento pesado, evitando que a interface fique travada.</p>
+       <p>📌 Não podem modificar o HTML diretamente, mas podem enviar mensagens para o script principal.</p>
+    </div>
+</body>
+</html>

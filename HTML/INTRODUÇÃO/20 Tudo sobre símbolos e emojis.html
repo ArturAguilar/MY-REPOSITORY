@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre símbolos e emojis</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 0, 0);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: red;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(255, 65, 65);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="home" class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../index.html">Voltar para o ínicio</a>
+        </nav>
+        
+        <h1>Tudo sobre símbolos e emojis</h1>
+        
+        <p>O HTML permite a exibição de símbolos e emojis usando códigos especiais, como entidades HTML e códigos Unicode.</p>
+        <p>Segue abaixo os topicos abordados nesse artigo:</p>
+
+        <nav>
+            <a href="#01">Símbolos</a>
+            <a href="#02">Emojis</a>
+        </nav>
+    </div>
+
+    <div id="01" class="conteiner"> 
+
+        <nav style="text-align: start;"> 
+            <a href="#home">Voltar para home</a>
+        </nav>
+
+        <h1>Entidades HTML</h1>
+        <p>Entidades HTML são usadas para representar caracteres especiais que, de outra forma, poderiam ser interpretados como código HTML. Elas são úteis para exibir símbolos, caracteres reservados ou caracteres que não podem ser facilmente digitados no teclado.</p>
+
+        <h2>Por que usar entidades HTML?</h2>
+        <p>Alguns caracteres têm funções específicas no HTML, como:</p>
+        <ul>
+            <li>< e > (usados para definir tags HTML)</li>
+            <li>& (usado para especificar outras entidades)</li>
+            <li>" e ' (para aspas duplas e simples)</li>
+        </ul>
+        <p>Se esses caracteres forem usados diretamente no HTML sem entidades, podem causar erros no código ou serem interpretados de maneira errada pelo navegador.</p>
+
+        <hr>
+
+        <h2>Principais Entidades HTML</h2>
+        <table>
+            <tr>
+                <th>Símbolo</th>
+                <th>Entidade</th>
+                <th>Código Numérico</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td><</td>
+                <td>&amp;lt;</td>
+                <td>& #60;</td>
+                <td>Menor que (<)</td>
+            </tr>
+            <tr>
+                <td>></td>
+                <td>&amp;gt;</td>
+                <td>& #62;</td>
+                <td>Maior que (>)</td>
+            </tr>
+            <tr>
+                <td>&</td>
+                <td>&amp;amp;</td>
+                <td>& #38;</td>
+                <td>E comercial (&)</td>
+            </tr>
+            <tr>
+                <td>"</td>
+                <td>&amp;quot;</td>
+                <td>& #34;</td>
+                <td>Aspas duplas (")</td>
+            </tr>
+            <tr>
+                <td>'</td>
+                <td>&amp;apos;</td>
+                <td>& #39;</td>
+                <td>Aspas simples (')</td>
+            </tr>
+            <tr>
+                <td>¢</td>
+                <td>&amp;cent;</td>
+                <td>& #162;</td>
+                <td>Símbolo de centavo (¢)</td>
+            </tr>
+            <tr>
+                <td>£</td>
+                <td>&amp;pound;</td>
+                <td>& #163;</td>
+                <td>Libra esterlina (£)</td>
+            </tr>
+            <tr>
+                <td>¥</td>
+                <td>&amp;yen;</td>
+                <td>& #165;</td>
+                <td>Iene japonês (¥)</td>
+            </tr>
+            <tr>
+                <td>€</td>
+                <td>&amp;euro;</td>
+                <td>& #8364;</td>
+                <td>Euro (€)</td>
+            </tr>
+            <tr>
+                <td>©</td>
+                <td>&amp;copy;</td>
+                <td>& #169;</td>
+                <td>Símbolo de copyright (©)</td>
+            </tr>
+            <tr>
+                <td>®</td>
+                <td>&amp;reg;</td>
+                <td>& #174;</td>
+                <td>Símbolo de marca registrada (®)</td>
+            </tr>
+            <tr>
+                <td>×</td>
+                <td>&amp;times;</td>
+                <td>& #215;</td>
+                <td>Multiplicação (×)</td>
+            </tr>
+            <tr>
+                <td>÷</td>
+                <td>&amp;divide;</td>
+                <td>& #247;</td>
+                <td>Divisão (÷)</td>
+            </tr>
+            <tr>
+                <td>∃</td>
+                <td>&amp;exist;</td>
+                <td>& #8707;</td>
+                <td>Existe (∃)</td>
+            </tr>
+            <tr>
+                <td>∅</td>
+                <td>&amp;empty;</td>
+                <td>& #8709;</td>
+                <td>Conjunto vazio (∅)</td>
+            </tr>
+            <tr>
+                <td>∈</td>
+                <td>&amp;isin;</td>
+                <td>& #8712;</td>
+                <td>Pertence a (∈)</td>
+            </tr>
+            <tr>
+                <td>∉</td>
+                <td>&amp;notin;</td>
+                <td>& #8713;</td>
+                <td>Não pertence a (∉)</td>
+            </tr>
+            <tr>
+                <td>∋</td>
+                <td>&amp;ni;</td>
+                <td>& #8715;</td>
+                <td>Contém como membro (∋)</td>
+            </tr>
+            <tr>
+                <td>∏</td>
+                <td>&amp;prod;</td>
+                <td>& #8719;</td>
+                <td>Produto (∏)</td>
+            </tr>
+            <tr>
+                <td>∑</td>
+                <td>&amp;sum;</td>
+                <td>& #8721;</td>
+                <td>Soma (∑)</td>
+            </tr>
+            <tr>
+                <td>−</td>
+                <td>&amp;minus;	</td>
+                <td>& #8722;</td>
+                <td>Subtração (−)</td>
+            </tr>
+            <tr>
+                <td>∗</td>
+                <td>&amp;lowast;</td>
+                <td>&  #8727;</td>
+                <td>Asterisco (∗)</td>
+            </tr>
+            <tr>
+                <td>√</td>
+                <td>&amp;radic;</td>
+                <td>& #8730;</td>
+                <td>Raiz quadrada (√)</td>
+            </tr>
+            <tr>
+                <td>∞</td>
+                <td>&amp;infin;</td>
+                <td>& #8734;</td>
+                <td>Infinito (∞)</td>
+            </tr>
+            <tr>
+                <td>∠</td>
+                <td>&amp;ang;</td>
+                <td>& #8736;</td>
+                <td>Ângulo (∠)</td>
+            </tr>
+            <tr>
+                <td>∧</td>
+                <td>&amp;and;</td>
+                <td>& #8743;</td>
+                <td>E lógico (∧)</td>
+            </tr>
+            <tr>
+                <td>∨</td>
+                <td>&amp;or;&amp;or;</td>
+                <td>& #8744;</td>
+                <td>Ou lógico (∨)</td>
+            </tr>
+            <tr>
+                <td>∩</td>
+                <td>&amp;cap;</td>
+                <td>& #8745;</td>
+                <td>Interseção (∩)</td>
+            </tr>
+            <tr>
+                <td>∪</td>
+                <td>&amp;cup;</td>
+                <td>& #8746;</td>
+                <td>União (∪)</td>
+            </tr>
+            <tr>
+                <td>∫</td>
+                <td>&amp;int;</td>
+                <td>& #8747;</td>
+                <td>Integral (∫)</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>Espaços e Quebras de Linha</h2>
+        <table>
+            <tr>
+                <th>Entidade</th>
+                <th>Código Numérico</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>&amp;nbsp;</td>
+                <td>& #160;</td>
+                <td>Espaço em branco</td>
+            </tr>
+            <tr>
+                <td>&amp;shy;</td>
+                <td>& #173;</td>
+                <td>Hífen invisível</td>
+            </tr>
+            <tr>
+                <td>&amp;ensp;</td>
+                <td>& #8194;</td>
+                <td>Espaço médio</td>
+            </tr>
+            <tr>
+                <td>&amp;emsp;</td>
+                <td>& #8195;</td>
+                <td>Espaço longo</td>
+            </tr>
+            <tr>
+                <td>&amp;brvbar;</td>
+                <td>& #166;</td>
+                <td>Barra vertical quebrada (¦)</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>Exemplo no Código HTML</h2>
+        <div class="code">
+            <p>
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html lang="pt-br"&gt;<br>
+                &lt;head&gt;<br>
+                    &lt;meta charset="UTF-8"&gt;<br>
+                    &lt;title&gt;Exemplo de Entidades HTML&lt;/title&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br><br>
+
+                    &lt;p&gt;Menor que: &amp;lt; e Maior que: &amp;gt;&lt;/p&gt;<br>
+                    &lt;p&gt;Aspas: &amp;quot;Texto entre aspas&amp;quot;&lt;/p&gt;<br>
+                    &lt;p&gt;Copyright: &amp;copy; 2025 Meu Site&lt;/p&gt;<br>
+                    &lt;p&gt;Símbolos: Euro &amp;euro;, Libra &amp;<br>pound;, Iene &amp;yen;&lt;/p&gt;<br>
+                    &lt;p&gt;Multiplicação: 5 &amp;times; 3 = 15&lt;/p&gt;<br>
+                    &lt;p&gt;Espaço extra: Texto&amp;nbsp;aqui&lt;/p&gt;<br><br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;                
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div id="02" class="conteiner"> 
+
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="#home">Voltar para home</a>
+        </nav>
+
+        <h1>Emojis em HTML</h1>
+        <p>Os emojis são representados em HTML por códigos Unicode. Eles podem ser usados diretamente no código HTML, CSS ou JavaScript para exibir ícones gráficos que representam emoções, objetos, símbolos e muito mais.</p>
+
+        <hr>
+        
+        <h2>Como Usar Emojis em HTML</h2>
+
+        <h3>Usando o próprio emoji</h3>
+        <p>Basta copiar e colar o emoji diretamente no código:</p>
+        <div class="code">
+            <p>&lt;p&gt;😃 Olá, mundo!&lt;/p&gt;</p>
+        </div>
+
+        <h3>Usando códigos Unicode</h3>
+        <p>O Unicode dos emojis pode ser usado com &#x seguido do código hexadecimal:</p>
+        <div class="code">
+            <p>&lt;p&gt;&#x1F600; Isso é um emoji!&lt;/p&gt;</p>
+        </div>
+        <p>O código & #x1F600; representa 😀 (rosto sorridente).</p>
+
+        <hr>
+
+        <h2>Principais Emojis e Seus Códigos Unicode</h2>
+
+        <h3>Rostos e Emoções</h3>
+        <table>
+            <tr>
+                <th>Emoji</th>
+                <th>Código Unicode</th>
+                <th>HTML</th>
+            </tr>
+            <tr>
+                <td>😀</td>
+                <td>U+1F600</td>
+                <td>& #x1F600;</td>
+            </tr>
+            <tr>
+                <td>😂</td>
+                <td>U+1F602</td>
+                <td>& #x1F602;</td>
+            </tr>
+            <tr>
+                <td>😍</td>
+                <td>U+1F60D</td>
+                <td>& #x1F60D;</td>
+            </tr>
+            <tr>
+                <td>😎</td>
+                <td>U+1F60E</td>
+                <td>& #x1F60E;</td>
+            </tr>
+            <tr>
+                <td>😢</td>
+                <td>U+1F622</td>
+                <td>& #x1F622;</td>
+            </tr>
+        </table>
+
+        <h3>Mãos e Gestos</h3>
+        <table>
+            <tr>
+                <th>Emoji</th>
+                <th>Código Unicode</th>
+                <th>HTML</th>
+            </tr>
+            <tr>
+                <td>👍</td>
+                <td>U+1F44D</td>
+                <td>& #x1F44D;</td>
+            </tr>
+            <tr>
+                <td>👎</td>
+                <td>U+1F44E</td>
+                <td>& #x1F44E;</td>
+            </tr>
+            <tr>
+                <td>👏</td>
+                <td>U+1F44F</td>
+                <td>& #x1F44F;</td>
+            </tr>
+            <tr>
+                <td>🙌</td>
+                <td>U+1F64C</td>
+                <td>& #x1F64C;</td>
+            </tr>
+        </table>
+
+        <h3>Objetos e Símbolos</h3>
+        <table>
+            <tr>
+                <th>Emoji</th>
+                <th>Código Unicode</th>
+                <th>HTML</th>
+            </tr>
+            <tr>
+                <td>❤️</td>
+                <td>U+2764</td>
+                <td>& #x2764;</td>
+            </tr>
+            <tr>
+                <td>⭐</td>
+                <td>U+2B50</td>
+                <td>& #x2B50;</td>
+            </tr>
+            <tr>
+                <td>🔥</td>
+                <td>U+1F525</td>
+                <td>& #x1F525;</td>
+            </tr>
+            <tr>
+                <td>🚀</td>
+                <td>U+1F680</td>
+                <td>& #x1F680;</td>
+            </tr>
+        </table>
+
+        <h3>Animais e Natureza</h3>
+        <table>
+            <tr>
+                <th>Emoji</th>
+                <th>Código Unicode</th>
+                <th>HTML</th>
+            </tr>
+            <tr>
+                <td>🐶</td>
+                <td>U+1F436</td>
+                <td>& #x1F436;</td>
+            </tr>
+            <tr>
+                <td>🐱</td>
+                <td>U+1F431</td>
+                <td>& #x1F431;</td>
+            </tr>
+            <tr>
+                <td>🌍</td>
+                <td>U+1F30D</td>
+                <td>& #x1F30D;</td>
+            </tr>
+            <tr>
+                <td>🌞</td>
+                <td>U+1F31E</td>
+                <td>& #x1F31E;</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>Exemplo no Código HTML</h2>
+        <div class="code">
+            <p>
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html lang="pt-br"&gt;<br>
+                &lt;head&gt;<br>
+                    &lt;meta charset="UTF-8"&gt;<br>
+                    &lt;title&gt;Usando Emojis&lt;/title&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br><br>
+                    &lt;p&gt;😀 Olá, mundo!&lt;/p&gt;<br>
+                    &lt;p&gt;&#x1F44D; Isso é legal!&lt;/p&gt;<br>
+                    &lt;p&gt;&#x1F680; Vamos para o espaço!&lt;/p&gt;<br><br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;                
+            </p>
+        </div>
+    </div>
+</body>
+</html>

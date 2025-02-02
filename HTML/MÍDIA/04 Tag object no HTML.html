@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag object no HTML</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 0, 0);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: red;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(255, 65, 65);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../index.html">Voltar para o ínicio</a>
+        </nav>
+        
+        <h1>Tag object no HTML</h1>
+        <p>A tag object é usada para incorporar objetos externos em uma página da web, como PDFs, vídeos, imagens, animações Flash e até outras páginas HTML.</p>
+
+        <hr>
+
+        <h2>Sintaxe Básica</h2>
+        <div class="code">
+            <p>
+                &LT;object data="arquivo.pdf" type="application/pdf" width="600" height="500"&GT; <br>
+                Seu navegador não suporta a exibição deste objeto. <br>
+              &LT;/object&GT;              
+            </p>
+        </div>
+        <p>✅ O atributo data define o arquivo a ser incorporado.</p>
+        <p>✅ O atributo type especifica o tipo MIME do objeto.</p>
+        <p>✅ O conteúdo dentro da tag aparece se o navegador não suportar o objeto.</p>
+
+        <hr>
+
+        <h2>Incorporando um PDF</h2>
+        <div class="code">
+            <p>
+                &LT;object data="documento.pdf" type="application/pdf" width="800" height="600"&GT;<br>
+                Não foi possível exibir o PDF. <br>
+                &LT;a href="documento.pdf"&GT;Baixe aqui&LT;/a&GT;.<br>
+              &LT;/object&GT;              
+            </p>
+        </div>
+        <p>💡 Dica: Alguns navegadores bloqueiam PDFs, então forneça um link alternativo.</p>
+
+        <hr>
+
+        <h2>Incorporando um Arquivo de Áudio ou Vídeo</h2>
+        <p>Embora audio e video sejam mais recomendados, object também pode ser usado:</p>
+        <div class="code">
+            <p>
+                &LT;object data="musica.mp3" type="audio/mpeg"&GT;<br>
+                Seu navegador não suporta áudio embutido.  <br>
+                &LT;a href="musica.mp3"&GT;Baixe aqui&LT;/a&GT;.<br>
+              &LT;/object&GT;              
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Incorporando Outra Página HTML</h2>
+        <p>Você pode usar object para carregar uma página HTML dentro da sua página.</p>
+        <div class="code">
+            <p>
+                &LT;object data="outra_pagina.html" type="text/html" width="100%" height="500"&GT; <br>
+                Não foi possível carregar a página. <br>
+              &LT;/object&GT;              
+            </p>
+        </div>
+        <p>✅ Semelhante ao iframe, mas menos utilizado atualmente.</p>
+
+        <hr>
+
+        <h2>Atributos da Tag object</h2>
+        <table>
+            <tr>
+                <th>Atributo</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>data</td>
+                <td>Define o caminho do arquivo a ser incorporado</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>Especifica o tipo MIME do conteúdo</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>Define a largura do objeto</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>Define a altura do objeto</td>
+            </tr>
+            <tr>
+                <td>form</td>
+                <td>Associa o objeto a um formulário</td>
+            </tr>
+            <tr>
+                <td>usemap</td>
+                <td>Define um mapa de imagens associado ao objeto</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>Diferença entre object, embed e iframe</h2>
+        <table>
+            <tr>
+                <th>Tag</th>
+                <th>Uso Principal</th>
+            </tr>
+            <tr>
+                <td>object</td>
+                <td>Incorporar PDFs, vídeos, áudios, páginas HTML</td>
+            </tr>
+            <tr>
+                <td>embed</td>
+                <td>Incorporar mídia (vídeos, Flash) sem fallback</td>
+            </tr>
+            <tr>
+                <td>iframe</td>
+                <td>Carregar outra página dentro da sua</td>
+            </tr>
+        </table>
+        <p>💡 Recomendação: Para vídeos e áudios, prefira video e audio. Para carregar páginas HTML, use iframe.</p>
+    </div>
+</body>
+</html>
