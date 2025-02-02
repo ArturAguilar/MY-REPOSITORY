@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Definindo o conjunto de caracteres para garantir que os caracteres especiais sejam exibidos corretamente -->
+  <meta charset="UTF-8">
+  <!-- Garantindo que o layout seja responsivo, ajustando o tamanho para diferentes tamanhos de tela -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Título da página exibido na aba do navegador -->
+  <title>Fontes, Medidas e Links</title>
+  <style>
+    /* Reset básico */
+    body, h1, h2, p {
+      margin: 0; /* Remove a margem padrão */
+      padding: 0; /* Remove o padding padrão */
+      box-sizing: border-box; /* Faz com que padding e border sejam incluídos no cálculo do tamanho dos elementos */
+    }
+
+    /* Corpo da página */
+    body {
+      font-family: "Arial", sans-serif; /* Define a fonte da página */
+      font-size: 16px; /* Define o tamanho da fonte */
+      line-height: 1.6; /* Define a altura da linha para facilitar a leitura */
+      color: #333; /* Cor do texto */
+      padding: 20px; /* Espaçamento interno */
+      background-color: #f9f9f9; /* Cor de fundo da página */
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: #007bff; /* Cor de fundo azul */
+      color: #fff; /* Cor do texto branco */
+      padding: 20px; /* Espaçamento interno */
+      text-align: center; /* Alinha o texto ao centro */
+    }
+
+    header h1 {
+      font-size: 2.5rem; /* Tamanho maior para o título principal */
+    }
+
+    header p {
+      font-size: 1rem; /* Tamanho da fonte do parágrafo */
+    }
+
+    /* Links */
+    .link {
+      color: #007bff; /* Cor do link */
+      text-decoration: none; /* Remove o sublinhado dos links */
+    }
+
+    .link:hover {
+      color: #0056b3; /* Cor do link ao passar o mouse */
+      text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    }
+
+    /* Rodapé */
+    footer {
+      margin-top: 20px; /* Adiciona um espaço acima do rodapé */
+      text-align: center; /* Alinha o texto ao centro */
+      font-size: 0.9rem; /* Tamanho da fonte do rodapé */
+      color: #666; /* Cor do texto do rodapé */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Cabeçalho da página com título e descrição -->
+    <h1>Bem-vindo ao meu site!</h1>
+    <p>Explore os conteúdos abaixo:</p>
+  </header>
+
+  <main>
+    <section>
+      <!-- Seção de conteúdo com um link -->
+      <h2>Destaques</h2>
+      <p>Leia mais sobre desenvolvimento web <a href="https://www.w3schools.com/" target="_blank" class="link">aqui</a>.</p>
+    </section>
+
+    <footer>
+      <!-- Rodapé com a autoria da página -->
+      <p>Feito com ❤️ por Artur.</p>
+    </footer>
+  </main>
+</body>
+</html>

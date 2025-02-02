@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Completo HTML e CSS</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fonte e Estilo Geral */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    /* Estilo do Header */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    header .logo img {
+      width: 50px;
+      height: auto;
+    }
+
+    /* Seções */
+    section {
+      padding: 40px 20px;
+    }
+
+    #about {
+      background-color: #e0e0e0;
+    }
+
+    #services {
+      background-color: #fafafa;
+    }
+
+    #contact {
+      background-color: #e0e0e0;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    /* Grid Layout para os serviços */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .service-item {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: transform 0.3s;
+    }
+
+    .service-item:hover {
+      transform: scale(1.1);
+    }
+
+    /* Formulário de Contato */
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    form label {
+      font-size: 18px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #45a049;
+    }
+
+    /* Responsividade - Ajustes para dispositivos móveis */
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header nav ul {
+        text-align: center;
+      }
+
+      header nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo">
+    </div>
+    <h1>Bem-vindo ao Meu Projeto Completo!</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>Sobre o Projeto</h2>
+    <p>Este é um exemplo de projeto que abrange tópicos importantes de HTML e CSS, como Flexbox, Grid Layout, Listas, Tabelas e muito mais.</p>
+  </section>
+
+  <section id="services">
+    <h2>Serviços</h2>
+    <div class="services-grid">
+      <div class="service-item">Desenvolvimento Web</div>
+      <div class="service-item">Design Responsivo</div>
+      <div class="service-item">Otimização de Sites</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contato</h2>
+    <form>
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" required></textarea><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Meu Projeto Completo</p>
+  </footer>
+</body>
+</html>

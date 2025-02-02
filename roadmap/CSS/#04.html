@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Definindo a codificação de caracteres e a meta tag para responsividade -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position e Flexbox</title>
+  <style>
+    /* Reset básico para remover margens e adicionar padding */
+    body {
+      font-family: Arial, sans-serif; /* Define a fonte padrão */
+      margin: 0; /* Remove a margem padrão do body */
+      padding: 20px; /* Adiciona um padding de 20px */
+      background-color: #f9f9f9; /* Cor de fundo suave */
+    }
+
+    h1, h2 {
+      color: #333; /* Cor dos títulos */
+    }
+
+    /* Exemplo de Position */
+    .position-container {
+      position: relative; /* Torna o container um contexto de posicionamento */
+      height: 200px; /* Define a altura do container */
+      background-color: #f4f4f4; /* Cor de fundo do container */
+      margin-bottom: 30px; /* Adiciona uma margem inferior */
+    }
+
+    .box1 {
+      background-color: #007bff; /* Cor de fundo azul */
+      color: white; /* Cor do texto branca */
+      padding: 20px; /* Adiciona padding dentro da caixa */
+      position: relative; /* A caixa será posicionada de forma relativa ao container */
+      top: 0; /* A posição do box será 0px em relação ao topo */
+      left: 0; /* A posição do box será 0px em relação à esquerda */
+    }
+
+    .box2 {
+      background-color: #28a745; /* Cor de fundo verde */
+      color: white; /* Cor do texto branca */
+      padding: 20px; /* Adiciona padding dentro da caixa */
+      position: absolute; /* A caixa será posicionada de forma absoluta em relação ao container */
+      top: 30px; /* A caixa fica 30px do topo do container */
+      left: 50px; /* A caixa fica 50px da esquerda do container */
+    }
+
+    .box3 {
+      background-color: #ffc107; /* Cor de fundo amarela */
+      color: white; /* Cor do texto branca */
+      padding: 20px; /* Adiciona padding dentro da caixa */
+      position: fixed; /* A caixa ficará fixa em relação à janela */
+      bottom: 10px; /* A caixa ficará 10px acima da parte inferior da janela */
+      right: 10px; /* A caixa ficará 10px à esquerda da borda direita da janela */
+    }
+
+    /* Exemplo de Flexbox */
+    .flex-container {
+      display: flex; /* Ativa o modelo de layout Flexbox */
+      justify-content: space-around; /* Distribui os itens com espaço igual entre eles */
+      align-items: center; /* Alinha os itens verticalmente no centro */
+      gap: 10px; /* Adiciona um espaço de 10px entre os itens */
+      margin-top: 20px; /* Adiciona margem superior */
+    }
+
+    .flex-item {
+      background-color: #007bff; /* Cor de fundo azul */
+      color: white; /* Cor do texto branca */
+      padding: 20px; /* Adiciona padding dentro do item */
+      text-align: center; /* Alinha o texto ao centro */
+      flex: 1; /* Faz com que cada item ocupe o mesmo espaço disponível */
+      border-radius: 5px; /* Adiciona bordas arredondadas aos itens */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Exemplo de Position e Flexbox</h1>
+  </header>
+
+  <main>
+    <!-- Seção de Position -->
+    <section>
+      <h2>Exemplo de Position</h2>
+      <div class="position-container">
+        <!-- Caixa com posicionamento normal -->
+        <div class="box1">Box 1 - Normal</div>
+        <!-- Caixa com posicionamento absoluto -->
+        <div class="box2">Box 2 - Absolute</div>
+        <!-- Caixa com posicionamento fixo -->
+        <div class="box3">Box 3 - Fixed</div>
+      </div>
+    </section>
+
+    <!-- Seção de Flexbox -->
+    <section>
+      <h2>Introdução ao Flexbox</h2>
+      <div class="flex-container">
+        <!-- Itens do Flexbox -->
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
