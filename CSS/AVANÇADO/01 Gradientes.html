@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cores no CSS</title>
+    <title>Gradientes</title>
     <link rel="shortcut icon" href="../../ICONES/css.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -131,119 +131,144 @@
             <a href="../../index.html">Voltar para o início</a>
         </nav>
         
-        <h1>Cores no CSS</h1>
-
-        <h2>Métodos para Definir Cores</h2>
-        <p>Existem quatro formas principais de especificar cores no CSS:</p>
+        <h1>Gradientes</h1>
+        <p>O CSS3 permite criar transições suaves entre duas ou mais cores usando gradientes. Isso evita a necessidade de imagens e melhora a performance do site.</p>
 
         <hr>
 
-        <h3>Nomes de Cores</h3>
-        <p>CSS suporta nomes de cores pré-definidos, como:</p>
+        <h2>Tipos de Gradientes</h2>
+
+        <h3>Gradiente Linear (linear-gradient)</h3>
+        <p>Transição de cores em linha reta.</p>
+        <h4>Sintaxe:</h4>
         <div class="code">
-            <p>
-                h1 { color: red; } <br>
-                p { background-color: lightblue; }                
-            </p>
+            <p>background: linear-gradient(direção, cor1, cor2, ...);</p>
         </div>
-        <p>✅ Fácil de usar</p>
-        <p>❌ Limitado a cores predefinidas</p>
-        <p>🔹 Exemplo de cores nomeadas: Red, Blue, Green, Yellow, Black, White, Gray, Purple, Cyan, Magenta, etc.</p>
-
-        <hr>
-
-        <h3>Cores em Hexadecimal (#rrggbb)</h3>
-        <p>Usa um código de 6 caracteres para definir cores:</p>
-        <div class="code">
-            <p>
-                h1 { color: #ff0000; } /* Vermelho */ <br>
-                p { background-color: #00ff00; } /* Verde */                
-            </p>
-        </div>
-        <p><strong>✅ Mais opções que nomes de cores</strong></p>
-        <p><strong>✅ Muito usado em design</strong></p>
-        <p><strong>❌ Menos intuitivo que nomes de cores</strong></p>
-        <p><strong>Atalho para hexadecimais</strong></p>
-        <ul style="padding-left: 20px;">
-            <li>#ff0000 pode ser abreviado para #f00</li>
-            <li>#00ff00 → #0f0</li>
-            <li>#0000ff → #00f</li>
-        </ul>
-
-        <hr>
-
-        <h3>RGB (rgb(r, g, b))</h3>
-        <p>Define cores usando valores entre 0 e 255 para vermelho, verde e azul:</p>
-        <div class="code">
-            <p>
-                h1 { color: rgb(255, 0, 0); } /* Vermelho */ <br>
-                p { background-color: rgb(0, 255, 0); } /* Verde */                
-            </p>
-        </div>
-        <p><strong>✅ Fácil de ajustar níveis de cores</strong></p>
-        <p><strong>✅ Útil para efeitos de transparência (com RGBA)</strong></p>
-
-        <hr>
-
-        <h3>RGBA (rgba(r, g, b, a))</h3>
-        <p>O "a" no final define a transparência (opacidade), variando de 0 (totalmente transparente) a 1 (totalmente opaco).</p>
-        <div class="code">
-            <p>h1 { color: rgba(255, 0, 0, 0.5); } /* Vermelho com 50% de transparência */</p>
-        </div>
-
-        <hr>
-
-        <h3>HSL (hsl(hue, saturation, lightness))</h3>
-        <p>Define cores usando:</p>
-        <ul style="padding-left: 20px;">
-            <li><strong>Hue (Matiz):</strong> 0° (vermelho) a 360° (volta completa no espectro)</li>
-            <li><strong>Saturation (Saturação):</strong> 0% (sem cor) a 100% (cor total)</li>
-            <li><strong>Lightness (Luminosidade):</strong> 0% (preto) a 100% (branco)</li>
-        </ul>
-        <div class="code">
-            <p>
-                h1 { color: hsl(0, 100%, 50%); } /* Vermelho */ <br>
-                p { background-color: hsl(240, 100%, 50%); } /* Azul */                
-            </p>
-        </div>
-        <p>🔹 HSLA adiciona transparência:</p>
-        <div class="code">
-            <p>h1 { color: hsla(120, 100%, 50%, 0.5); } /* Verde transparente */</p>
-        </div>
-
-        <hr>
-
-        <h2>Cores Transparentes e Predefinidas</h2>
-        <p>O CSS inclui palavras-chave especiais para transparência:</p>
-        <table>
-            <tr>
-                <th>Nome</th>
-                <th>Descrição</th>
-            </tr>
-            <tr>
-                <td>transparent</td>
-                <td>Cor totalmente transparente</td>
-            </tr>
-            <tr>
-                <td>currentColor</td>
-                <td>Usa a cor definida no color do elemento</td>
-            </tr>
-            <tr>
-                <td>inherit</td>
-                <td>Herda a cor do elemento pai</td>
-            </tr>
-        </table>
-
-        <h3>Exemplo de Transparência:</h3>
+        <h4>Exemplo:</h4>
         <div class="code">
             <p>
                 div { <br>
-                    background-color: transparent; <br>
+                    background: linear-gradient(to right, red, blue); <br>
+                  }
+            </p>
+        </div>
+
+        <h3>Direções Possíveis:</h3>
+        <table>
+            <tr>
+                <th>Direção</th>
+                <th>Sintaxe</th>
+            </tr>
+            <tr>
+                <td>De cima para baixo (padrão)</td>
+                <td>linear-gradient(red, blue)</td>
+            </tr>
+            <tr>
+                <td>Da esquerda para a direita</td>
+                <td>linear-gradient(to right, red, blue)</td>
+            </tr>
+            <tr>
+                <td>Diagonal</td>
+                <td>linear-gradient(to bottom right, red, blue)</td>
+            </tr>
+        </table>
+        <h4>Exemplo Avançado:</h4>
+        <div class="code">
+            <p>
+                div { <br>
+                    background: linear-gradient(45deg, red, yellow, green); <br>
+                  }
+            </p>
+        </div>
+
+        <hr>
+
+        <h3>Gradiente Radial (radial-gradient)</h3>
+        <p>Transição circular ou elíptica.</p>
+        <h4>Sintaxe:</h4>
+        <div class="code">
+            <p>background: radial-gradient(formato tamanho, cor1, cor2, ...);</p>
+        </div>
+        <h4>Exemplo:</h4>
+        <div class="code">
+            <p>
+                div {  <br>
+                    background: radial-gradient(circle, red, yellow, green); <br>
+                  }
+            </p>
+        </div>
+
+        <h3>Tipos de Formato:</h3>
+        <table>
+            <tr>
+                <th>Formato</th>
+                <th>Sintaxe</th>
+            </tr>
+            <tr>
+                <td>Circular (padrão)</td>
+                <td>radial-gradient(circle, red, blue)</td>
+            </tr>
+            <tr>
+                <td>Elíptico</td>
+                <td>lradial-gradient(ellipse, red, blue)</td>
+            </tr>
+        </table>
+        <h4>Exemplo com Foco Ajustado:</h4>
+        <div class="code">
+            <p>
+                div { <br>
+                    background: radial-gradient(circle at 30% 70%, red, blue); <br>
+                  }
+            </p>
+        </div>
+
+        <hr>
+
+        <h3>Gradiente Cônico (conic-gradient)</h3>
+        <p>Gradiente ao redor de um ponto central.</p>
+        <h4>Sintaxe:</h4>
+        <div class="code">
+            <p>background: conic-gradient(cor1 grau, cor2 grau, ...);</p>
+        </div>
+        <h4>Exemplo:</h4>
+        <div class="code">
+            <p>
+                div { <br>
+                    background: conic-gradient(red 0deg, yellow 90deg, green 180deg, blue 270deg); <br>
+                  }
+            </p>
+        </div>
+
+        <h3>Criando um "Gráfico de Pizza":</h3>
+        <div class="code">
+            <p>
+                div {  <br>
+                    background: conic-gradient(red 0deg 90deg, yellow 90deg 180deg, green 180deg 270deg, blue 270deg 360deg); <br>
+                  }
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Exemplo Completo com Gradientes</h2>
+        <div class="code">
+            <p>
+                body { <br>
+                    background: linear-gradient(to bottom right,  <br>#ff7e5f, #feb47b); <br>
                   } <br><br>
                   
-                  button { <br>
-                    color: currentColor; /* Mantém a cor do texto do elemento pai */ <br>
-                  }
+                  div { <br>
+                    width: 300px; <br>
+                    height: 300px; <br>
+                    background: radial-gradient(circle, blue, white); <br>
+                    border-radius: 50%; <br>
+                  } <br><br>
+                  
+                  h1 { <br>
+                    background: conic-gradient(red, yellow, green, blue); <br>
+                    -webkit-background-clip: text; <br>
+                    color: transparent; <br>
+                  } 
             </p>
         </div>
     </div>

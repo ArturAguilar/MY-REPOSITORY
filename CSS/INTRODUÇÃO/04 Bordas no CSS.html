@@ -140,6 +140,7 @@
             <a href="#03">Border Color</a>
             <a href="#04">Border Sides</a>
             <a href="#05">Rounded Borders</a>
+            <a href="#06">Border Image</a>
         </nav>
     </div>
 
@@ -671,6 +672,130 @@
                     }                                  
             </p>
         </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="06" class="conteiner">
+        <nav style="text-align: start;"> 
+            <a href="#home">Voltar para home</a>
+        </nav>
+
+        <h1>Border Image</h1>
+        <p>O border-image no CSS permite usar uma imagem personalizada como borda de um elemento, ao invés de uma cor sólida ou gradiente.</p>
+
+        <hr>
+
+        <h2>Sintaxe do border-image</h2>
+        <p>A propriedade border-image é definida assim:</p>
+        <div class="code">
+            <p>
+                .elemento { <br>
+                    border-image-source: url("borda.png");  /* Define a imagem */ <br>
+                    border-image-slice: 30;  /* Define a área da imagem usada como borda */ <br>
+                    border-image-width: 10px;  /* Define a largura da borda */ <br>
+                    border-image-outset: 5px;  /* Define a expansão da borda */ <br>
+                    border-image-repeat: round;  /* Define como a borda será repetida */ <br>
+                  }                  
+            </p>
+        </div>
+        <p>Ou usando a shorthand:</p>
+        <div class="code">
+            <p>
+                .elemento { <br>
+                    border-image: url("borda.png") 30 / 10px / 5px round; <br>
+                  }                  
+            </p>
+        </div>
+        <p><strong>Ordem da shorthand:</strong> <br>
+           border-image: source slice / width / outset repeat;</p>
+
+        <hr>
+
+        <h2>Propriedades do border-image</h2>
+        
+        <h3>border-image-source</h3>
+        <p>Define a imagem usada como borda.</p>
+        <div class="code">
+            <p>border-image-source: url("borda.png");</p>
+        </div>
+
+        <h3>border-image-slice</h3>
+        <p>Determina como a imagem será cortada em nove partes (4 cantos, 4 laterais e centro).</p>
+        <div class="code">
+            <p>
+                border-image-slice: 30; /* Divide a imagem a 30px da borda */ <br>
+                border-image-slice: 30% 20% 10% 5%; /* Definição personalizada (top, right, bottom, left) */
+            </p>
+        </div>
+        <p>Se usar fill, o meio da imagem será usado como fundo do elemento.</p>
+        <div class="code">
+            <p>border-image-slice: 30 fill;</p>
+        </div>
+
+        <h3>border-image-width</h3>
+        <p>Define a largura da borda.</p>
+        <div class="code">
+            <p>border-image-width: 10px;</p>
+        </div>
+        <p>Pode ser definida em px, %, auto, ou valores relativos.</p>
+
+        <h3>border-image-outset</h3>
+        <p>Expande a borda para fora do elemento.</p>
+        <div class="code">
+            <p>border-image-outset: 5px;</p>
+        </div>
+
+        <h3>border-image-repeat</h3>
+        <p>Controla como a imagem da borda será repetida.</p>
+        <table>
+            <tr>
+                <th>Valor</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>stretch</td>
+                <td>Estica a imagem para preencher a borda</td>
+            </tr>
+            <tr>
+                <td>repeat</td>
+                <td>Repete a imagem ao longo da borda</td>
+            </tr>
+            <tr>
+                <td>round</td>
+                <td>Repete, mas ajusta o tamanho para caber perfeitamente</td>
+            </tr>
+            <tr>
+                <td>space</td>
+                <td>Como repeat, mas ajusta os espaços entre as repetições</td>
+            </tr>
+        </table>
+        <div class="code">
+            <p>border-image-repeat: round;</p>
+        </div>
+
+        <hr>
+
+        <h2>Exemplo Completo</h2>
+        <div class="code">
+            <p>
+                .caixa { <br>
+                    border: 20px solid transparent; <br>
+                    border-image: url("borda.png") 30 / 20px / 10px repeat; <br>
+                  }
+            </p>
+        </div>
+        <ul>
+            <li>O border precisa estar definido para que border-image funcione.</li>
+            <li>Use transparent para evitar interferência de cor sólida na borda.</li>            
+        </ul>
     </div>
 </body>
 </html>

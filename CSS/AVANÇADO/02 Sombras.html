@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sombras</title>
+    <link rel="shortcut icon" href="../../ICONES/css.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../index.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Sombras</h1>
+        <p>O CSS3 permite adicionar sombras a textos e elementos para criar efeitos visuais elegantes. Existem dois tipos principais de sombras:</p>
+        <ul>
+            <li>Sombra de texto (text-shadow) – Aplica sombra a textos.</li>
+            <li>Sombra de caixa (box-shadow) – Aplica sombra a elementos (como div, button, etc.).</li>
+        </ul>
+
+        <hr>
+
+        <h3>Sombra de Texto (text-shadow)</h3>
+        <p>A propriedade text-shadow permite criar efeitos de profundidade e brilho nos textos.</p>
+
+        <h4>Sintaxe:</h4>
+        <div class="code">
+            <p>text-shadow: deslocamentoX deslocamentoY desfoque cor;</p>
+        </div>
+        <h4>Exemplo Simples:</h4>
+        <div class="code">
+            <p>
+                h1 { <br>
+                    text-shadow: 2px 2px 5px gray; <br>
+                }
+            </p>
+        </div>
+
+        <h3>Explicação dos Valores:</h3>
+        <table>
+            <tr>
+                <th>Propriedade</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>deslocamentoX</td>
+                <td>Distância horizontal da sombra (positivo para direita, negativo para esquerda)</td>
+            </tr>
+            <tr>
+                <td>deslocamentoY</td>
+                <td>Distância vertical da sombra (positivo para baixo, negativo para cima)</td>
+            </tr>
+            <tr>
+                <td>desfoque</td>
+                <td>Intensidade do desfoque (opcional)</td>
+            </tr>
+            <tr>
+                <td>cor</td>
+                <td>Cor da sombra</td>
+            </tr>
+        </table>
+        <h4>Exemplo com Multicamadas:</h4>
+        <div class="code">
+            <p>
+                h1 { <br>
+                    text-shadow: 2px 2px 5px red, -2px -2px 5px blue; <br>
+                  }
+            </p>
+        </div>
+        <h4>Exemplo de Efeito Neon:</h4>
+        <div class="code">
+            <p>
+                h1 { <br>
+                    color: white; <br>
+                    text-shadow: 0 0 10px cyan, 0 0 20px blue, 0 0 30px cyan; <br>
+                  }
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Sombra de Caixa (box-shadow)</h2>
+        <p>A propriedade box-shadow adiciona sombra em elementos como div, button, input, etc.</p>
+        <h4>Sintaxe:</h4>
+        <div class="code">
+            <p>box-shadow: deslocamentoX deslocamentoY desfoque espalhamento cor;</p>
+        </div>
+        <h4>Exemplo Simples:</h4>
+        <div class="code">
+            <p>
+                div { <br>
+                    width: 200px; <br>
+                    height: 100px; <br>
+                    background: lightblue; <br>
+                    box-shadow: 5px 5px 10px gray; <br>
+                  }
+            </p>
+        </div>
+
+        <h3>Explicação dos Valores:</h3>
+        <table>
+            <tr>
+                <th>Propriedade</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>deslocamentoX</td>
+                <td>Distância horizontal da sombra (positivo para direita, negativo para esquerda)</td>
+            </tr>
+            <tr>
+                <td>deslocamentoY</td>
+                <td>Distância vertical da sombra (positivo para baixo, negativo para cima)</td>
+            </tr>
+            <tr>
+                <td>desfoque</td>
+                <td>Intensidade do desfoque (opcional)</td>
+            </tr>
+            <tr>
+                <td>espalhamento</td>
+                <td>Aumenta ou reduz a área da sombra (opcional)</td>
+            </tr>
+            <tr>
+                <td>cor</td>
+                <td>Cor da sombra</td>
+            </tr>
+        </table>
+        <h4>Exemplo com Espalhamento:</h4>
+        <div class="code">
+            <p>
+                div { <br>
+                    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5); <br>
+                  }
+            </p>
+        </div>
+        <h4>Exemplo de Sombra Interna (inset):</h4>
+        <div class="code">
+            <p>
+                div { <br>
+                    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5); <br>
+                  }
+            </p>
+        </div>
+        <h4>Exemplo de Sombra com Várias Camadas:</h4>
+        <div class="code">
+            <p>
+                div { <br>
+                    box-shadow: 5px 5px 10px gray, -5px -5px 10px lightgray; <br>
+                  }
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Exemplo Completo com text-shadow e box-shadow</h2>
+        <div class="code">
+            <p>
+                body { <br>
+                    background: #f0f0f0; <br>
+                  } <br><br>
+                  
+                  h1 { <br>
+                    color: #d70000; <br>
+                    text-shadow: 3px 3px 5px black, -3px -3px 5px gray; <br>
+                  } <br><br>
+                  
+                  div { <br>
+                    width: 200px; <br>
+                    height: 100px; <br>
+                    background: white; <br>
+                    margin: 50px auto; <br>
+                    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); <br>
+                  }                  
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -217,7 +217,104 @@
 
         <hr>
 
-        <h3>background</h3>
+        <h2>background-size – Tamanho da Imagem</h2>
+        <p>Define o tamanho da imagem de fundo.</p>
+        <table>
+            <tr>
+                <th>Valor</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>auto</td>
+                <td>Mantém o tamanho original da imagem (padrão)</td>
+            </tr>
+            <tr>
+                <td>cover</td>
+                <td>Faz a imagem cobrir todo o elemento</td>
+            </tr>
+            <tr>
+                <td>contain</td>
+                <td>Faz a imagem caber dentro do elemento sem cortes</td>
+            </tr>
+            <tr>
+                <td>100px 200px</td>
+                <td>Define largura e altura personalizadas</td>
+            </tr>
+        </table>
+        <div class="code">
+            <p>
+                body { <br>
+                    background-image: url("fundo.jpg"); <br>
+                    background-size: cover; <br>
+                  }
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>background-origin – Área de Origem</h2>
+        <p>Define onde a imagem de fundo começa.</p>
+        <table>
+            <tr>
+                <th>Valor</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>border-box</td>
+                <td>Começa da borda (padrão)</td>
+            </tr>
+            <tr>
+                <td>padding-box</td>
+                <td>Começa da área de padding</td>
+            </tr>
+            <tr>
+                <td>content-box</td>
+                <td>Começa dentro do conteúdo</td>
+            </tr>
+        </table>
+        <div class="code">
+            <p>
+                body { <br>
+                    background-image: url("fundo.jpg"); <br>
+                    background-origin: content-box; <br>
+                  }
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>background-clip – Área de Exibição</h2>
+        <p>Define até onde a imagem de fundo se estende.</p>
+        <table>
+            <tr>
+                <th>Valor</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>border-box</td>
+                <td>A imagem cobre até a borda (padrão)</td>
+            </tr>
+            <tr>
+                <td>padding-box</td>
+                <td>Cobre apenas o padding, sem invadir a borda</td>
+            </tr>
+            <tr>
+                <td>content-box	</td>
+                <td>Cobre apenas a área do conteúdo</td>
+            </tr>
+        </table>
+        <div class="code">
+            <p>
+                body { <br>
+                    background-image: url("fundo.jpg"); <br>
+                    background-clip: padding-box; <br>
+                  }
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>background</h2>
         <p>A propriedade background permite definir todas as propriedades em uma única linha.</p>
         <h3>Sintaxe:</h3>
         <div class="code">
