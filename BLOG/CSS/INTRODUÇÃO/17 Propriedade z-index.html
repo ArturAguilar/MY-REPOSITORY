@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade z-index</title>
+    <link rel="shortcut icon" href="../../ICONES/css.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+
+        <h1>Propriedade z-index</h1>
+        <p>A propriedade z-index determina a ordem de empilhamento de elementos posicionados em uma página, ou seja, quais elementos aparecem na frente ou atrás de outros quando há sobreposição.</p>
+
+        <h2>Valores Possíveis:</h2>
+        <ul>
+            <li>Número inteiro: Pode ser positivo, negativo ou zero. Um valor maior indica que o elemento será exibido acima de elementos com valores menores.</li>
+            <li>auto: Define a ordem de empilhamento padrão do elemento, que geralmente é 0.</li>
+        </ul>
+
+        <p>Importante: A propriedade z-index só funciona em elementos que têm a propriedade position definida como absolute, relative, fixed ou sticky.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                &lt;!DOCTYPE html&gt; <br>
+                &lt;html&gt; <br>
+                &lt;head&gt; <br>
+                  &lt;style&gt; <br>
+                    .container { <br>
+                      position: relative; <br>
+                      width: 200px; <br>
+                      height: 200px; <br>
+                    } <br><br>
+                
+                    .box1 { <br>
+                      position: absolute; <br>
+                      top: 20px; <br>
+                      left: 20px; <br>
+                      width: 100px; <br>
+                      height: 100px; <br>
+                      background-color: red; <br>
+                      z-index: 1; <br>
+                    } <br><br>
+                
+                    .box2 { <br>
+                      position: absolute; <br>
+                      top: 40px; <br>
+                      left: 40px; <br>
+                      width: 100px; <br>
+                      height: 100px; <br>
+                      background-color: blue; <br>
+                      z-index: 2; <br>
+                    } <br><br>
+                
+                    .box3 { <br>
+                      position: absolute; <br>
+                      top: 60px; <br>
+                      left: 60px; <br>
+                      width: 100px; <br>
+                      height: 100px; <br>
+                      background-color: green; <br>
+                      z-index: 3; <br>
+                    } <br>
+                  &lt;/style&gt; <br>
+                &lt;/head&gt; <br>
+                &lt;body&gt; <br>
+                  &lt;div class="container"&gt; <br>
+                    &lt;div class="box1"&gt;Caixa 1&lt;/div&gt; <br>
+                    &lt;div class="box2"&gt;Caixa 2&lt;/div&gt; <br>
+                    &lt;div class="box3"&gt;Caixa 3&lt;/div&gt; <br>
+                  &lt;/div&gt; <br>
+                &lt;/body&gt; <br>
+                &lt;/html&gt;  <br>                
+            </p>
+        </div>
+        <p>Neste exemplo, temos três caixas (box1, box2 e box3) posicionadas de forma absoluta dentro de um contêiner. Cada caixa tem um valor de z-index diferente:</p>
+        <ul>
+            <li>box1 tem z-index: 1</li>
+            <li>box2 tem z-index: 2</li>
+            <li>box3 tem z-index: 3</li>
+        </ul>
+        <p>Como resultado, a box3 (verde) será exibida acima da box2 (azul), que, por sua vez, será exibida acima da box1 (vermelha), devido aos valores crescentes de z-index.</p>
+
+        <p>Nota: Se dois elementos têm o mesmo valor de z-index, a ordem de empilhamento será determinada pela ordem em que aparecem no DOM (Document Object Model). O elemento que aparece por último no código HTML será exibido acima dos anteriores.</p>
+
+        <hr>
+
+        <h2>Manipulação do z-index com JavaScript</h2>
+        <p>Você pode alterar dinamicamente o valor de z-index de um elemento usando JavaScript, o que é útil para criar interações dinâmicas na página.</p>
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                &lt;!DOCTYPE html&gt; <br>
+                &lt;html&gt; <br>
+                &lt;head&gt; <br>
+                  &lt;style&gt; <br>
+                    .box { <br>
+                      position: absolute; <br>
+                      width: 100px; <br>
+                      height: 100px; <br>
+                      background-color: red; <br>
+                      z-index: 1; <br>
+                    } <br>
+                  &lt;/style&gt; <br>
+                &lt;/head&gt; <br>
+                &lt;body&gt; <br>
+                  &lt;div class="box" id="myBox"&gt;Caixa&lt;/div&gt; <br>
+                  &lt;button onclick="bringToFront()"&gt;Trazer para Frente&lt;/button&gt; <br><br>
+                
+                  &lt;script&gt; <br>
+                    function bringToFront() { <br>
+                      var box = document.getElementById("myBox"); <br>
+                      box.style.zIndex = "10"; <br>
+                    } <br>
+                  &lt;/script&gt; <br>
+                &lt;/body&gt; <br>
+                &lt;/html&gt;  <br>               
+            </p>
+        </div>
+        <p>Neste exemplo, ao clicar no botão "Trazer para Frente", a função bringToFront é chamada, que altera o valor de z-index da caixa (myBox) para 10, fazendo com que ela seja exibida acima de outros elementos com valores de z-index menores.</p>
+    </div>
+</body>
+</html>

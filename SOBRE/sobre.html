@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Sobre mim</title>
+    <link rel="shortcut icon" href="../IMG/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navegation">
+            <a href="#" class="logo">MY <span>PORTFÓLIO</span></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" onclick="fecharMenu()">Home</a></li>
+                <li class="nav-item"><a href="../PROJETO/projeto.html" onclick="fecharMenu()">Projetos</a></li>
+                <li class="nav-item"><a href="../HABILIDADES/habilidades.html" onclick="fecharMenu()">Skills</a></li>
+                <li class="nav-item"><a href="../BLOG/blog.html" onclick="fecharMenu()">Blog</a></li>
+                <li class="nav-item"><a href="../EBOOKS/ebooks.html" onclick="fecharMenu()">E-books</a></li>
+                <li class="nav-item"><a href="../CONTATO/contato.html" onclick="fecharMenu()">Contato</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="home">
+            <div class="home-img">
+                <img src="../IMG/sobre.png" alt="logo">
+            </div>
+            <div class="home-text">
+                <h4 class="text-h4"></h4>
+                <h1 class="text-h1">Sobre Mim</h1>
+                <p>
+                    Olá! Meu nome é Artur, sou um desenvolvedor front-end iniciante apaixonado por tecnologia e design. Meu objetivo é me tornar um engenheiro de software e criar interfaces incríveis que proporcionem uma ótima experiência para os usuários. <br><br>
+                    
+                    Estou sempre em busca de novos desafios e oportunidades para crescer na área de tecnologia. Se quiser trocar uma ideia ou conhecer mais sobre meus projetos, fique à vontade para entrar em contato!
+                </p>
+            </div>
+            
+        </section>
+    </main>
+
+    <script>
+        const menu = document.querySelector('.menu');
+        const NavMenu = document.querySelector('.nav-menu');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+            NavMenu.classList.toggle('ativo');
+        });
+
+        function fecharMenu() {
+            document.querySelector(".nav-menu").classList.remove("ativo");
+            document.querySelector(".menu").classList.remove("ativo");
+
+            menu.addEventListener('click' , () => {
+                menu.classList.toggle('desativar');
+                NavMenu.classList.toggle('desativar');
+                });
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding no CSS</title>
+    <link rel="shortcut icon" href="../../ICONES/css.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>O que é padding?</h1>
+        <p>A propriedade padding define o espaço interno entre o conteúdo de um elemento e sua borda.</p>
+
+        <h2>Sintaxe</h2>
+        <div class="code">
+            <p>
+                elemento { <br>
+                    padding: valor; <br>
+                  }                  
+            </p>
+        </div>
+        <p>O valor pode ser em pixels (px), porcentagem (%), em, rem e outras unidades.</p>
+
+        <hr>
+
+        <h2>Exemplo Simples</h2>
+        <h3>HTML</h3>
+        <div class="code">
+            <p>&lt;div class="caixa"&gt;Espaçamento interno&lt;/div&gt;</p>
+        </div>
+        <h3>CSS</h3>
+        <div class="code">
+            <p>
+                .caixa { <br>
+                    margin: 20px; <br>
+                    background-color: lightblue; <br>
+                  }  
+            </p>
+        </div>
+        <p>Esse código adiciona 20px de espaçamento interno ao redor do conteúdo da div.</p>
+
+        <hr>
+
+        <h2>Definindo padding Individualmente</h2>
+        <p>Você pode definir valores diferentes para cada lado:</p>
+        <div class="code">
+            <p>
+                elemento { <br>
+                    padding-top: 10px; <br>
+                    padding-right: 15px; <br>
+                    padding-bottom: 20px; <br>
+                    padding-left: 25px; <br>
+                  }                    
+            </p>
+        </div>
+        <p>Ou usar shorthand (atalho):</p>
+        <div class="code">
+            <p>
+                padding: 10px 15px 20px 25px; <br>
+                /* topo, direita, baixo, esquerda */                
+            </p>
+        </div>
+        <p>Outras variações:</p>
+        <div class="code">
+            <p>
+                padding: 10px 20px; /* topo e baixo = 10px, esquerda e direita = 20px */ <br>
+                padding: 15px; /* todos os lados = 15px */                
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>padding com width e height</h2>
+        <p>Por padrão, o padding aumenta o tamanho total do elemento.</p>
+        <h3>Problema</h3>
+        <div class="code">
+            <p>
+                .caixa { <br>
+                    width: 200px; <br>
+                    padding: 20px; <br>
+                  }                  
+            </p>
+        </div>
+        <p>O tamanho real da .caixa será 240px (200px de largura + 20px de padding em cada lado).</p>
+
+        <hr>
+
+        <h2>Corrigindo com box-sizing: border-box;</h2>
+        <p>Para manter o width e height fixos, use:</p>
+        <div class="code">
+            <p>
+                .caixa { <br>
+                    width: 200px; <br>
+                    padding: 20px; <br>
+                    box-sizing: border-box; <br>
+                  }                  
+            </p>
+        </div>
+        <p>Agora o padding não altera o tamanho total do elemento.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contadores</title>
+    <link rel="shortcut icon" href="../../ICONES/css.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Contadores</h1>
+        <p>Os contadores CSS permitem a numeração automática de elementos em um site sem a necessidade de usar JavaScript ou contar manualmente no HTML. Eles são úteis para criar listas numeradas personalizadas, capítulos de um livro, seções de um artigo, entre outras aplicações.</p>
+
+        <hr>
+
+        <h2>Como Funcionam os Contadores CSS?</h2>
+        <p>Os contadores CSS são baseados em três propriedades principais:</p>
+        
+        <ul>
+            <li>counter-reset – Define ou reinicia um contador.</li>
+            <li>counter-increment – Aumenta o valor do contador.</li>
+            <li>content: counter(nome_do_contador) – Exibe o valor do contador em um ::before ou ::after.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Exemplo Básico: Criando uma Lista Numerada Personalizada</h2>
+        <div class="code">
+            <p>
+                /* Reinicia o contador no elemento pai */ <br>
+                ul { <br>
+                  counter-reset: lista-contador; <br>
+                } <br><br>
+                
+                /* Incrementa o contador para cada item da lista e exibe antes do conteúdo */ <br>
+                li::before { <br>
+                  counter-increment: lista-contador; <br>
+                  content: counter(lista-contador) ". "; <br>
+                  font-weight: bold; <br>
+                  color: #d70000; <br>
+                }
+            </p>
+        </div>
+        <div class="code">
+            <p>
+                &lt;ul&gt; <br>
+                &lt;li&gt;Primeiro item&lt;/li&gt; <br>
+                &lt;li&gt;Segundo item&lt;/li&gt; <br>
+                &lt;li&gt;Terceiro item&lt;/li&gt; <br>
+                &lt;/ul&gt;
+            </p>
+        </div>
+        <p>Saída esperada:</p>
+        <ul>
+            <li>1. Primeiro item</li>
+            <li>2. Segundo item</li>
+            <li>3. Terceiro item</li>
+        </ul>
+
+        <hr>
+
+        <h2>Exemplo Avançado: Numerando Seções e Sub-seções</h2>
+        <p>Podemos usar contadores aninhados para criar uma numeração hierárquica de seções e subseções, como em documentos estruturados.</p>
+        <div class="code">
+            <p>
+                /* Reseta e incrementa os contadores de seções */ <br>
+                body { <br>
+                  counter-reset: secao; <br>
+                } <br><br>
+                
+                h2 { <br>
+                  counter-increment: secao; <br>
+                  counter-reset: subsecao; <br>
+                } <br><br>
+                
+                h2::before { <br>
+                  content: "Seção " counter(secao) ": "; <br>
+                  font-weight: bold; <br>
+                  color: #d70000;
+                } <br><br>
+                
+                h3 { <br>
+                  counter-increment: subsecao; <br>
+                } <br><br>
+                
+                h3::before { <br>
+                  content: counter(secao) "." counter(subsecao) " "; <br>
+                  font-weight: bold; <br>
+                  color: #ff4500; <br>
+                }
+            </p>
+        </div>
+        <div class="code">
+            <p>
+                &lt;h2&gt;Introdução&lt;/h2&gt; <br>
+                &lt;h3&gt;Objetivo&lt;/h3&gt; <br>
+                &lt;h3&gt;Metodologia&lt;/h3&gt; <br><br>
+                
+                &lt;h2&gt;Desenvolvimento&lt;/h2&gt; <br>
+                &lt;h3&gt;Ferramentas Utilizadas&lt;/h3&gt; <br>
+                &lt;h3&gt;Resultados Obtidos&lt;/h3&gt;
+            </p>
+        </div>
+        <p>Saída esperada:</p>
+        <p>
+            🔴 Seção 1: Introdução <br>
+            🟠 1.1 Objetivo <br>
+            🟠 1.2 Metodologia <br><br>
+            
+            🔴 Seção 2: Desenvolvimento <br>
+            🟠 2.1 Ferramentas Utilizadas <br>
+            🟠 2.2 Resultados Obtidos
+        </p>
+        
+        <hr>
+
+        <h2>Contadores Personalizados em Elementos</h2>
+        <p>Podemos aplicar contadores em diferentes elementos para criar numerações únicas, como capítulos de livros, etapas de processos, ou até mesmo numeração automática de postagens.</p>
+        <div class="code">
+            <p>
+                /* Criando um contador para capítulos */ <br>
+                body { <br>
+                  counter-reset: capitulo; <br>
+                } <br><br>
+                
+                h1 { <br>
+                  counter-increment: capitulo; <br>
+                } <br><br>
+                
+                h1::before { <br>
+                  content: "Capítulo " counter(capitulo) ": "; <br>
+                  font-weight: bold; <br>
+                  color: #d70000;
+                }
+            </p>
+        </div>
+        <div class="code">
+            <p>
+                &lt;h1&gt;Introdução ao CSS&lt;/h1&gt; <br>
+                &lt;h1&gt;Modelo de Caixa&lt;/h1&gt; <br>
+                &lt;h1&gt;Flexbox e Grid&lt;/h1&gt;
+            </p>
+        </div>
+        <p>Saída esperada:</p>
+        <p>
+            🔴 Capítulo 1: Introdução ao CSS <br>
+            🔴 Capítulo 2: Modelo de Caixa <br>
+            🔴 Capítulo 3: Flexbox e Grid
+        </p> 
+    </div>
+</body>
+</html>

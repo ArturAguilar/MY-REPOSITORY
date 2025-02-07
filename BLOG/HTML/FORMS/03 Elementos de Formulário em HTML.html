@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de Formulário em HTML</title>
+    <link rel="shortcut icon" href="../../ICONES/html.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 0, 0);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: red;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(255, 65, 65);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Elementos de Formulário em HTML</h1>
+        <p>Os elementos de formulário em HTML são usados para coletar informações do usuário. Eles são inseridos dentro da tag form e podem ser de diferentes tipos, como caixas de texto, botões, menus suspensos e muito mais.</p>
+
+        <hr>
+
+        <h2>O Elemento form</h2>
+        <p>O elemento form serve como um contêiner para todos os elementos de entrada do formulário. Ele define como os dados serão enviados.</p>
+        <div class="code">
+            <p>
+                &LT;form action="processar.php" method="post"&GT;<br>
+                ...<br>
+                &LT;/form&GT;
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>O Elemento input</h2>
+        <p>O input é o elemento mais usado em formulários e pode ter diferentes tipos, como text, password, email, checkbox, radio, submit, entre outros.</p>
+        <div class="code">
+            <p>&LT;input type="text" name="nome" placeholder="Digite seu nome"&GT;</p>
+        </div>
+        <p><strong>Principais tipos de input:</strong></p>
+        <ul>
+            <li>type="text" → Campo de texto simples.</li>
+            <li>type="password" → Campo de senha (esconde os caracteres digitados).</li>
+            <li>type="email" → Campo para e-mail (valida formato automaticamente).</li>
+            <li>type="checkbox" → Caixa de seleção.</li>
+            <li>type="radio" → Botão de opção (radio).</li>
+            <li>type="submit" → Botão para enviar o formulário.</li>
+        </ul>
+        <div class="code">
+            <p>
+                &LT;input type="radio" name="genero" value="masculino"&GT; Masculino <br>
+                &LT;input type="radio" name="genero" value="feminino"&GT; Feminino
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>O Elemento label</h2>
+        <p>O label é usado para descrever um elemento de entrada, tornando a experiência do usuário mais acessível.</p>
+        <div class="code">
+            <p>&LT;label for="nome"&GT;Nome:&LT;/label&GT;<br>
+                &LT;input type="text" id="nome" name="nome"&GT;</p>
+        </div>
+        <p>O atributo for no label deve corresponder ao id do campo de entrada.</p>
+
+        <hr>
+
+        <h2>O Elemento textarea</h2>
+        <p>Usado para entrada de texto de múltiplas linhas.</p>
+        <div class="code">
+            <p>&LT;textarea name="mensagem" rows="4" cols="50"&GT;&LT;/textarea&GT;</p>
+        </div>
+
+        <hr>
+
+        <h2>O Elemento select e option</h2>
+        <p>Usado para criar um menu suspenso.</p>
+        <div class="code">
+            <p>&LT;select name="carro"&GT;<br>
+                &LT;option value="volvo"&GT;Volvo&LT;/option&GT;<br>
+                &LT;option value="bmw"&GT;BMW&LT;/option&GT;<br>
+                &LT;option value="audi"&GT;Audi&LT;/option&GT;<br>
+                &LT;/select&GT;
+            </p>
+        </div>
+        <p>Para permitir múltiplas seleções, use o atributo multiple:</p>
+        <div class="code">
+            <p>&LT;select name="carros" multiple&GT;</p>
+        </div>
+        
+        <hr>
+
+        <h2>O Elemento button</h2>
+        <p>Cria um botão clicável dentro do formulário.</p>
+        <div class="code">
+            <p>&LT;button type="submit"&GT;Enviar&LT;/button&GT;</p>
+        </div>
+
+        <hr>
+
+        <h2>O Elemento fieldset e legend</h2>
+        <p>Usado para agrupar elementos do formulário.</p>
+        <div class="code">
+            <p> 
+                &LT;fieldset&GT;<br>
+                &LT;legend&GT;Informações Pessoais&LT;/legend&GT;<br>
+                &LT;label for="nome"&GT;Nome:&LT;/label&GT;<br>
+                &LT;input type="text" id="nome" name="nome"&GT;<br>
+                &LT;/fieldset&GT;
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>O Elemento datalist</h2>
+        <p>Cria uma lista de sugestões para um campo de entrada.</p>
+        <div class="code">
+            <p>
+                &LT;input list="cidades" name="cidade"&GT;<br>
+                &LT;datalist id="cidades"&GT;<br>
+                    &LT;option value="São Paulo"&GT;<br>
+                    &LT;option value="Rio de Janeiro"&GT;<br>
+                    &LT;option value="Belo Horizonte"&GT;<br>
+                &LT;/datalist&GT;
+            </p>
+        </div>
+    </div>
+</body>
+</html>

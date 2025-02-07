@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao CSS 🎨</title>
+    <link rel="shortcut icon" href="../../ICONES/css.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(38, 0, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(68, 65, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Introdução ao CSS 🎨</h1>
+        <p>O CSS (Cascading Style Sheets) é a linguagem usada para estilizar páginas HTML, permitindo definir cores, fontes, layouts e muito mais.</p>
+        <p><strong>📌 Vantagens do CSS:</strong></p>
+        <p style="padding-left: 20px;">✅ Separação de conteúdo e estilo (melhor organização).</p>
+        <p style="padding-left: 20px;">✅ Reutilização de código (um arquivo CSS pode estilizar várias páginas).</p>
+        <p style="padding-left: 20px;">✅ Facilidade de manutenção (mudanças rápidas sem alterar HTML).</p>
+
+        <hr>
+
+        <h2>Como Usar CSS?</h2>
+        <p>Existem três formas de usar CSS:</p>
+
+        <h3>CSS Inline (dentro da tag HTML)</h3>
+        <p>📌 O estilo é aplicado diretamente no elemento usando o atributo style:</p>
+        <div class="code">
+            <p>&LT;p style="color: red; font-size: 20px;"&GT;Texto vermelho&LT;/p&GT;</p>
+        </div>
+        <p>✅ Simples e rápido.</p>
+        <p>❌ Não recomendado para grandes projetos (difícil manutenção).</p>
+
+        <h3>CSS Interno (dentro do style)</h3>
+        <p>📌 O estilo é definido dentro da tag style no head do HTML:</p>
+        <div class="code">
+            <p>
+                &LT;style&GT; <br>
+                p { <br>
+                  color: blue; <br>
+                  font-size: 18px; <br>
+                } <br>
+              &LT;/style&GT;              
+            </p>
+        </div>
+        <p>✅ Melhor organização do que CSS inline.</p>
+        <p>❌ Ainda misturado com o HTML.</p>
+
+        <h3>CSS Externo (Arquivo .css separado)</h3>
+        <p>📌 Crie um arquivo styles.css e vincule-o ao HTML:</p>
+        <p><strong>Arquivo styles.css:</strong></p>
+        <div class="code">
+            <p>
+                p { <br>
+                    color: green; <br>
+                    font-size: 16px; <br>
+                  }                  
+            </p>
+        </div>
+        <p><strong>Arquivo HTML:</strong></p>
+        <div class="code">
+            <p>
+                &LT;head&GT; <br>
+                &LT;link rel="stylesheet" href="styles.css"&GT; <br>
+              &LT;/head&GT;              
+            </p>
+        </div>
+        <p>✅ Melhor prática (separa HTML do CSS).</p>
+        <p>✅ Facilita manutenção e reutilização.</p>
+
+        <hr>
+
+        <h2>Seletores CSS</h2>
+        <p>Os seletores definem quais elementos HTML serão estilizados.</p>
+
+        <h3>Seletores Básicos</h3>
+        <p>🔹 <strong>Seletor de elemento:</strong> Aplica estilo a todas as ocorrências do elemento.</p>
+        <div class="code">
+            <p>
+                h1 { <br>
+                    color: purple; <br>
+                  }                  
+            </p>
+        </div>
+
+        <p>🔹 <strong>Seletor de classe:</strong> Aplica estilo a elementos com uma classe específica.</p>
+        <div class="code">
+            <p>
+                .destacado { <br>
+                    font-weight: bold; <br>
+                  }                  
+            </p>
+        </div>
+        <p><strong>Uso no HTML:</strong></p>
+        <div class="code">
+            <p>&LT;p class="destacado"&GT;Texto em negrito&LT;/p&GT;</p>
+        </div>
+
+        <p>🔹 <strong>Seletor de ID: </strong>Aplica estilo a um único elemento com um ID específico.</p>
+        <div class="code">
+            <p>
+                #titulo { <br>
+                    text-align: center; <br>
+                  }                  
+            </p>
+        </div>
+        <p><strong>Uso no HTML:</strong></p>
+        <div class="code">
+            <p>&LT;h1 id="titulo"&GT;Título Centralizado&LT;/h1&GT;</p>
+        </div>
+
+        <hr>
+
+        <h2>Comentários em CSS</h2>
+        <p>📌 Comentários ajudam a documentar o código e não afetam o estilo.</p>
+        <div class="code">
+            <p>
+                /* Isso é um comentário em CSS */ <br>
+                p { <br>
+                  color: blue; <br>
+                }                
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Cascata e Prioridade no CSS</h2>
+        <p>Quando várias regras CSS afetam um mesmo elemento, o navegador segue esta ordem de prioridade:</p>
+        <p><strong>1️⃣ CSS Inline (style="") ⬆️ MAIOR prioridade</strong></p>
+        <p><strong>2️⃣ ID (#id)</strong></p>
+        <p><strong>3️⃣ Classes (.classe) e atributos</strong></p>
+        <p><strong>4️⃣ Elementos (h1, p, div)</strong></p>
+        <p><strong>5️⃣ Estilos padrão do navegador ⬇️ MENOR prioridade</strong></p>
+        <p>Exemplo de conflito:</p>
+        <div class="code">
+            <p>&LT;p id="especial" class="destaque" style="color: red;"&GT;Qual cor vai ganhar?&LT;/p&GT;</p>
+        </div>
+        <div class="code">
+            <p>
+                p { color: blue; } /* Menor prioridade */ <br>
+                .destaque { color: green; } /* Prioridade maior que elemento */ <br>
+                #especial { color: purple; } /* Prioridade maior que classe */                
+            </p>
+        </div>
+        <p>✅ O texto será vermelho porque o CSS inline tem prioridade máxima.</p>
+
+        <hr>
+
+        <h2>Conclusão</h2>
+        <p>📌 CSS melhora o design e a organização do código.</p>
+        <p>📌 O uso de CSS externo é recomendado para projetos profissionais.</p>
+        <p>📌 Entender seletores e prioridades ajuda a evitar conflitos.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformações 2D e 3D</title>
+    <link rel="shortcut icon" href="../../ICONES/css.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        h3{
+            font-size: 18px;
+        }
+
+        h4{
+            font-size: 16px;
+        }
+
+        h5{
+            font-size: 14px;
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            h3{
+                font-size: 20px; /* Ajuste para telas médias */
+            }
+
+            h4{
+                font-size: 18px; /* Ajuste para telas médias */
+            }
+
+            h5{
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Transformações 2D e 3D</h1>
+        <p>O CSS3 oferece a capacidade de transformar elementos na página, seja em 2D ou 3D. Isso proporciona efeitos visuais impressionantes, como rotação, deslocamento, dimensionamento e distorção.</p>
+
+        <hr>
+
+        <h2>Transformações 2D (2D Transforms)</h2>
+        <p>As transformações 2D permitem que você mova, rotacione, redimensione e incline um elemento.</p>
+
+        <h3>Propriedades Comuns de Transformações 2D</h3>
+
+        <h4>transform</h4>
+        <p>É a propriedade básica usada para aplicar transformações em elementos. Vários tipos de transformação podem ser combinados.</p>
+        <h5>Sintaxe:</h5>
+        <div class="code">
+            <p>transform: tipo_de_transformacao( valor );</p>
+        </div>
+
+        <h4>Exemplos de Transformações 2D:</h4>
+
+        <h5>rotate() - Rotaciona um elemento.</h5>
+        <div class="code">
+            <p>
+                div { <br>
+                    transform: rotate(45deg); /* Rotaciona 45 graus no sentido horário */ <br>
+                  }
+            </p>
+        </div>
+
+        <h5>scale() - Redimensiona o elemento.</h5>
+        <div class="code">
+            <p>
+                div { <br>
+                    transform: scale(1.5); /* Aumenta o tamanho do elemento em 1.5 vezes */ <br>
+                  }
+            </p>
+        </div>
+
+        <h5>translate() - Desloca o elemento.</h5>
+        <div class="code">
+            <p>
+                div { <br>
+                    transform: translate(50px, 100px); /* Desloca 50px para a direita e 100px para baixo */ <br>
+                  }
+            </p>
+        </div>
+
+        <h5>skew() - Inclina o elemento.</h5>
+        <div class="code">
+            <p>
+                div { <br>
+                    transform: skew(20deg, 10deg); /* Inclina o elemento 20 graus no eixo X e 10 graus no eixo Y */ <br>
+                  }
+            </p>
+        </div>
+
+        <h4>Exemplo de Transformações 2D Combinadas:</h4>
+        <div class="code">
+            <p>
+                div { <br>
+                    transform: rotate(45deg) scale(1.2) translate(50px, 100px); <br>
+                  }
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Transformações 3D (3D Transforms)</h2>
+        <p>As transformações 3D permitem manipular os elementos em um espaço tridimensional. A principal diferença é o uso de um eixo adicional (Z), o que permite efeitos de profundidade.</p>
+
+        <h3>Propriedades Comuns de Transformações 3D</h3>
+
+        <h4>transform</h4>
+        <p>Aqui, as transformações 3D podem ser combinadas da mesma forma que as 2D, mas com o uso do eixo Z.
+        
+        <h4>Exemplos de Transformações 3D:</h4>
+
+        <h5>rotateX() - Rotaciona o elemento no eixo X (horizontal).</h5>
+        <div class="code">
+            <p>
+                div { <br>
+                    transform: rotateX(45deg); /* Rotaciona o elemento 45 graus no eixo X */ <br>
+                  }
+            </p>
+        </div>
+
+        <h5>rotateY() - Rotaciona o elemento no eixo Y (vertical).</h5>
+        <div class="code">
+            <p>
+                div { <br>
+                    transform: rotateY(45deg); /* Rotaciona o elemento 45 graus no eixo Y */ <br>
+                  }
+            </p>
+        </div>
+
+        <h5>rotateY() - Rotaciona o elemento no eixo Y (vertical).</h5>
+        <div class="code">
+            <p>
+                div { <br>
+                    transform: rotateY(45deg); /* Rotaciona o elemento 45 graus no eixo Y */ <br>
+                  }
+            </p>
+        </div>
+
+        <h5>translateZ() - Move o elemento para frente ou para trás ao longo do eixo Z (profundidade).</h5>
+        <div class="code">
+            <p>
+                div { <br>
+                    transform: translateZ(50px); /* Move o elemento 50px para frente */ <br>
+                  }
+            </p>
+        </div>
+
+        <h5>perspective() - Controla o efeito de perspectiva, aplicando uma profundidade em um espaço 3D.</h5>
+        <div class="code">
+            <p>
+                .container { <br>
+                    perspective: 500px; /* Cria uma perspectiva de 500px */ <br>
+                  } <br><br>
+                  
+                  div { <br>
+                    transform: rotateY(45deg); <br>
+                  }
+        </div>
+
+        <h4>Exemplo de Transformações 3D Combinadas:</h4>
+        <div class="code">
+            <p>
+                div { <br>
+                    transform: rotateX(30deg) rotateY(30deg) translateZ(100px); <br>
+                  }
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Exemplo Completo de Transformações 2D e 3D</h2>
+        <div class="code">
+            <p>
+                /* Transformação 2D */ <br>
+                div { <br>
+                  width: 200px; <br>
+                  height: 200px; <br>
+                  background-color: lightblue; <br>
+                  transform: rotate(45deg) scale(1.5) translate(50px, 100px); <br>
+                } <br><br> <br>
+                
+                /* Transformação 3D */ <br>
+                .container { <br>
+                  perspective: 500px; <br>
+                } <br><br> <br>
+                
+                div { <br>
+                  width: 200px; <br>
+                  height: 200px; <br>
+                  background-color: lightcoral; <br>
+                  transform: rotateY(45deg) translateZ(100px); <br>
+                }
+            </p>
+        </div>
+    </div>
+</body>
+</html>

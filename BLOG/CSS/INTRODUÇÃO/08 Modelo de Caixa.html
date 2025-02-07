@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixa (Box Model)</title>
+    <link rel="shortcut icon" href="../../ICONES/css.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Modelo de Caixa (Box Model)</h1>
+        <p>No CSS, cada elemento é representado como uma caixa retangular composta por várias camadas que determinam seu tamanho e espaçamento em relação a outros elementos. Essas camadas, de dentro para fora, são:</p>
+        <ol style="padding-left: 20px;">
+            <li>Conteúdo (Content): A área onde o conteúdo (texto, imagens, etc.) é exibido.</li>
+            <li>Preenchimento (Padding): Espaço entre o conteúdo e a borda.</li>
+            <li>Borda (Border): A borda ao redor do preenchimento e do conteúdo.</li>
+            <li>Margem (Margin): Espaço entre a borda do elemento e outros elementos adjacentes.</li>
+        </ol>
+
+        <hr>
+
+        <h2>Propriedades do Modelo de Caixa</h2>
+
+        <h3>Conteúdo (Content)</h3>
+        <p>Define a largura (width) e a altura (height) da área de conteúdo do elemento.</p>
+        <div class="code">
+            <p>
+                div { <br>
+                    width: 300px; <br>
+                    height: 200px; <br>
+                  }                  
+            </p>
+        </div>
+
+        <h3>Preenchimento (Padding)</h3>
+        <p>Controla o espaço interno entre o conteúdo e a borda do elemento.</p>
+        <div class="code">
+            <p>
+                div { <br>
+                    padding: 20px; /* Aplica 20px de preenchimento em todos os lados */
+                    /* Ou especificar individualmente: */
+                    padding-top: 10px; <br>
+                    padding-right: 15px; <br>
+                    padding-bottom: 10px; <br>
+                    padding-left: 15px; <br>
+                  }                  
+            </p>
+        </div>
+
+        <h3>Borda (Border)</h3>
+        <p>Define a borda ao redor do conteúdo e do preenchimento.</p>
+        <div class="code">
+            <p>
+                div { <br>
+                    border: 5px solid #000; /* Borda de 5px, sólida, cor preta */ <br>
+                    /* Ou especificar individualmente: */ <br>
+                    border-top: 2px dashed #333; <br>
+                    border-right: 3px dotted #666; <br>
+                    border-bottom: 4px double #999; <br>
+                    border-left: 5px groove #ccc; <br>
+                  }                  
+            </p>
+        </div>
+
+        <h3>Margem (Margin)</h3>
+        <p>Controla o espaço externo entre a borda do elemento e outros elementos.</p>
+        <div class="code">
+            <p>
+                div { <br>
+                    margin: 10px; /* Aplica 10px de margem em todos os lados */ <br>
+                    /* Ou especificar individualmente: */ <br>
+                    margin-top: 5px; <br>
+                    margin-right: 10px; <br>
+                    margin-bottom: 15px; <br>
+                    margin-left: 20px; <br>
+                  }                  
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Cálculo do Tamanho Total do Elemento</h2>
+        <p>Por padrão, o tamanho total de um elemento é calculado somando-se o conteúdo, o preenchimento, a borda e a margem.</p>
+
+        <p><strong>Largura Total:</strong>width + padding-left + padding-right + border-left + border-right + margin-left + margin-right</p>
+        <p><strong>Altura Total:</strong>height + padding-top + padding-bottom + border-top + border-bottom + margin-top + margin-bottom</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                div { <br>
+                    width: 300px; <br>
+                    height: 200px; <br>
+                    padding: 10px; <br>
+                    border: 5px solid #000; <br>
+                    margin: 20px; <br>
+                  }                  
+            </p>
+        </div>
+        <p><strong>Largura Total:</strong>300px (conteúdo) + 20px (preenchimento) + 10px (borda) + 40px (margem) = 370px</p>
+        <p><strong>Altura Total:</strong>200px (conteúdo) + 20px (preenchimento) + 10px (borda) + 40px (margem) = 270px
+        </p>
+
+        <hr>
+
+        <h2>Ajustando o Modelo de Caixa com box-sizing</h2>
+        <p>A propriedade box-sizing permite alterar a forma como a largura e a altura de um elemento são calculadas.</p>
+        <ul>
+            <li>content-box (padrão): A largura e a altura incluem apenas o conteúdo. O preenchimento e a borda são adicionados posteriormente.</li>
+            <li>border-box: A largura e a altura incluem o conteúdo, o preenchimento e a borda.</li>
+        </ul>
+
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                div { <br>
+                    box-sizing: border-box; <br>
+                  }                  
+            </p>
+        </div>
+        <p>Com box-sizing: border-box;, o tamanho total do elemento permanece conforme especificado, independentemente do preenchimento ou da borda.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Skills</title>
+    <link rel="shortcut icon" href="../IMG/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilização geral da seção de habilidades */
+#habilidades {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#habilidades h2 {
+    font-size: 2rem;
+    color: #727272;
+    margin-bottom: 30px;
+}
+
+/* Categorias de habilidades (Front-End e Back-End) */
+.categoria {
+    margin-bottom: 40px;
+}
+
+.categoria h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Layout responsivo em grid */
+.habilidades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Estilização individual das habilidades */
+.habilidade {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.habilidade:hover {
+    transform: translateY(-5px);
+}
+
+/* Ícones das habilidades */
+.habilidade img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Texto das habilidades */
+.habilidade h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.habilidade p {
+    font-size: 1rem;
+    color: #666;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navegation">
+            <a href="#" class="logo">MY <span>PORTFÓLIO</span></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" onclick="fecharMenu()">Home</a></li>
+                <li class="nav-item"><a href="../PROJETO/projeto.html" onclick="fecharMenu()">Projetos</a></li>
+                <li class="nav-item"><a href="../HABILIDADES/habilidades.html" onclick="fecharMenu()">Skills</a></li>
+                <li class="nav-item"><a href="../BLOG/blog.html" onclick="fecharMenu()">Blog</a></li>
+                <li class="nav-item"><a href="../EBOOKS/ebooks.html" onclick="fecharMenu()">E-books</a></li>
+                <li class="nav-item"><a href="../CONTATO/contato.html" onclick="fecharMenu()">Contato</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>   
+        <section id="habilidades">
+            <h2>Minhas Habilidades</h2>
+        
+            <!-- Seção Front-End -->
+            <div class="categoria">
+                <h3>Front-End</h3>
+                <div class="habilidades-container">
+                    <div class="habilidade">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                        <h4>HTML</h4>
+                        <p>Estruturação semântica e boas práticas para SEO.</p>
+                    </div>
+
+                    <div class="habilidade">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                        <h4>CSS</h4>
+                        <p>Estilização avançada, Flexbox e Grid.</p>
+                    </div>
+
+                    <div class="habilidade">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                        <h4>JavaScript</h4>
+                        <p>Manipulação do DOM, eventos e lógica de programação.</p>
+                    </div>
+
+                   <!-- <div class="habilidade">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                        <h4>React</h4>
+                        <p>Criação de componentes reutilizáveis e gerenciamento de estado.</p>
+                    </div>
+                </div>-->
+            </div>
+        
+            <!-- Seção Back-End -->
+            <!--<div class="categoria">
+                <h3>Back-End</h3>
+                <div class="habilidades-container">
+                    <div class="habilidade">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                        <h4>Node.js</h4>
+                        <p>Desenvolvimento de APIs e microsserviços.</p>
+                    </div>
+                    <div class="habilidade">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js">
+                        <h4>Express.js</h4>
+                        <p>Criação de servidores e middlewares.</p>
+                    </div>
+                    <div class="habilidade">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                        <h4>MySQL</h4>
+                        <p>Banco de dados relacional e modelagem de dados.</p>
+                    </div>
+                    <div class="habilidade">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                        <h4>MongoDB</h4>
+                        <p>Banco de dados NoSQL para alta escalabilidade.</p>
+                    </div>
+                </div>
+            </div>-->
+        </section>               
+    </main>
+
+    <script>
+        const menu = document.querySelector('.menu');
+        const NavMenu = document.querySelector('.nav-menu');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+            NavMenu.classList.toggle('ativo');
+        });
+
+        function fecharMenu() {
+            document.querySelector(".nav-menu").classList.remove("ativo");
+            document.querySelector(".menu").classList.remove("ativo");
+
+            menu.addEventListener('click' , () => {
+                menu.classList.toggle('desativar');
+                NavMenu.classList.toggle('desativar');
+                });
+}
+    </script>
+</body>
+</html>

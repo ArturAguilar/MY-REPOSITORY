@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas em HTML</title>
+    <link rel="shortcut icon" href="../../ICONES/html.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 0, 0);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: red;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(255, 65, 65);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Listas em HTML</h1>
+
+        <h2>Tipos de Listas em HTML</h2>
+        <div class="version">
+            <h3>Lista Ordenada (&lt;ol&gt; - Ordered List)</h3>
+            <ul>
+                <li>Usada para itens que precisam seguir uma ordem específica.</li>
+                <li>Por padrão, os itens aparecem numerados.</li>
+            </ul>
+
+            <h4>Exemplo:</h4>
+            <div class="code">
+                <p>
+                    &lt;ol&gt;<br>
+                    &lt;li&gt;HTML&lt;/li&gt;<br>
+                    &lt;li&gt;CSS&lt;/li&gt;<br>
+                    &lt;li&gt;JavaScript&lt;/li&gt;<br>
+                  &lt;/ol&gt;                  
+                </p>
+            </div>
+
+            <h3>Lista Não Ordenada (&lt;ul&gt; - Unordered List)</h3>
+            <ul>
+                <li>Usada para itens sem uma ordem específica.</li>
+                <li>Por padrão, os itens aparecem com marcadores (bullets).</li>
+            </ul>
+
+            <h4>Exemplo:</h4>
+            <div class="code">
+                <p>
+                    &lt;ul&gt;<br>
+                    &lt;li&gt;Café&lt;/li&gt;<br>
+                    &lt;li&gt;Chá&lt;/li&gt;<br>
+                    &lt;li&gt;Suco&lt;/li&gt;<br>
+                  &lt;/ul&gt;                  
+                </p>
+            </div>
+
+            <h3>Lista de Definições (dl - Definition List)</h3>
+                <ul>
+                    <li>Usada para termos e suas descrições.</li>
+                    <li>Composta por: &lt;dt&gt;: Define o termo. &lt;dd&gt;: Define a descrição.</li>
+                </ul>
+
+            <h4>Exemplo:</h4>
+            <div class="code">
+                <p>
+                    &lt;dl&gt;<br>
+                    &lt;dt&gt;HTML&lt;/dt&gt;<br>
+                    &lt;dd&gt;Linguagem de marcação usada para criar páginas web.&lt;/dd&gt;<br><br>
+                  
+                    &lt;dt&gt;CSS&lt;/dt&gt;<br>
+                    &lt;dd&gt;Linguagem de estilo usada para definir a aparência de páginas web.&lt;/dd&gt;<br>
+                  &lt;/dl&gt;                  
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Listas Aninhadas</h2>
+        <p>Listas podem ser aninhadas, ou seja, uma lista dentro de outra.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                &lt;ul&gt;<br>
+                &lt;li&gt;Front-End<br>
+                  &lt;ul&gt;<br>
+                    &lt;li&gt;HTML&lt;/li&gt;<br>
+                    &lt;li&gt;CSS&lt;/li&gt;<br>
+                    &lt;li&gt;JavaScript&lt;/li&gt;<br>
+                  &lt;/ul&gt;<br>
+                &lt;/li&gt;<br>
+                &lt;li&gt;Back-End<br>
+                  &lt;ul&gt;<br>
+                    &lt;li&gt;Node.js&lt;/li&gt;<br>
+                    &lt;li&gt;Python&lt;/li&gt;<br>
+                  &lt;/ul&gt;<br>
+                &lt;/li&gt;<br>
+              &lt;/ul&gt;              
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Personalização de Listas</h2>
+
+        <div class="version">
+            <h3>Alterando os Estilos de Marcadores (Bullets)</h3>
+            <p>Pode-se usar a propriedade CSS list-style-type para personalizar marcadores.</p>
+
+            <h4>Exemplo:</h4>
+            <div class="code">
+                <p>
+                    &lt;style&gt;<br>
+                    ul {<br>
+                      list-style-type: square; /* <br>Marcador em forma de quadrado */<br>
+                    }<br>
+                  &lt;/style&gt;<br><br>
+                  
+                  &lt;ul&gt;<br>
+                    &lt;li&gt;Item 1&lt;/li&gt;<br>
+                    &lt;li&gt;Item 2&lt;/li&gt;<br>
+                  &lt;/ul&gt;                  
+                </p>
+            </div>
+
+            <p>Outros valores de list-style-type:</p>
+            <ul>
+                <li>circle</li>
+                <li>square</li>
+                <li>none (sem marcadores)</li>
+            </ul>
+
+            <hr>
+
+            <h3>Alterando o Estilo de Números em Listas Ordenadas</h3>
+            <p>Use o atributo type no &lt;ol&gt; .</p>
+
+            <h4>Exemplo:</h4>
+            <div class="code">
+                <p>
+                    &lt;ol type="A"&gt;<br>
+                    &lt;li&gt;Item 1&lt;/li&gt;<br>
+                    &lt;li&gt;Item 2&lt;/li&gt;<br>
+                  &lt;/ol&gt;                  
+                </p>
+            </div>
+
+            <p>Valores do atributo type:</p>
+            <ul>
+                <li>1: Números (padrão).</li>
+                <li>A: Letras maiúsculas.</li>
+                <li>a: Letras minúsculas.</li>
+                <li>I: Números romanos maiúsculos.</li>
+                <li>i: Números romanos minúsculos.</li>
+            </ul>
+
+            <hr>
+
+            <h3>Começando uma Lista em um Número Específico</h3>
+            <p>Use o atributo start no  &lt;ol&gt;.</p>
+
+            <h4>Exemplo:</h4>
+            <div class="code">
+                <p>
+                    &lt;ol start="5"&gt;<br>
+                    &lt;li&gt;Item 5&lt;/li&gt;<br>
+                    &lt;li&gt;Item 6&lt;/li&gt;<br>
+                  &lt;/ol&gt;                  
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Personalização com CSS</h2>
+        <div class="code">
+            <p>
+                &lt;style&gt;<br>
+                ol.custom {<br>
+                  list-style-type: upper-roman; /* <br>Números romanos maiúsculos */<br>
+                  padding-left: 20px;<br>
+                  color: #d70000;<br>
+                }<br>
+              &lt;/style&gt;<br><br>
+              
+              &lt;ol class="custom"&gt;<br>
+                &lt;li&gt;Primeiro&lt;/li&gt;<br>
+                &lt;li&gt;Segundo&lt;/li&gt;<br>
+              &lt;/ol&gt;              
+            </p>
+        </div>
+    </div>
+</body>
+</html>

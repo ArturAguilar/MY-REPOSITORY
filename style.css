@@ -1,189 +1,189 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            list-style: none;
+            text-decoration: none;
+        }
 
-body {
-    background-color:#f7f7f7;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Poppins', sans-serif  ;
-}
+        body{
+            background-color: white;
+            color: black;
+        }
 
-nav {
-    text-align: center;
-    margin: 20px 0;
-}
+        .navegation{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 40px;
+            box-shadow: 0 0.1rem 0.5rem #ccc;
+            background-color: white;
+            transition: all 0.5s;
+        }
 
-.conteiner, .conteine{
-    width: 90%;
-    max-width: 850px;
-    margin: 25px auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+        .navegation .logo{
+            color: #727272;
+            font-size: 1.7rem;
+            font-weight: 600;
+        }
 
-.conteiner > h1, label {
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 24px; /* Tamanho padrão */
-}
+        .logo span{
+            color: #f75454;
+        }
 
-h2 {
-    margin-bottom: 10px;
-    font-size: 20px; /* Tamanho padrão */
-}
+        .navegation ul{
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+        }
 
-p, li {
-    margin-bottom: 15px;
-    font-size: 14px; /* Tamanho padrão */
-}
+        .navegation ul li a{
+            color: #f75454;
+            font-size: 17px;
+            font-weight: 500;
+            transition: all 0.5s;
+        }
 
-ul {
-    list-style: inside;
-    margin-bottom: 25px;
-}
+        .navegation ul li a:hover{
+            color:white;
+            padding: 10px;
+            background-color: #f75454;
+            border-radius: 10px;
+            transition: all 0.5s;
+        }
 
-.code p {
-    background-color: #e6e4e4;
-    border-radius: 10px;
-    font-family: 'Fira Code', monospace;
-    padding: 10px;
-    overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
-    font-size: 13px; /* Tamanho padrão */
-}
+       .menu{
+            cursor: pointer;
+            display: none;
+        }
 
-th, td {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-}
+        .menu .bar{
+            display: block;
+            width: 28px;
+            height: 3px;
+            border-radius: 3px;
+            background: #727272;
+            margin: 5px auto ;
+            transition: all 0.3s;
+        }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 30px;
-    font-size: 13px; /* Tamanho padrão */
-}
+       .menu .bar:nth-child(1), .menu .bar:nth-child(3){
+            background-color: #f75454;
+        }
 
-th{
-    background-color: #757575;
-    color: white;
-}
+        .home{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 2%;
+        }
 
-label {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    display: block;
-}
+        .home-text{
+            max-width: 37rem;
+        }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #66444400;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-    transition: 0.3s;
-}
+        .home-text .text-h4{
+            font-size: 1.5rem;
+            color: #f75454;
+            margin-bottom: 1rem;
+        }
 
-input[type="text"]:focus {
-    border-color: #000000;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-}
+        .home-text .text-h1{
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 4rem;
+        }
 
-.internet > a {
-    text-decoration: none;
-    color: blue;
-    display: inline-block;
-    margin-right: 10px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: 0.5s;
-    font-size: 14px; /* Tamanho padrão */
-}
+        .home-text p{
+            margin-bottom: 4rem;
+        }
 
-.internet > a:hover {
-    color: #ffffff;
-    background-color: rgb(65, 84, 255);
-}
+        .home-btn{
+            padding: 15px 45px;
+            background-color: #f75454;
+            color: white;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: all 0.5s;
+        }
 
-.html > a {
-    text-decoration: none;
-    color: red;
-    display: inline-block;
-    margin-right: 10px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: 0.5s;
-    font-size: 14px; /* Tamanho padrão */
-}
+        .home-btn:hover{
+            background-color: #f75454;
+        }
 
-.html > a:hover {
-    color: #ffffff;
-    background-color: rgb(255, 67, 67);
-}
+        .home-img img{
+            width: 100%;
+        }
 
-.css > a {
-    text-decoration: none;
-    color: blue;
-    display: inline-block;
-    margin-right: 10px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: 0.5s;
-    font-size: 14px; /* Tamanho padrão */
-}
+        @media (max-width : 900px){
+            .navegation{
+                padding: 18px 20px;
+            }
 
-.css > a:hover {
-    color: #ffffff;
-    background-color: rgb(65, 84, 255);
-}
+            .menu{
+                display: block;
+                cursor: pointer;
+            }
 
-.projetos > a {
-    text-decoration: none;
-    color: rgb(255, 72, 0);
-    display: inline-block;
-    margin-right: 10px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: 0.5s;
-    font-size: 14px; /* Tamanho padrão */
-}
+            .menu.ativo .bar:nth-child(1){
+                transform: translateY(8px) rotate(45deg);
+            }
 
-.projetos > a:hover {
-    color: #ffffff;
-    background-color: rgb(253, 76, 52);
-}
+            .menu.ativo .bar:nth-child(2){
+                opacity: 0;
+            }
 
-@media (min-width: 768px) {
-    .conteiner > h1 {
-        font-size: 32px; /* Ajuste para telas médias */
-    }
+            .menu.ativo .bar:nth-child(3){
+                transform: translateY(-8px) rotate(-45deg);
+            }
 
-    h2 {
-        font-size: 26px; /* Ajuste para telas médias */
-    }
+            .nav-menu{
+                position: fixed;
+                right: -100%;
+                top: 70px;
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                background-color: white;
+                gap: -10px;
+                transition: 0.3s;
+            }
 
-    p, li {
-        font-size: 16px; /* Ajuste para telas médias */
-    }
+            .nav-menu.ativo{
+                right: 0;
+            }
 
-    .code p {
-        font-size: 15px; /* Ajuste para telas médias */
-    }
+            .nav-item{
+                margin: -4px 0;
+            }
 
-    nav > a {
-        font-size: 16px; /* Ajuste para telas médias */
-    }
+            .home{
+                padding: 100px 2%;
+                flex-direction: column;
+                overflow: hidden;
+                text-align: center;
+                gap: 2rem;
+            }
 
-    table {
-        font-size: 15px; /* Ajuste para telas médias */
-    }
-}
+            .home .text-h4{
+                font-size: 15px;
+            }
+
+            .home .text-h1{
+                font-size: 2.5rem;
+                line-height: 3rem;
+            }
+
+            .home p{
+                font-size: 15px;
+            }
+
+            .home-img{
+                width: 100%;
+            }
+        }

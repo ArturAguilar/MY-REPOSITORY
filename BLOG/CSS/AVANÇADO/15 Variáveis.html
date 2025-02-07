@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../ICONES/css.ico" type="image/x-icon">
+    <title>Variáveis</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Variáveis</h1>
+        <p>As variáveis CSS, também chamadas de CSS Custom Properties, permitem armazenar valores reutilizáveis, tornando o código mais organizado e fácil de manter.</p>
+
+        <hr>
+
+        <h2>Introdução às Variáveis</h2>
+        <h3>Sintaxe básica:</h3>
+        <ul>
+            <li>Variáveis são definidas dentro de um seletor CSS usando --nome-da-variavel.</li>
+            <li>Para utilizá-las, usamos a função var(--nome-da-variavel).</li>
+        </ul>
+
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                :root { <br>
+                    --cor-principal: #d70000; <br>
+                    --tamanho-fonte: 18px; <br>
+                  } <br><br>
+                  
+                  h1 { <br>
+                    color: var(--cor-principal); <br>
+                    font-size: var(--tamanho-fonte); <br>
+                  }                  
+            </p>
+        </div>
+        <ul>
+            <li>O :root define as variáveis globais.</li>
+            <li>O h1 usará --cor-principal como cor e --tamanho-fonte como tamanho da fonte.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Sobrescrevendo Variáveis</h2>
+        <p>As variáveis CSS podem ser sobrescritas em escopos mais específicos.</p>
+
+        <h3>Exemplo de sobrescrita:</h3>
+        <div class="code">
+            <p>
+                :root { <br>
+                    --cor-texto: black; <br>
+                  } <br><br>
+                  
+                  p { <br>
+                    color: var(--cor-texto); <br>
+                  } <br><br>
+                  
+                  p.destaque { <br>
+                    --cor-texto: red; /* Sobrescrevendo a variável apenas neste escopo */ <br>
+                    color: var(--cor-texto); <br>
+                  }                  
+            </p>
+        </div>
+        <ul>
+            <li>O parágrafo com a classe .destaque terá texto vermelho, enquanto os demais permanecerão pretos.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Usando Variáveis CSS no JavaScript</h2>
+        <p>Podemos acessar e modificar variáveis CSS usando JavaScript, permitindo a personalização dinâmica da interface.</p>
+
+        <h3>Exemplo com JavaScript:</h3>
+        <div class="code">
+            <p>
+                :root { <br>
+                    --cor-de-fundo: lightblue; <br>
+                  } <br><br>
+                  
+                  body { <br>
+                    background-color: var(--cor-de-fundo); <br>
+                  }                  
+            </p>
+        </div>
+        <div class="code">
+            <p>document.documentElement.style.setProperty('--cor-de-fundo', 'yellow');</p>
+        </div>
+        <ul>
+            <li>O código JavaScript altera a variável --cor-de-fundo para amarelo, mudando a cor do fundo da página dinamicamente.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Usando Variáveis com Media Queries</h2>
+        <p>Podemos ajustar variáveis CSS dinamicamente com Media Queries, tornando o design responsivo mais flexível.</p>
+
+        <h3>Exemplo de Media Queries:</h3>
+        <div class="code">
+            <p>
+                :root { <br>
+                    --largura-max: 1200px; <br>
+                    --cor-de-fundo: white; <br>
+                  } <br><br>
+                  
+                  @media (max-width: 600px) { <br>
+                    :root { <br>
+                      --cor-de-fundo: lightgray; <br>
+                    } <br>
+                  } <br><br>
+                  
+                  body { <br>
+                    max-width: var(--largura-max); <br>
+                    background-color: var(--cor-de-fundo); <br>
+                  }                  
+            </p>
+        </div>
+        <ul>
+            <li>Para telas menores que 600px, a cor de fundo muda para cinza claro (lightgray).</li>
+        </ul>
+    </div>
+</body>
+</html>

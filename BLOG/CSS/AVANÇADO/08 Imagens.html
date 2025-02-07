@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+    <link rel="shortcut icon" href="../../ICONES/css.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Imagens</h1>
+        <p>O CSS3 oferece várias técnicas para manipular imagens, desde a simples exibição até efeitos avançados.</p>
+
+        <h2>Trabalhando com Imagens</h2>
+        <h3>✅ Como Definir uma Imagem de Fundo</h3>
+        <div class="code">
+            <p>
+                body { <br>
+                    background-image: url('imagem.jpg'); <br>
+                    background-size: cover; <br>
+                    background-repeat: no-repeat; <br>
+                  }                  
+            </p>
+        </div>
+            <ul>
+                <li>background-image: Define uma imagem como fundo.</li>
+                <li>background-size: cover: Faz com que a imagem ocupe todo o espaço disponível.</li>
+                <li>background-repeat: no-repeat: Evita a repetição da imagem.</li>
+            </ul>
+
+        <hr>
+
+        <h2>Como Centralizar uma Imagem</h2>
+        <h3>✅ Centralizar Imagem Dentro de um Contêiner</h3>
+        <div class="code">
+            <p>
+                .container { <br>
+                    display: flex; <br>
+                    justify-content: center; <br>
+                    align-items: center; <br>
+                    height: 300px; <br>
+                    border: 2px solid red; <br>
+                  } <br><br>
+                  
+                  .container img { <br>
+                    max-width: 100%; <br>
+                    height: auto; <br>
+                  }                   
+            </p>
+        </div>
+        <ul>
+            <li>display: flex: Usa flexbox para facilitar o alinhamento.</li>
+            <li>justify-content: center: Centraliza horizontalmente.</li>
+            <li>align-items: center: Centraliza verticalmente.</li>
+        </ul>
+
+        <h3>✅ Centralizar uma Imagem como Fundo</h3>
+        <div class="code">
+            <p>
+                body { <br>
+                    background: url('imagem.jpg') no-repeat center center; <br>
+                    background-size: cover; <br>
+                  }                  
+            </p>
+        </div>
+        <ul>
+            <li>center center: Mantém a imagem centralizada.</li>
+            <li>background-size: cover: Ajusta o tamanho para cobrir todo o espaço.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Aplicando Filtros em Imagens</h2>
+        <h3>✅ Exemplo de Aplicação de Filtros</h3>
+        <div class="code">
+            <p>
+                img { <br>
+                    filter: grayscale(100%); <br>
+                  }                  
+            </p>
+        </div>
+        <p>Principais Filtros CSS3:</p>
+        <table>
+            <tr>
+                <th>Filtro</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>grayscale(100%)</td>
+                <td>Deixa a imagem em preto e branco.</td>
+            </tr>
+            <tr>
+                <td>blur(5px)</td>
+                <td>Aplica um efeito de desfoque.</td>
+            </tr>
+            <tr>
+                <td>brightness(200%)</td>
+                <td>Aumenta o brilho.</td>
+            </tr>
+            <tr>
+                <td>contrast(150%)</td>
+                <td>Ajusta o contraste.</td>
+            </tr>
+            <tr>
+                <td>sepia(100%)</td>
+                <td>Dá um efeito de foto antiga.</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>Criando Formas com Imagens no CSS</h2>
+        <h3>Criando Imagens Redondas</h3>
+        <div class="code">
+            <p>
+                img { <br>
+                    width: 150px; <br>
+                    height: 150px; <br>
+                    border-radius: 50%; <br>
+                  }                  
+            </p>
+        </div>
+        <ul>
+            <li>border-radius: 50%: Torna a imagem circular.</li>
+        </ul>
+
+        <h3>✅ Criando Formas Personalizadas com clip-path</h3>
+        <div class="code">
+            <p>
+                img { <br>
+                    clip-path: polygon(50% 0%, 100% 100%, 0% 100%); <br>
+                  }                   
+            </p>
+        </div>
+        <ul>
+            <li>lip-path: Define uma máscara para recortar a imagem em formatos personalizados.</li>
+        </ul>
+    </div>
+</body>
+</html>

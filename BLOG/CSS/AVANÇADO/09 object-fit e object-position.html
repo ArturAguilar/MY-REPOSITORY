@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-fit e object-position</title>
+    <link rel="shortcut icon" href="../../ICONES/css.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>object-fit e object-position</h1>
+        <p>O CSS3 introduziu propriedades como object-fit e object-position para manipular imagens e vídeos de forma mais precisa dentro de contêineres.</p>
+
+        <hr>
+
+        <h2>O que é object-fit?</h2>
+        <p>A propriedade object-fit define como uma imagem ou um vídeo deve se ajustar dentro do seu contêiner. Ela funciona em elementos img e video.</p>
+
+        <h3>✅ Exemplo de Uso</h3>
+        <div class="code">
+            <p>
+                img { <br>
+                    width: 300px; <br>
+                    height: 200px; <br>
+                    object-fit: cover; <br>
+                  }                   
+            </p>
+        </div>
+        <p>Principais Valores de object-fit</p>
+        <table>
+            <tr>
+                <th>Valor</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>fill (default)</td>
+                <td>A imagem se estica para ocupar todo o espaço do contêiner, podendo distorcer.</td>
+            </tr>
+            <tr>
+                <td>contain</td>
+                <td>A imagem é redimensionada para caber dentro do contêiner sem cortar nada. Pode haver espaços vazios.</td>
+            </tr>
+            <tr>
+                <td>cover</td>
+                <td>A imagem cobre todo o contêiner, podendo cortar partes dela.</td>
+            </tr>
+            <tr>
+                <td>none</td>
+                <td>A imagem mantém seu tamanho original, podendo ultrapassar o contêiner.</td>
+            </tr>
+            <tr>
+                <td>scale-down</td>
+                <td>Usa o menor tamanho possível entre none e contain.</td>
+            </tr>
+        </table>
+
+        <h3>✅ Comparação Visual</h3>
+        <ul>
+            <li>cover: Mantém a proporção e cobre todo o espaço disponível.</li>
+            <li>contain: Mantém a proporção, mas pode deixar espaços vazios.</li>
+            <li>fill: Estica a imagem para caber no contêiner, distorcendo-a.</li>
+        </ul>
+
+        <hr>
+
+        <h2>O que é object-position?</h2>
+        <p>A propriedade object-position permite controlar a posição da imagem dentro do contêiner quando object-fit: cover ou object-fit: contain estão sendo usados.</p>
+
+        <h3>✅ Exemplo de Uso</h3>
+        <div class="code">
+            <p>
+                img { <br>
+                    width: 300px; <br>
+                    height: 200px; <br>
+                    object-fit: cover; <br>
+                    object-position: top right; <br>
+                  }                  
+            </p>
+        </div>
+        <p>Principais Valores de object-position</p>
+        <table>
+            <tr>
+                <th>Valor</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>center center (default)</td>
+                <td>Centraliza a imagem.</td>
+            </tr>
+            <tr>
+                <td>top left</td>
+                <td>Alinha a imagem no canto superior esquerdo.</td>
+            </tr>
+            <tr>
+                <td>top right</td>
+                <td>Alinha a imagem no canto superior direito.</td>
+            </tr>
+            <tr>
+                <td>bottom left</td>
+                <td>Alinha a imagem no canto inferior esquerdo.</td>
+            </tr>
+            <tr>
+                <td>bottom right</td>
+                <td>Alinha a imagem no canto inferior direito.</td>
+            </tr>
+            <tr>
+                <td>50% 50%</td>
+                <td>Define posições personalizadas usando porcentagens ou pixels.</td>
+            </tr>
+        </table>
+
+        <h3>✅ Ajustando Precisamente a Posição</h3>
+        <div class="code">
+            <p>
+                img { <br>
+                    object-fit: cover; <br>
+                    object-position: 75% 25%; <br>
+                  }                    
+            </p>
+        </div>
+        <ul>
+            <li>75% 25% move a imagem mais para a direita e um pouco para cima.</li>
+        </ul>
+    </div>
+</body>
+</html>

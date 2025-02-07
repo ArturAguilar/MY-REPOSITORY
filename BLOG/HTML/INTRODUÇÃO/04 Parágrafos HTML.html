@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parágrafos HTML</title>
+    <link rel="shortcut icon" href="../../ICONES/html.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 0, 0);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: red;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(255, 65, 65);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html../index.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Parágrafos HTML</h1>
+
+        <h2>O que são parágrafos HTML?</h2>
+        <ul>
+            <li>O elemento &lt;p&gt; é usado para definir um parágrafo de texto.</li>
+
+            <li>O texto dentro do parágrafo será exibido com espaçamento acima e abaixo por padrão.</li>
+
+            <li>Ideal para organizar o conteúdo textual na página.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Exemplo de Parágrafo</h2>
+        <div class="code">
+            <p>&lt;p&gt;Este é um parágrafo de exemplo. O parágrafo pode ter várias linhas, mas o navegador automaticamente cria quebras de linha ao final de cada parágrafo.&lt;/p&gt;</p>
+        </div>
+
+        <div class="version">
+            <h3>Quebras de Linha</h3>
+            
+            <p>O navegador não faz quebras de linha automáticas dentro de um parágrafo, exceto no final de cada &lt;p&gt;.</p>
+
+            <p>Para adicionar uma nova linha dentro de um parágrafo, utilize a tag &lt;br&gt; (break line):</p>
+
+            <div class="code">
+            <p>&lt;p&gt;Primeira linha.&lt;br&gt;Segunda linha.&lt;/p&gt;</p> 
+            </div>
+            
+            <h3>Espaçamento</h3>
+            <p>O elemento &lt;p&gt; tem espaçamento automático entre os parágrafos, o que ajuda a organizar o conteúdo de forma legível.</p>
+
+            <h3>Boas Práticas</h3>
+            <p>Use &lt;p&gt; para dividir grandes blocos de texto em seções menores.</p>
+            <p>Não use &lt;p&gt; para elementos que não sejam parágrafos, como listas ou cabeçalhos.</p>
+        </div>
+    </div>
+</body>
+</html>

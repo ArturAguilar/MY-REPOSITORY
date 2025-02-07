@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masking</title>
+    <link rel="shortcut icon" href="../../ICONES/css.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Masking</h1>
+        <p>O CSS Masking permite esconder ou revelar partes de um elemento usando máscaras opacas e transparentes. Isso é útil para criar efeitos visuais avançados, como gradientes de transparência e cortes personalizados em imagens.</p>
+
+        <hr>
+
+        <h2>Propriedade mask-image</h2>
+        <p>Define uma máscara que controla a visibilidade de partes de um elemento. Pode ser aplicada com imagens ou gradientes.</p>
+
+        <h3>Exemplo de Uso: Máscara com Imagem</h3>
+        <div class="code">
+            <p>
+                div { <br>
+                    width: 300px; <br>
+                    height: 200px; <br>
+                    background: url("paisagem.jpg"); <br>
+                    mask-image: url("mascara.png"); <br>
+                    -webkit-mask-image: url("mascara.png"); /* Compatibilidade com WebKit */ <br>
+                  }                  
+            </p>
+        </div>
+        <ul>
+            <li>A máscara (mascara.png) define quais partes da paisagem.jpg serão visíveis.</li>
+            <li>Áreas brancas na máscara ficam visíveis, enquanto áreas pretas ficam ocultas.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Propriedade mask-size</h2>
+        <p>Define o tamanho da máscara, semelhante ao background-size.</p>
+
+        <h3>Exemplo de mask-size</h3>
+        <div class="code">
+            <p>
+                div { <br>
+                    mask-image: url("mascara.png"); <br>
+                    mask-size: contain; <br>
+                    -webkit-mask-size: contain; <br>
+                  }                                   
+            </p>
+        </div>
+        <ul>
+            <li>contain: ajusta a máscara para caber no elemento sem cortar.</li>
+            <li>cover: faz a máscara cobrir o elemento inteiro.</li>
+        </ul>
+
+        <hr>
+
+        <h2>mask-image com Gradiente</h2>
+        <p>Podemos usar um gradiente como máscara para criar um efeito de transição suave.</p>
+
+        <h3>Exemplo de Máscara com Gradiente</h3>
+        <div class="code">
+            <p>
+                div { <br>
+                    width: 300px; <br>
+                    height: 200px; <br>
+                    background: url("paisagem.jpg"); <br>
+                    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); <br>
+                    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); <br>
+                  }                                   
+            </p>
+        </div>
+        <ul>
+            <li>A imagem desaparece gradualmente de cima para baixo.</li>
+            <li>Valores escuros mantêm a área visível, e áreas transparentes ocultam.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Propriedade mask-position</h2>
+        <p>Define a posição da máscara dentro do elemento.</p>
+
+        <h3>Exemplo de mask-position</h3>
+        <div class="code">
+            <p>
+                div { <br>
+                    mask-image: url("mascara.png"); <br>
+                    mask-position: center; <br>
+                    -webkit-mask-position: center; <br>
+                  }                                   
+            </p>
+        </div>
+        <p>Alinha a máscara ao centro do elemento.</p>
+        <p>Valores comuns:</p>
+        <ul>
+            <li>A máscara (mascara.png) define quais partes da paisagem.jpg serão visíveis.</li>
+            <li>Áreas brancas na máscara ficam visíveis, enquanto áreas pretas ficam ocultas.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Propriedade mask-repeat</h2>
+        <p>Controla se a máscara será repetida no elemento.</p>
+
+        <h3>Exemplo de mask-repeat</h3>
+        <div class="code">
+            <p>
+                div { <br>
+                    mask-image: url("mascara.png"); <br>
+                    mask-repeat: repeat-x; <br>
+                    -webkit-mask-repeat: repeat-x; <br>
+                  }                                  
+            </p>
+        </div>
+        <p>Repete a máscara horizontalmente.</p>
+        <p>Valores comuns:</p>
+        <ul>
+            <li>no-repeat</li>
+            <li>repeat</li>
+            <li>repeat-x</li>
+            <li>repeat-y</li>
+        </ul>
+
+        <hr>
+
+        <h2>Propriedade mask-composite</h2>
+        <p>Define como múltiplas máscaras interagem umas com as outras.</p>
+
+        <h3>Exemplo de mask-composite</h3>
+        <div class="code">
+            <p>
+                div { <br>
+                    mask-image: url("mascara1.png"), url("mascara2.png"); <br>
+                    mask-composite: exclude; <br>
+                    -webkit-mask-composite: exclude; <br>
+                  }                                  
+            </p>
+        </div>
+        <p>exclude: remove a área onde as máscaras se sobrepõem.</p>
+        <p>Outros valores:</p>
+        <ul>
+            <li>add: soma as máscaras.</li>
+            <li>subtract: subtrai a segunda máscara da primeira.</li>
+        </ul>
+    </div>
+</body>
+</html>
