@@ -120,6 +120,7 @@
             width: 100%;
         }
 
+        
         @media (max-width : 900px){
             .navegation{
                 padding: 18px 20px;
