@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../ICONES/css.ico" type="image/x-icon">
+    <title>Vídeos Responsivos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Vídeos Responsivos</h1>
+        <p>Os vídeos precisam se adaptar automaticamente a diferentes tamanhos de tela, garantindo uma experiência fluida para os usuários. Vamos explorar maneiras de torná-los 100% responsivos!</p>
+
+        <hr>
+
+        <h2>Tornando Vídeos Responsivos</h2>
+        <p>A abordagem mais simples é definir width: 100% e height: auto, garantindo que o vídeo nunca ultrapasse o contêiner.</p>
+        <div class="code">
+            <p>
+                video { <br>
+                    max-width: 100%; <br>
+                    height: auto; <br>
+                  }                     
+            </p>
+        </div>
+        <p> Com isso, o vídeo se ajusta automaticamente ao tamanho da tela.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                &lt;picture&gt; <br>
+                &lt;source srcset="imagem-pequena.jpg" media="(max-width: 600px)"&gt; <br>
+                &lt;source srcset="imagem-media.jpg" media="(max-width: 1024px)"&gt; <br>
+                &lt;img src="imagem-grande.jpg" alt="Imagem Responsiva"&gt; <br>
+              &lt;/picture&gt;              
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Responsividade com iframe (YouTube, Vimeo, etc.)</h2>
+        <p>Vídeos incorporados (como os do YouTube) não são responsivos por padrão, mas podemos resolver isso com CSS.</p>
+
+        <h3>Solução: Contêiner Proporcional (aspect ratio)</h3>
+        <div class="code">
+            <p>
+                .video-container { <br>
+                    position: relative; <br>
+                    width: 100%; <br>
+                    padding-top: 56.25%; /* 16:9 Aspect Ratio */ <br>
+                  } <br><br>
+                  
+                  .video-container iframe { <br>
+                    position: absolute; <br>
+                    top: 0; <br>
+                    left: 0; <br>
+                    width: 100%; <br>
+                    height: 100%; <br>
+                  }                  
+            </p>
+        </div>
+        <h3>Exemplo com YouTube:</h3>
+        <div class="code">
+            <p>
+                &lt;div class="video-container"&gt; <br>
+                &lt;iframe src="https://www.youtube.com/embed/xyz123" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt; <br>
+              &lt;/div&gt;              
+            </p>
+        </div>
+        <p> Agora o vídeo se ajusta automaticamente ao tamanho da tela! 📱💻</p>
+
+        <hr>
+
+        <h2>Alternativa Moderna: aspect-ratio</h2>
+        <p>Se o navegador suportar aspect-ratio, podemos simplificar o código:</p>
+        <div class="code">
+            <p>
+                iframe { <br>
+                    width: 100%; <br>
+                    aspect-ratio: 16 / 9; <br>
+                  }                    
+            </p>
+        </div>
+        <p> Isso define a proporção do vídeo sem precisar do padding-top.</p>
+
+        <hr>
+
+        <h2>Exemplo Prático com Vídeo e Iframe Responsivos</h2>
+        <div class="code">
+            <p>
+                &lt;!DOCTYPE html&gt; <br>
+                &lt;html lang="pt"&gt; <br>
+                &lt;head&gt; <br>
+                  &lt;meta charset="UTF-8"&gt; <br>
+                  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; <br>
+                  &lt;title&gt;Vídeos Responsivos&lt;/title&gt; <br>
+                  &lt;style&gt; <br><br>
+                    video { <br>
+                      max-width: 100%; <br>
+                      height: auto; <br>
+                    } <br><br>
+                
+                    .video-container { <br>
+                      position: relative; <br>
+                      width: 100%; <br>
+                      padding-top: 56.25%; <br>
+                    } <br><br>
+                
+                    .video-container iframe { <br>
+                      position: absolute; <br>
+                      top: 0; <br>
+                      left: 0; <br>
+                      width: 100%; <br>
+                      height: 100%; <br>
+                    } <br><br>
+                  &lt;/style&gt; <br>
+                &lt;/head&gt; <br>
+                &lt;body&gt; <br><br>
+                
+                  &lt;h2&gt;Vídeo Responsivo&lt;/h2&gt; <br>
+                  &lt;video controls&gt; <br>
+                    &lt;source src="video.mp4" type="video/mp4"&gt; <br>
+                    Seu navegador não suporta vídeos.
+                  &lt;/video&gt; <br><br>
+                
+                  &lt;h2&gt;Vídeo Incorporado (YouTube)&lt;/h2&gt; <br>
+                  &lt;div class="video-container"&gt; <br>
+                    &lt;iframe src="https://www.youtube.com/embed/xyz123" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt; <br>
+                  &lt;/div&gt; <br><br>
+                
+                &lt;/body&gt; <br>
+                &lt;/html&gt;                
+            </p>
+        </div>
+    </div>
+</body>
+</html>

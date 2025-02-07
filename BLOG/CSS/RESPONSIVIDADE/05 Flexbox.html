@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../ICONES/css.ico" type="image/x-icon">
+    <title>Flexbox</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 38, 255);
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(65, 84, 255);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Flexbox</h1>
+        <p>O Flexbox é um sistema de layout no CSS que facilita o alinhamento e a distribuição dos elementos dentro de um contêiner, mesmo quando seus tamanhos são dinâmicos.</p>
+
+        <hr>
+
+        <h2>Flex Container (Contêiner Flexível)</h2>
+        <p>O Flexbox começa ao definir um elemento como contêiner flexível usando display: flex; ou display: inline-flex;.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                .container { <br>
+                    display: flex; /* Ativa o flexbox */ <br>
+                    background-color: #ddd; <br>
+                    padding: 10px; <br>
+                  } <br><br>
+                  
+                  .item { <br>
+                    background-color: #d70000; <br>
+                    color: white; <br>
+                    padding: 20px; <br>
+                    margin: 5px; <br>
+                  }                  
+            </p>
+        </div>
+        <div class="code">
+            <p>
+                &lt;div class="container"&gt; <br>
+                &lt;div class="item"&gt;1&lt;/div&gt; <br>
+                &lt;div class="item"&gt;2&lt;/div&gt; <br>
+                &lt;div class="item"&gt;3&lt;/div&gt; <br>
+              &lt;/div&gt;                            
+            </p>
+        </div>
+        <h4>Explicação:</h4>
+        <ul>
+            <li>display: flex; faz com que os itens internos sejam alinhados em linha por padrão.</li>
+            <li>Os elementos .item agora são flexíveis dentro do .container.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Propriedades do Contêiner Flexível</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Propriedade</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>display: flex;</td>
+                    <td>Ativa o Flexbox no elemento.</td>
+                </tr>
+                <tr>
+                    <td>flex-direction</td>
+                    <td>Define a direção dos itens (row, column, row-reverse, column-reverse).</td>
+                </tr>
+                <tr>
+                    <td>justify-content</td>
+                    <td>Alinha os itens no eixo principal (flex-start, center, flex-end, space-between, space-around, space-evenly).</td>
+                </tr>
+                <tr>
+                    <td>align-items</td>
+                    <td>Alinha os itens no eixo transversal (stretch, flex-start, center, flex-end, baseline).</td>
+                </tr>
+                <tr>
+                    <td>flex-wrap</td>
+                    <td>Permite que os itens quebrem linha (nowrap, wrap, wrap-reverse).</td>
+                </tr>
+                <tr>
+                    <td>align-content</td>
+                    <td>Alinha múltiplas linhas de itens (stretch, center, flex-start, flex-end, space-between, space-around).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <h2>Direção dos Itens (flex-direction)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Valor</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>row</td>
+                    <td>Padrão. Itens alinhados da esquerda para a direita.</td>
+                </tr>
+                <tr>
+                    <td>row-reverse</td>
+                    <td>Itens alinhados da direita para a esquerda.</td>
+                </tr>
+                <tr>
+                    <td>column</td>
+                    <td>Itens alinhados de cima para baixo.</td>
+                </tr>
+                <tr>
+                    <td>column-reverse</td>
+                    <td>Itens alinhados de baixo para cima.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Exemplo - flex-direction: column;</h3>
+        <div class="code">
+            <p>
+                .container { <br>
+                    display: flex; <br>
+                    flex-direction: column; <br>
+                  }                  
+            </p>
+        </div>
+        <p>Isso faz com que os itens sejam organizados verticalmente.</p>
+
+        <hr>
+
+        <h2>Distribuição dos Itens no Eixo Principal (justify-content)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Valor</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>flex-start</td>
+                    <td>Alinha os itens no início do contêiner.</td>
+                </tr>
+                <tr>
+                    <td>flex-end</td>
+                    <td>Alinha os itens no final do contêiner.</td>
+                </tr>
+                <tr>
+                    <td>center</td>
+                    <td>Centraliza os itens.</td>
+                </tr>
+                <tr>
+                    <td>space-between</td>
+                    <td>Distribui os itens igualmente, com espaço entre eles.</td>
+                </tr>
+                <tr>
+                    <td>space-around</td>
+                    <td>Distribui os itens igualmente, com espaço ao redor deles.</td>
+                </tr>
+                <tr>
+                    <td>space-evenly</td>
+                    <td>Espaço igual entre os itens e nas bordas do contêiner.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Exemplo - justify-content: space-between;</h3>
+        <div class="code">
+            <p>
+                .container { <br>
+                    display: flex; <br>
+                    justify-content: space-between; <br>
+                  }                  
+            </p>
+        </div>
+        <p>Os itens ficam alinhados com espaço igual entre eles.</p>
+
+        <hr>
+
+        <h2>Alinhamento no Eixo Transversal (align-items)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Valor</th>
+                    <th>Descrição</th>
+                </tr>
+                <tr>
+                    <td>stretch</td>
+                    <td>Padrão. Os itens ocupam toda a altura disponível.</td>
+                </tr>
+                <tr>
+                    <td>flex-start</td>
+                    <td>Alinha os itens no topo do contêiner.</td>
+                </tr>
+                <tr>
+                    <td>flex-end</td>
+                    <td>Alinha os itens na parte inferior.</td>
+                </tr>
+                <tr>
+                    <td>center</td>
+                    <td>Centraliza os itens verticalmente.</td>
+                </tr>
+                <tr>
+                    <td>baseline</td>
+                    <td>Alinha os itens com base no texto dentro deles.</td>
+                </tr>
+            </thead>
+        </table>
+
+        <h3>Exemplo - align-items: center;</h3>
+        <div class="code">
+            <p>
+                .container { <br>
+                    display: flex; <br>
+                    align-items: center; <br>
+                  }                  
+            </p>
+        </div>
+        <p>Os itens ficarão centralizados verticalmente.</p>
+
+        <hr>
+
+        <h2>Controle de Tamanho dos Itens (flex-grow, flex-shrink, flex-basis)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Propriedade</th>
+                    <th>Descrição</th>
+                </tr>
+                <tr>
+                    <td>flex-grow</td>
+                    <td>Define quanto um item pode crescer comparado aos outros.</td>
+                </tr>
+                <tr>
+                    <td>flex-shrink</td>
+                    <td>Define quanto um item pode encolher quando não há espaço suficiente.</td>
+                </tr>
+                <tr>
+                    <td>flex-basis</td>
+                    <td>Define o tamanho inicial do item antes da distribuição do espaço.</td>
+                </tr>
+            </thead>
+        </table>
+        <h3>Exemplo - flex-grow</h3>
+        <div class="code">
+            <p>
+                .item:first-child { <br>
+                    flex-grow: 2; <br>
+                  } <br><br>
+                  .item:last-child { <br>
+                    flex-grow: 1; <br>
+                  }                   
+            </p>
+        </div>
+        <p>O primeiro item ocupará o dobro de espaço comparado ao último.</p>
+
+        <hr>
+
+        <h2>Flex-Wrap: Quebra de Linha Automática</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Valor</th>
+                    <th>Descrição</th>
+                </tr>
+                <tr>
+                    <td>nowrap</td>
+                    <td>Padrão. Todos os itens ficam na mesma linha.</td>
+                </tr>
+                <tr>
+                    <td>wrap</td>
+                    <td>Itens quebram linha quando não há espaço suficiente.</td>
+                </tr>
+                <tr>
+                    <td>wrap-reverse</td>
+                    <td>Quebra de linha invertida.</td>
+                </tr>
+            </thead>
+        </table>
+        <h3>Exemplo - flex-wrap: wrap;</h3>
+        <div class="code">
+            <p>
+                .container { <br>
+                    display: flex; <br>
+                    flex-wrap: wrap; <br>
+                  }                  
+            </p>
+        </div>
+        <p>Os itens quebram linha automaticamente quando necessário.</p>
+
+        <hr>
+
+        <h2>Flexbox Responsivo</h2>
+        <p>Podemos usar Media Queries para adaptar o layout em telas menores.</p>
+
+        <h3>Exemplo de Layout Responsivo</h3>
+        <div class="code">
+            <p>
+                .container { <br>
+                    display: flex; <br>
+                    flex-wrap: wrap; <br>
+                    justify-content: center; <br>
+                  } <br><br>
+                  
+                  @media (max-width: 600px) { <br>
+                    .container { <br>
+                      flex-direction: column; <br>
+                    } <br>
+                  }                  
+            </p>
+        </div>
+        <ul>
+            <li>Acima de 600px: os itens ficam em linha.</li>
+            <li>Abaixo de 600px: os itens ficam em coluna.</li>
+        </ul>
+    </div>
+</body>
+</html>
