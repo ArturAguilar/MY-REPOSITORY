@@ -16,41 +16,78 @@
             font-size:2rem;
             color: #727272;
         }
-
-        /* Estilização geral da seção de habilidades */
-    .ebooks-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.ebook {
-    background: #f4f4f4;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+/* Estilização da seção de contato */
+#contato {
+    width: 90%;
+    background-color: #dbdbdb; /* Fundo escuro */
+    color: #fff;
     text-align: center;
-    width: 300px;
+    padding: 50px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(199, 199, 199, 0.3); /* Efeito neon vermelho */
+    max-width: 600px;
+    margin: 50px auto;
 }
 
-.ebook img {
+/* Título */
+#contato h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000; /* Vermelho vibrante */
+}
+
+/* Parágrafo */
+#contato p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+    color: #000000;
+    
+}
+
+/* Inputs e textarea */
+#contato input, 
+#contato textarea {
     width: 100%;
-    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #949292; /* Borda vermelha */
+    background-color: #f1f1f1;
+    color: #000000;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-.btn {
+#contato input:focus, 
+#contato textarea:focus {
+    border-color: #ff4d4d;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+/* Botão de enviar */
+.whatsapp-btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: #d70000;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    width: 100%;
+    padding: 14px;
+    background-color: #25D366;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 0px 15px rgba(37, 211, 102, 0.5);
 }
 
-.btn:hover {
-    background: #a00000;
+.whatsapp-btn:hover {
+    background-color: #1EBE5D;
+    box-shadow: 0px 0px 25px rgba(37, 211, 102, 0.8);
 }
 
     </style>
@@ -75,27 +112,37 @@
         </nav>
     </header>
     <main>   
-        <section id="ebooks">
-            <h2>Meus eBooks</h2>
-            <div class="ebooks-container">
-                <div class="ebook">
-                    <img src="../IMG/html.png" alt="Guia Descomplica Front End - Volume 1">
-                    <h3>Nome do eBook</h3>
-                    <p>Breve descrição sobre o conteúdo do eBook.</p>
-                    <a href="./PDF/Guia Descomplica Front End - Volume 1.pdf" download="./PDF/Guia Descomplica Front End - Volume 1.pdf" target="_blank" class="btn">Baixar</a>
-                </div>
-        
-                <div class="ebook">
-                    <img src="../IMG/css.png" alt="Guia Descomplica Front End - Volume 2">
-                    <h3>Nome do eBook 2</h3>
-                    <p>Breve descrição sobre o conteúdo do eBook.</p>
-                    <a href="./PDF/Guia Descomplica Front End - Volume 2.pdf" download="./PDF/Guia Descomplica Front End - Volume 2.pdf" target="_blank" class="btn">Baixar</a>
-                </div>
-            </div>
-        </section>                  
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p>Ficou interessado em meu trabalho? Me chame no WhatsApp!</p>
+            <form onsubmit="enviarWhatsApp(event)">
+                <input type="text" id="nome" placeholder="Seu Nome" required>
+                <textarea id="mensagem" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit" class="whatsapp-btn">
+                    📩 Enviar pelo WhatsApp
+                </button>
+            </form>
+        </section>
+                      
     </main>
 
     <script>
+        function enviarWhatsApp(event) {
+    event.preventDefault();
+    
+    let nome = document.getElementById("nome").value;
+    let mensagem = document.getElementById("mensagem").value;
+    
+    let texto = `Olá, meu nome é ${nome}. ${mensagem}`;
+    let numero = "5521976838012"; // Substitua pelo seu número
+
+    let link = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+    window.open(link, "_blank");
+}
+
+
+
         const menu = document.querySelector('.menu');
         const NavMenu = document.querySelector('.nav-menu');
 

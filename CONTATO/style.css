@@ -107,6 +107,7 @@
                 background-color: white;
                 gap: -10px;
                 transition: 0.3s;
+                z-index: 1;
             }
 
             .nav-menu.ativo{
