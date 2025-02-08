@@ -19,7 +19,16 @@ nav {
     text-align: center;
 }
 
-.conteiner, .conteine{
+.conteiner > h1, label {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px; /* Tamanho padrão */
+}
+
+.filtro-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
     width: 90%;
     max-width: 850px;
     margin: 25px auto;
@@ -27,12 +36,60 @@ nav {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-.conteiner > h1, label {
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 24px; /* Tamanho padrão */
+.filtro, .etiqueta-filtro {
+    display: flex;
+    align-items: center;
+    
+}
+
+.filtro input, .etiqueta-filtro select {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.conteiner{
+    width: 90%;
+    max-width: 850px;
+    margin: 25px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.etiqueta-internet, .etiqueta-css{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 15px;
+    background-color: rgb(65, 84, 255);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+}
+
+.etiqueta-html {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 15px;
+    background-color: rgb(255, 67, 67);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+}
+
+nav a {
+    display: block;
+    margin: 5px 0;
 }
 
 h2 {
