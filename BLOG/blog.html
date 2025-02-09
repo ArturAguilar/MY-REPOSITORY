@@ -246,6 +246,38 @@
     document.getElementById('search').addEventListener('input', filtrar);
     document.getElementById('etiqueta').addEventListener('change', filtrar)
 
+    /////////////////////////////////////////////////////////////////
+    document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("search");
+    const etiquetaSelect = document.getElementById("etiqueta");
+    const conteiners = document.querySelectorAll(".conteiner");
+
+    function filtrarConteudo() {
+        const termoBusca = searchInput.value.toLowerCase();
+        const etiquetaSelecionada = etiquetaSelect.value.toLowerCase();
+
+        conteiners.forEach(conteiner => {
+            const titulo = conteiner.querySelector("h1").innerText.toLowerCase();
+            const links = conteiner.querySelectorAll("nav a");
+            const etiqueta = conteiner.querySelector("div").innerText.toLowerCase();
+            let algumLinkVisivel = false;
+
+            links.forEach(link => {
+                const textoLink = link.innerText.toLowerCase();
+                const correspondeTermo = textoLink.includes(termoBusca);
+                link.style.display = correspondeTermo ? "inline-block" : "none";
+                if (correspondeTermo) algumLinkVisivel = true;
+            });
+
+            const correspondeEtiqueta = etiquetaSelecionada === "" || etiqueta.includes(etiquetaSelecionada);
+            conteiner.style.display = (algumLinkVisivel && correspondeEtiqueta) ? "block" : "none";
+        });
+    }
+
+    searchInput.addEventListener("input", filtrarConteudo);
+    etiquetaSelect.addEventListener("change", filtrarConteudo);
+});
+/////////////////////////////////////////////////////
 
 const menu = document.querySelector('.menu');
         const NavMenu = document.querySelector('.nav-menu');

@@ -26,8 +26,7 @@ nav {
 }
 
 .filtro-container {
-    display: flex;
-    justify-content: space-between;
+    display: block;
     margin-bottom: 20px;
     width: 90%;
     max-width: 850px;
@@ -42,7 +41,6 @@ nav {
 .filtro, .etiqueta-filtro {
     display: flex;
     align-items: center;
-    
 }
 
 .filtro input, .etiqueta-filtro select {
@@ -85,11 +83,6 @@ nav {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 14px;
-}
-
-nav a {
-    display: block;
-    margin: 5px 0;
 }
 
 h2 {
@@ -243,6 +236,11 @@ input[type="text"]:focus {
     table {
         font-size: 15px; /* Ajuste para telas médias */
     }
+
+    .filtro-container {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .navegation{
@@ -338,6 +336,7 @@ input[type="text"]:focus {
         background-color: white;
         gap: -10px;
         transition: 0.3s;
+        z-index: 10;
     }
 
     .nav-menu.ativo{
