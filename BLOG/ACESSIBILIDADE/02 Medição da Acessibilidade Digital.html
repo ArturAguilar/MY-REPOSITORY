@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../IMG/logo.png" type="image/x-icon">
+    <title>Medição da Acessibilidade Digital</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: rgb(2, 243, 62);
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(8, 241, 67);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Medição da Acessibilidade Digital</h1>
+        <p>A medição da acessibilidade digital envolve a avaliação de como um site ou aplicativo atende às diretrizes de acessibilidade e às necessidades de usuários com diferentes deficiências. Existem várias ferramentas, métodos e critérios que ajudam a avaliar o nível de acessibilidade digital de um projeto. <br><br>
+
+        Aqui estão os principais meios usados para medir a acessibilidade digital:</p>
+
+        <hr>
+
+        <h2>Diretrizes WCAG (Web Content Accessibility Guidelines)</h2>
+
+        <p>As WCAG são um conjunto de diretrizes amplamente utilizadas para garantir que o conteúdo da web seja acessível. Essas diretrizes, desenvolvidas pelo W3C (World Wide Web Consortium), ajudam a medir e garantir que os sites atendam a padrões de acessibilidade. As WCAG são organizadas em principais princípios, e cada um deles contém diretrizes específicas. São eles:</p>
+
+        <ul>
+            <li><strong>Perceptível:</strong> O conteúdo deve ser apresentado de forma que os usuários possam perceber, independentemente de sua deficiência. Por exemplo, imagens devem ter texto alternativo e o conteúdo de vídeo deve ser transcrito ou ter legendas.</li>
+
+            <li><strong>Operável:</strong> O conteúdo deve ser interativo de forma que os usuários possam navegar, independentemente de sua deficiência. Isso inclui permitir a navegação por teclado e garantir que a interação com o site seja possível sem o uso de mouse.</li>
+
+            <li><strong>Compreensível:</strong> O conteúdo e a interface devem ser apresentados de maneira clara e fácil de entender, o que inclui a escolha de palavras simples e instruções claras.</li>
+
+            <li><strong>Robusto:</strong> O site deve ser projetado para funcionar bem em uma variedade de dispositivos, incluindo leitores de tela e navegadores diferentes, agora e no futuro.</li>
+        </ul>
+
+        <p>Esses princípios são avaliados em três níveis de conformidade: <strong>A</strong>, <strong>AA</strong> e <strong>AAA</strong>, sendo o nível <strong>AA</strong> o mais comum para sites que buscam atender a uma acessibilidade razoável.</p>
+
+        <hr>
+
+        <h2>Ferramentas de Avaliação Automática</h2>
+        <p>Existem várias ferramentas que permitem realizar testes automáticos de acessibilidade em sites e páginas da web. Essas ferramentas verificam se o site atende a certos critérios de acessibilidade, como contraste, uso de texto alternativo, navegação por teclado, etc.</p>
+
+        <ul>
+            <li><strong>Google Lighthouse:</strong> Uma das ferramentas mais populares, que pode ser utilizada diretamente no Chrome DevTools. Ela analisa várias áreas de um site, incluindo acessibilidade, e fornece uma pontuação (de 0 a 100), além de sugestões para melhorar a acessibilidade.</li>
+
+            <li><strong>WAVE:</strong> Uma ferramenta de avaliação online que ajuda a identificar problemas de acessibilidade em sites. Ela gera um relatório visual com os erros encontrados e fornece dicas de como corrigi-los.</li>
+
+            <li><strong>Axe Accessibility Checker:</strong> Uma ferramenta popular usada como extensão de navegador para testar a acessibilidade. Ela gera um relatório detalhado sobre os erros e fornece recomendações sobre como corrigi-los.</li>
+
+            <li><strong>Tenon: </strong>Outra ferramenta que realiza auditorias de acessibilidade e fornece sugestões detalhadas sobre como melhorar.</li>
+        </ul>
+
+        <p>Essas ferramentas são muito úteis, mas <strong>não substituem a revisão manual</strong>, pois podem não identificar todos os problemas.</p>
+
+        <hr>
+
+        <h2>Avaliação Manual</h2>
+
+        <p>
+            Embora as ferramentas automáticas sejam muito úteis, elas não podem capturar todos os aspectos de acessibilidade, especialmente no que diz respeito à experiência do usuário. Portanto, a avaliação manual é crucial. <br><br>
+
+            Durante a avaliação manual, especialistas em acessibilidade (ou testadores com deficiências) podem testar o site para garantir que ele seja usável em situações do mundo real. Isso pode envolver:
+        </p>
+
+        <ul>
+            <li><strong>Testes com leitores de tela:</strong> Verificar se o site funciona bem com leitores de tela, como o JAWS ou o NVDA.</li>
+
+            <li><strong>Testes de navegação por teclado:</strong> Garantir que o site seja totalmente navegável e funcional sem o uso de mouse.</li>
+
+            <li><strong>Testes de contraste:</strong> Verificar se o contraste de cores entre o texto e o fundo é suficientemente alto para usuários com baixa visão.</li>
+
+            <li><strong>Testes com diferentes dispositivos de entrada:</strong> Garantir que o site funcione bem em diferentes dispositivos de entrada, como teclados adaptados, switches ou outros dispositivos assistivos.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Feedback de Usuários com Deficiência</h2>
+
+        <p>Uma das formas mais eficazes de medir a acessibilidade digital é obter feedback direto dos usuários que dependem de tecnologias assistivas, como leitores de tela, teclados adaptados e outros dispositivos assistivos. Isso permite identificar problemas práticos que podem não ser evidentes durante os testes automáticos ou manuais.</p>
+
+        <hr>
+
+        <h2>Métricas de Acessibilidade</h2>
+        <p>Algumas organizações medem a experiência do usuário acessível por meio de métricas específicas, como:</p>
+
+        <ul>
+            <li>Taxa de sucesso: Percentual de usuários que conseguem completar uma tarefa sem dificuldades.</li>
+            <li>Taxa de erros: Percentual de usuários que cometem erros ao tentar realizar uma tarefa.</li>
+            <li>Tempo de conclusão: Tempo médio necessário para concluir uma tarefa.</li>
+        </ul>
+
+        <p>Essas métricas são mais comuns em testes de usabilidade focados em acessibilidade.</p>
+
+        <hr>
+
+        <h2>Conformidade com Leis e Regulamentos</h2>
+        <p>Em alguns casos, a acessibilidade digital é medida com base no cumprimento de leis e regulamentos locais que exigem que sites e aplicativos atendam a padrões específicos. No Brasil, a Lei Brasileira de Inclusão (LBI) é um exemplo de regulamentação que exige a acessibilidade em ambientes digitais, e a não conformidade pode resultar em penalidades.</p>
+    </div>
+</body>
+</html>

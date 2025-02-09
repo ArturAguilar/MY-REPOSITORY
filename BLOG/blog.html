@@ -40,6 +40,7 @@
                 <option value="">Selecione uma etiqueta</option>
                 <option value="INTERNET">INTERNET</option>
                 <option value="HTML">HTML</option>
+                <option value="ACESSIBILIDADE">ACESSIBILIDADE</option>
                 <option value="CSS">CSS</option>
                 
             </select>
@@ -59,8 +60,9 @@
         </nav>
     </div>
     
-    <!-- Adicione outras seções, mas mantenha a classe 'etiqueta-html' para que o filtro funcione com ela -->
     
+
+
 
         <div class="conteiner">
             <div class="etiqueta-html">HTML</div>
@@ -115,7 +117,7 @@
 
         <div class="conteiner">
             <div class="etiqueta-html">HTML</div>
-            <h1>HTML Grafícos</h1>
+            <h1>Grafícos</h1>
             <nav class="html">
                 <a href="HTML/GRAFÍCOS/01 Elemento canvas no HTML.html">Elemento Canvas</a>
                 <a href="HTML/GRAFÍCOS/02 Elemento svg no HTML.html">Elemento svg</a>
@@ -133,6 +135,19 @@
                 <a href="HTML/API/05 Server-Sent Events no HTML.html">Server-Sent Events (SSE)</a>
             </nav>
         </div>
+
+
+
+
+        <div class="conteiner">
+            <div class="etiqueta-acessibilidade">ACESSIBILIDADE</div>
+            <h1>Introdução</h1>
+            <nav class="acessibilidade">
+                <a href="ACESSIBILIDADE/01 Acessibilidade Digital.html">Acessibilidade Digital</a>
+                <a href="ACESSIBILIDADE/02 Medição da Acessibilidade Digital.html">Medição da Acessibilidade Digital</a>
+            </nav>
+        </div>
+
 
 
 
@@ -224,7 +239,7 @@
         
         conteiners.forEach(function(conteiner) {
             // Filtrar pela etiqueta
-            let temEtiqueta = conteiner.querySelector('.etiqueta-internet, .etiqueta-html, .etiqueta-css'); // Verifica a etiqueta presente
+            let temEtiqueta = conteiner.querySelector('.etiqueta-internet, .etiqueta-html, .etiqueta-css, .etiqueta-acessibilidade'); // Verifica a etiqueta presente
 
             // Verificar se a etiqueta do conteiner corresponde ao filtro
             let correspondeEtiqueta = (selectedEtiqueta === "" || temEtiqueta && temEtiqueta.classList.contains('etiqueta-' + selectedEtiqueta.toLowerCase()));
