@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../IMG/logo verde.png" type="image/x-icon">
+    <title>Estrutura de Conteúdo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: rgb(2, 243, 62);
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(8, 241, 67);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Estrutura de Conteúdo</h1>
+        <p>A estrutura de conteúdo se refere à forma como o conteúdo de um site ou aplicação é organizado, estruturado e apresentado ao usuário, com foco na navegação intuitiva e na acessibilidade. Uma boa estrutura de conteúdo facilita a experiência do usuário e melhora a interação com a interface. <br><br>
+
+        Abaixo estão alguns elementos e conceitos importantes para criar uma boa estrutura de conteúdo em um site ou aplicação, tanto para usuários em geral quanto para acessibilidade digital:</p>
+
+        <hr>
+
+        <h2>HTML Semântico</h2>
+        <p>O uso de tags HTML semânticas é fundamental para criar uma estrutura de conteúdo clara e compreensível, tanto para os usuários quanto para os motores de busca e leitores de tela.</p>
+        <h3>Exemplos de tags semânticas:</h3>
+        <ul>
+            <li>header: Define a área de cabeçalho da página, que pode conter o logo, menus de navegação e informações gerais.</li>
+            <li>nav: Indica uma seção de navegação. Normalmente usada para menus ou links importantes.</li>
+            <li>main: Define a seção principal do conteúdo da página, excluindo cabeçalhos, rodapés e barras laterais.</li>
+            <li>section: Usado para dividir o conteúdo em blocos temáticos.</li>
+            <li>article: Indica um conteúdo independente que pode ser distribuído ou reutilizado, como um post de blog ou artigo.</li>
+            <li>footer: Define o rodapé da página, geralmente com informações de copyright, links de contato, etc.</li>
+            <li>aside: Usado para conteúdo adicional, como barras laterais, anúncios ou links relacionados.</li>
+        </ul>
+        
+        <hr>
+
+        <h2>Hierarquia de Títulos</h2>
+        <p>A hierarquia de títulos ajuda a organizar o conteúdo de maneira lógica e facilita a compreensão para os usuários e motores de busca. No HTML, usamos as tags h1 a h6 para definir títulos, sendo h1 o título principal e h6 o mais baixo na hierarquia.</p>
+        <ul>
+            <li>h1: Título principal, geralmente usado para o título da página ou seção principal.</li>
+            <li>h2: Subtítulo, usado para seções dentro do conteúdo.</li>
+            <li>h3, h4, etc.`: Subtítulos ainda mais específicos para estruturar subseções.</li>
+        </ul>
+        <div class="code">
+            <p>
+                &lt;h1&gt;Guia Completo de Acessibilidade Digital&lt;/h1&gt; <br>
+                &lt;h2&gt;O que é Acessibilidade Digital?&lt;/h2&gt; <br>
+                &lt;h3&gt;Importância da Acessibilidade&lt;/h3&gt; <br>
+                &lt;h3&gt;Como Medir a Acessibilidade?&lt;/h3&gt; <br>                
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Links de Navegação</h2>
+        <p>Os links de navegação devem ser claramente visíveis e acessíveis, permitindo que o usuário encontre facilmente o que procura.</p>
+        <h3>Tipos de Links:</h3>
+        <ul>
+            <li>Links de navegação principal: Usados para navegar entre seções principais do site.</li>
+            <li>Links de navegação secundária: Usados para navegar dentro de uma seção específica.</li>
+            <li>Links de ação: Como botões de "enviar" ou "ir para".</li>
+        </ul>
+
+        <p>Exemplo de navegação:</p>
+        <div class="code">
+            <p>
+                &lt;nav&gt; <br>
+                &lt;ul&gt; <br>
+                  &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;Início&lt;/a&gt;&lt;/li&gt; <br>
+                  &lt;li&gt;&lt;a href=&quot;#services&quot;&gt;Serviços&lt;/a&gt;&lt;/li&gt; <br>
+                  &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contato&lt;/a&gt;&lt;/li&gt; <br>
+                &lt;/ul&gt; <br>
+                &lt;/nav&gt;
+            </p>
+        </div>   
+
+        <hr>
+
+        <h2>Organização de Listas</h2>
+        <p>As listas são importantes para organizar o conteúdo de maneira estruturada e clara.</p>
+        <h3>Tipos de listas:</h3>
+        <ul>
+            <li>Listas ordenadas (ol): Usadas quando a ordem dos itens importa, como etapas de um processo.</li>
+            <li>Listas não ordenadas (ul): Usadas quando a ordem dos itens não importa, como uma lista de itens ou recursos.</li>
+            <li>Listas de definição (dl): Usadas para descrever termos e definições.</li>
+        </ul>
+        <p>Exemplo:</p>
+        <div class="code">
+            <p>
+                &lt;ul&gt; <br>
+                &lt;li&gt;Acessibilidade Web&lt;/li&gt; <br>
+                &lt;li&gt;Usabilidade&lt;/li&gt; <br>
+                &lt;li&gt;Design Responsivo&lt;/li&gt; <br>
+                &lt;/ul&gt;
+            </p>
+        </div>   
+        
+        <hr>
+
+        <h2>Estrutura de Formulários</h2>
+        <p>A estrutura de formulários deve ser clara e intuitiva, com campos corretamente rotulados e agrupados. A acessibilidade é essencial aqui, como garantir que os campos tenham rótulos visíveis e descrições claras.</p>
+        <p>Exemplo de formulário:</p>
+        <div class="code">
+            <p>
+                &lt;form&gt; <br>
+                &lt;label for="name"&gt;Nome:&lt;/label&gt; <br>
+                &lt;input type="text" id="name" name="name" required&gt; <br><br>
+                
+                &lt;label for="email"&gt;Email:&lt;/label&gt; <br>
+                &lt;input type="email" id="email" name="email" required&gt; <br><br>
+                
+                &lt;button type="submit"&gt;Enviar&lt;/button&gt; <br>
+                &lt;/form&gt;
+            </p>
+        </div>    
+        
+        <hr>
+
+        <h2>Estrutura de Imagens e Multimídia</h2>
+        <p>Imagens e conteúdo multimídia devem ser acessíveis a todos os usuários, inclusive aqueles que utilizam leitores de tela ou navegam sem imagens.</p>
+        <ul>
+            <li>Use o atributo alt nas imagens para fornecer uma descrição alternativa do conteúdo da imagem.</li>
+            <li>Forneça legendas e transcrições para vídeos.</li>
+        </ul>
+        <p>Exemplo:</p>
+        <div class="code">
+            <p>
+                &lt;img src="logo.png" alt="Logo da Empresa"&gt; <br>
+                &lt;video controls&gt; <br>
+                  &lt;source src="video.mp4" type="video/mp4"&gt; <br>
+                  &lt;track kind="subtitles" src="legendas_en.vtt" srclang="en" label="Inglês"&gt; <br>
+                &lt;/video&gt;
+            </p>
+        </div>
+        
+        <hr>
+
+        <h2>Responsividade e Design Adaptativo</h2>
+        <p>A estrutura de conteúdo também deve ser planejada para responsividade, ou seja, deve se adaptar a diferentes tamanhos de tela e dispositivos. Isso inclui o uso de media queries para ajustar o layout e o tamanho dos elementos conforme a resolução da tela.</p>
+        <p>Exemplo de media query:</p>
+        <div class="code">
+            <p>
+                @media screen and (max-width: 600px) {
+                    body {
+                      font-size: 14px;
+                    }
+                    nav {
+                      display: block;
+                    }
+                  }
+            </p>
+        </div>
+        
+        <hr>
+
+        <h2>Acessibilidade e Testes</h2>
+        <p>Ao organizar a estrutura de conteúdo, você deve considerar as necessidades de acessibilidade:</p>
+        <ul>
+            <li>Navegação por teclado: Garantir que todos os elementos interativos sejam acessíveis sem o uso de mouse.</li>
+            <li>Uso de ARIA: Implementar atributos ARIA para melhorar a experiência de usuários com deficiência.</li>
+            <li>Contraste adequado: Garantir que o contraste entre o texto e o fundo seja suficiente para usuários com baixa visão.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Feedback Visual e Interativo</h2>
+        <p>É importante fornecer feedback visual e interativo claro para os usuários, como destacar campos com erros em formulários ou indicar ações de sucesso. Isso ajuda os usuários a entenderem o que está acontecendo em cada momento.</p>
+
+        <p>Exemplo:</p>
+        <div class="code">
+            <p>
+                &lt;form&gt; <br>  
+                &lt;label for="email"&gt;Email:&lt;/label&gt;   <br>
+                &lt;input type="email" id="email" name="email" aria-describedby="email-error"&gt;   <br>
+                &lt;span id="email-error" style="color: red;"&gt;Por favor, insira um email válido.&lt;/span&gt;   <br>
+              &lt;/form&gt;                                
+            </p>
+        </div>
+    </div>
+</body>
+</html>

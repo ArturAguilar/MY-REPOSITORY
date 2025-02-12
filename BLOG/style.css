@@ -99,6 +99,18 @@ a{
     font-size: 12px;
 }
 
+.etiqueta-javascript{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 15px;
+    background-color: rgb(243, 207, 2);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
 h2 {
     margin-bottom: 10px;
     font-size: 20px; /* Tamanho padrão */
@@ -207,6 +219,22 @@ input[type="text"]:focus {
 .acessibility > a:hover {
     color: #ffffff;
     background-color: rgb(2, 243, 62);
+}
+
+.javascript > a {
+    text-decoration: none;
+    color: rgb(243, 207, 2);
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 14px; /* Tamanho padrão */
+}
+
+.javascript > a:hover {
+    color: #ffffff;
+    background-color: rgb(243, 207, 2);
 }
 
 @media (min-width: 768px) {

@@ -42,6 +42,7 @@
                 <option value="HTML">HTML</option>
                 <option value="ACESSIBILITY">ACESSIBILITY</option>
                 <option value="CSS">CSS</option>
+                <option value="JAVASCRIPT">JAVASCRIPT</option>
                 
             </select>
         </div>
@@ -145,6 +146,19 @@
             <nav class="acessibility">
                 <a href="ACESSIBILIDADE/01 Acessibilidade Digital.html">Acessibilidade Digital</a>
                 <a href="ACESSIBILIDADE/02 Medição da Acessibilidade Digital.html">Medição da Acessibilidade Digital</a>
+                <a href="ACESSIBILIDADE/03 ARIA vs HTML.html">ARIA vs HTML</a>
+                <a href="ACESSIBILIDADE/04 Estrutura de Conteúdo.html">Estrutura de Conteúdo</a>
+                <a href="ACESSIBILIDADE/05 Documento.html">Documento</a>
+                <a href="ACESSIBILIDADE/06 Foco no Teclado.html">Teclado</a>
+                <a href="ACESSIBILIDADE/07 JavaScript.html">JavaScript</a>
+                <a href="ACESSIBILIDADE/08 Imagens.html">Imagens</a>
+                <a href="ACESSIBILIDADE/09 Cor e Contraste.html">Cor e Contraste</a>
+                <a href="ACESSIBILIDADE/10 Animação e Movimento.html">Animação e Movimento</a>
+                <a href="ACESSIBILIDADE/11 Tipografia.html">Tipografia</a>
+                <a href="ACESSIBILIDADE/12 Vídeo e Áudio.html">Vídeo e Áudio</a>
+                <a href="ACESSIBILIDADE/13 Formulários.html">Formulários</a>
+                <a href="ACESSIBILIDADE/14 Padrões, Componentes e Sistemas de Design.html">Padrões, Componentes e Sistemas de Design</a>
+                <a href="ACESSIBILIDADE/15 Design e Experiência do Usuário (UX).html">Design e Experiência do Usuário (UX)</a>
             </nav>
         </div>
 
@@ -228,6 +242,29 @@
                 <a href="CSS/RESPONSIVIDADE/07 Frameworks Responsivos.html">Frameworks</a>
             </nav>
         </div>
+
+
+
+
+
+        <div class="conteiner">
+            <div class="etiqueta-javascript">JAVASCRIPT</div>
+            <h1>Introdução</h1>
+            <nav class="javascript">
+                <a href="CSS/RESPONSIVIDADE/01 Introdução ao Design Responsivo.html">Introdução ao Design Responsivo</a>
+                <a href="CSS/RESPONSIVIDADE/02 Grid no Design Responsivo.html">Grid</a>
+                <a href="CSS/RESPONSIVIDADE/03 Imagens Responsivas.html">Imagens Responsivas</a>
+                <a href="CSS/RESPONSIVIDADE/04 Media Queries.html">Media Queries</a>
+                <a href="CSS/RESPONSIVIDADE/05 Flexbox.html">Flexbox</a>
+                <a href="CSS/RESPONSIVIDADE/06 Vídeos Responsivos.html">Vídeos Responsivos</a>
+                <a href="CSS/RESPONSIVIDADE/07 Frameworks Responsivos.html">Frameworks</a>
+            </nav>
+        </div>
+
+
+
+
+
     <script>
     // Função para filtrar os itens com base na pesquisa
     function filtrar() {
@@ -239,7 +276,7 @@
         
         conteiners.forEach(function(conteiner) {
             // Filtrar pela etiqueta
-            let temEtiqueta = conteiner.querySelector('.etiqueta-internet, .etiqueta-html, .etiqueta-css, .etiqueta-acessibility'); // Verifica a etiqueta presente
+            let temEtiqueta = conteiner.querySelector('.etiqueta-internet, .etiqueta-html, .etiqueta-css, .etiqueta-acessibility, .etiqueta-javascript'); // Verifica a etiqueta presente
 
             // Verificar se a etiqueta do conteiner corresponde ao filtro
             let correspondeEtiqueta = (selectedEtiqueta === "" || temEtiqueta && temEtiqueta.classList.contains('etiqueta-' + selectedEtiqueta.toLowerCase()));

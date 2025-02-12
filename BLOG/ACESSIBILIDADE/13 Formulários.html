@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../IMG/logo verde.png" type="image/x-icon">
+    <title>Formulários</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: rgb(0, 255, 64);
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(0, 255, 64);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Formulários</h1>
+        <p>A criação de formulários acessíveis é fundamental para garantir que todos os usuários, independentemente de suas habilidades, possam interagir de maneira eficaz com seu conteúdo. A seguir, apresentamos práticas recomendadas para desenvolver formulários que atendam aos critérios de acessibilidade:</p>
+
+        <hr>
+
+        <h2>Uso Adequado de Rótulos (label)</h2>
+
+        <ul>
+            <li>Associação Clara: Utilize o elemento label para cada campo do formulário, associando-o ao respectivo controle por meio do atributo for, que deve corresponder ao id do campo. Isso facilita a identificação do propósito de cada campo por tecnologias assistivas.</li>
+        </ul>
+        <div class="code">
+            <p>
+                &lt;label for="nome"&gt;Nome:&lt;/label&gt; <br>
+                &lt;input type="text" id="nome" name="nome"&gt;                 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Agrupamento de Campos Relacionados</h2>
+        <p>fieldset e legend: Para grupos de campos relacionados, utilize o elemento fieldset para agrupá-los e o elemento legend para fornecer uma descrição do grupo. Isso ajuda na organização lógica do formulário e na compreensão por leitores de tela.</p>
+        <div class="code">
+            <p>
+                &lt;fieldset&gt; <br>
+                &lt;legend&gt;Informações Pessoais&lt;/legend&gt; <br>
+                &lt;!-- Campos relacionados --&gt; <br>
+              &lt;/fieldset&gt;              
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Indicação de Campos Obrigatórios</h2>
+        <p>Asterisco e Abreviação: Indique os campos obrigatórios com um asterisco (*) e utilize a tag abbr para fornecer a explicação "campo obrigatório". Isso informa aos usuários quais campos são necessários.</p>
+        <div class="code">
+            <p>
+                &lt;label for="email"&gt;E-mail &lt;abbr title="campo obrigatório"&gt;*&lt;/abbr&gt;&lt;/label&gt; <br>
+                &lt;input type="email" id="email" name="email" required&gt;                
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Ordem de Navegação Lógica</h2>
+        <p>Atributo tabindex: Garanta que a navegação pelo teclado siga uma ordem lógica, utilizando o atributo tabindex quando necessário para ajustar a sequência de foco. Isso é especialmente útil quando a ordem visual dos elementos não corresponde à ordem no código HTML.</p>
+        <div class="code">
+            <p>
+                &lt;input type="text" id="nome" name="nome" tabindex="1"&gt; <br>
+                &lt;input type="email" id="email" name="email" tabindex="2"&gt;                
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Mensagens de Erro Claras e Descritivas</h2>
+        <p>Feedback Imediato: Forneça mensagens de erro claras e específicas quando a validação do formulário falhar, indicando exatamente quais campos precisam de atenção e o que deve ser corrigido.</p>
+        <div class="code">
+            <p>
+                &lt;div id="erro-email" style="color: red;"&gt; <br>
+                Por favor, insira um endereço de e-mail válido. <br>
+              &lt;/div&gt;              
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Instruções e Descrições Adicionais</h2>
+        <p>Orientações Claras: Inclua instruções ou descrições adicionais para campos que possam necessitar de esclarecimentos, utilizando elementos como small ou aria-describedby para associar descrições aos campos.</p>
+        <div class="code">
+            <p>
+                &lt;label for="senha"&gt;Senha:&lt;/label&gt; <br>
+                &lt;input type="password" id="senha" name="senha" aria-describedby="senha-ajuda"&gt; <br>
+                &lt;small id="senha-ajuda"&gt;A senha deve ter pelo menos 8 caracteres.&lt;/small&gt;                
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Controles de Formulário Acessíveis</h2>
+        <p>Elementos Semânticos: Utilize elementos de formulário apropriados (input, select, textarea, etc.) para garantir que os controles sejam reconhecidos e manipuláveis por tecnologias assistivas.</p>
+
+        <hr>
+
+        <h2>Evite o Uso Exclusivo de Cores para Transmitir Informações</h2>
+        <p>Indicadores Visuais Adicionais: Não dependa apenas de cores para indicar estados ou informações importantes; inclua também textos ou ícones que transmitam a mesma mensagem.</p>
+
+        <h2>Testes de Acessibilidade</h2>
+        <p>
+            Avaliação Regular: Realize testes de acessibilidade utilizando ferramentas automatizadas e, sempre que possível, envolva usuários com deficiências para identificar e corrigir barreiras no formulário. <br><br>
+            Seguindo essas práticas, você contribuirá para a criação de formulários mais inclusivos e acessíveis, proporcionando uma experiência de usuário aprimorada para todos.
+        </p>
+    </div>
+</body>
+</html>

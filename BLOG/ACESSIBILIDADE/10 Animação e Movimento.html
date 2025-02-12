@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../IMG/logo verde.png" type="image/x-icon">
-    <title>Acessibilidade Digital</title>
+    <title>Animação e Movimento</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -66,7 +66,7 @@
 
         nav > a {
             text-decoration: none;
-            color: rgb(2, 243, 62);
+            color: rgb(0, 255, 64);
             display: inline-block;
             margin-right: 10px;
             padding: 8px 12px;
@@ -77,7 +77,7 @@
         
         nav > a:hover {
             color: #ffffff;
-            background-color: rgb(8, 241, 67);
+            background-color: rgb(0, 255, 64);
         }
 
         th, td {
@@ -131,7 +131,38 @@
             <a href="../blog.html">Voltar para o início</a>
         </nav>
         
-        <h1>Acessibilidade Digital</h1>
+        <h1>Animação e Movimento</h1>
+        <p>Animações e movimentos em interfaces web podem enriquecer a experiência do usuário, mas é crucial considerar a acessibilidade ao implementá-los. Algumas pessoas, especialmente aquelas com condições vestibulares ou neurológicas, podem sentir desconforto ou até náuseas devido a movimentos excessivos ou inesperados. Portanto, é essencial adotar práticas que tornem as animações inclusivas para todos.</p>
+
+        <hr>
+
+        <h2>Evite Animações Automáticas e Intrusivas</h2>
+        <p>Animações que iniciam automaticamente ou que são muito chamativas podem distrair ou causar desconforto. É recomendável evitar animações que começam sozinhas e garantir que o usuário tenha controle sobre elas. Além disso, é importante fornecer mecanismos para pausar ou interromper animações em execução, incluindo GIFs.</p>
+
+        <hr>
+
+        <h2>Respeite as Preferências do Usuário com prefers-reduced-motion</h2>
+        <p>Muitos sistemas operacionais oferecem configurações para reduzir movimentos. Utilize a consulta de mídia CSS @media (prefers-reduced-motion: reduce) para detectar essa preferência e ajustar ou desativar animações conforme necessário. Isso demonstra respeito pelas escolhas do usuário e melhora a acessibilidade.</p>
+
+        <hr>
+
+        <h2>Evite Efeitos de Rolagem Excessivos</h2>
+        <p>Efeitos de rolagem, como paralaxe, podem criar movimentos que afetam negativamente usuários com sensibilidades vestibulares. Limite ou ofereça opções para desativar esses efeitos, garantindo uma experiência mais confortável para todos.</p>
+
+        <hr>
+
+        <h2>Forneça Controles para Reprodução Automática</h2>
+        <p>Conteúdos que reproduzem automaticamente, como vídeos ou animações, podem ser problemáticos. Ofereça controles claros para que os usuários possam pausar, parar ou ajustar esses conteúdos conforme suas necessidades.</p>
+
+        <hr>
+
+        <h2>Evite Animações com Flashes ou Pisca-Piscas</h2>
+        <p>Animações com flashes rápidos podem desencadear convulsões em indivíduos com epilepsia fotossensível. É crucial evitar esse tipo de conteúdo ou fornecer avisos claros e opções para desativá-lo.</p>
+
+        <hr>
+
+        <h2>Teste com Usuários Reais</h2>
+        <p>Sempre que possível, envolva pessoas com deficiências nas fases de design e teste. Isso ajuda a identificar potenciais problemas de acessibilidade relacionados a animações e movimentos, permitindo ajustes antes do lançamento.</p>
     </div>
 </body>
 </html>

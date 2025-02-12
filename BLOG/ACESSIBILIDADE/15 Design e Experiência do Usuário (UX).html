@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../IMG/logo verde.png" type="image/x-icon">
+    <title>Design e Experiência do Usuário (UX)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: rgb(0, 255, 64);
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(0, 255, 64);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Design e Experiência do Usuário (UX)</h1>
+        <p>O design acessível é aquele que permite que todas as pessoas, independentemente de suas habilidades, possam navegar, interagir e compreender o conteúdo de uma interface. A experiência do usuário (UX) acessível busca garantir que todos tenham uma experiência fluida, sem barreiras.</p>
+
+        <hr>
+        
+        <h2>Princípios do Design Acessível</h2>
+        <p>Para criar interfaces inclusivas, é importante seguir alguns princípios fundamentais:</p>
+        <p>✅ Perceptível → O conteúdo deve ser compreensível por diferentes sentidos (visão, audição, tato).</p>
+        <p>✅ Operável → Deve ser navegável tanto por teclado quanto por mouse ou leitores de tela.</p>
+        <p>✅ Compreensível → A interface deve ser clara, previsível e fácil de usar.</p>
+        <p>✅ Robusto → Deve funcionar em diferentes dispositivos e tecnologias assistivas.</p>
+
+        <hr>
+
+        <h2>Elementos do Design Acessível</h2>
+        <h3>🎨 Cores e Contraste</h3>
+        <ul>
+            <li>Deve haver um contraste mínimo de 4.5:1 entre texto e fundo (segundo as diretrizes WCAG).</li>
+            <li>Evite usar somente cor para transmitir informações (exemplo: erros devem ter ícones e mensagens além da cor vermelha).</li>
+        </ul>
+
+        <h3>🔠 Tipografia</h3>
+        <ul>
+            <li>Use fontes legíveis e evite textos muito pequenos (mínimo de 16px é recomendado).</li>
+            <li>Mantenha espaçamento adequado entre linhas e parágrafos.</li>
+        </ul>
+
+        <h3>🎛 Componentes e Navegação</h3>
+        <ul>
+            <li>Botões e links devem ter rótulos descritivos (exemplo: “Enviar formulário” ao invés de apenas “Enviar”).</li>
+            <li>Os elementos devem ter feedback visual ao receber foco.</li>
+        </ul>
+
+        <h3>🎥 Vídeo e Áudio</h3>
+        <ul>
+            <li>Vídeos devem ter legendas e, sempre que possível, audiodescrição.</li>
+            <li>Evite músicas e sons automáticos, pois podem atrapalhar usuários com deficiência auditiva ou cognitiva.</li>
+        </ul>
+
+        <h3>⌨ Acessibilidade pelo Teclado</h3>
+        <ul>
+            <li>Toda navegação deve ser possível sem mouse (usando Tab, Enter, Setas e Esc).</li>
+            <li>Evite armadilhas de foco (exemplo: um modal que não pode ser fechado pelo teclado).</li>
+        </ul>
+
+        <hr>
+
+        <h2>Experiência do Usuário (UX) e Acessibilidade</h2>
+        <p>A experiência do usuário acessível vai além do design bonito. Ela garante que todas as pessoas possam concluir tarefas de forma eficiente.</p>
+        <p>👁 Visão → Usuários com baixa visão podem usar leitores de tela ou ampliar a interface. Certifique-se de que o site suporte essas tecnologias.</p>
+        <p>🦻 Audição → Pessoas surdas ou com deficiência auditiva precisam de legendas em vídeos e alternativas textuais para conteúdos sonoros.</p>
+        <p>🖐 Mobilidade → Usuários com limitações motoras podem usar teclado ou comandos de voz em vez do mouse.</p>
+        <p>🧠 Neurodiversidade → Pessoas com dislexia, TDAH ou autismo podem se beneficiar de textos claros, animações reduzidas e layouts organizados.</p>
+        <p>💡 Dica: Faça testes com usuários reais e use ferramentas como Lighthouse e axe DevTools para avaliar a acessibilidade do seu site.</p>
+        <p>Criar um design acessível melhora a experiência para todos, não apenas para pessoas com deficiência. Além disso, aumenta o alcance do seu site e evita problemas legais. 🚀</p>
+    </div>
+</body>
+</html>

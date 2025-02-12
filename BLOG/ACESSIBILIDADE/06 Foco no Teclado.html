@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../IMG/logo verde.png" type="image/x-icon">
+    <title>Foco no Teclado</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 750px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: rgb(2, 243, 62);
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(8, 241, 67);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Foco no Teclado</h1>
+        <p>
+            O foco no teclado é um aspecto crucial para a acessibilidade digital, principalmente para pessoas com deficiência visual ou aquelas que não podem usar um mouse devido a limitações físicas. Garantir que um site seja navegável e utilizável exclusivamente com o teclado é um dos princípios fundamentais para garantir que ele seja acessível. <br><br>
+
+            Aqui, vamos explorar o que é o foco no teclado, como ele deve ser tratado, e por que isso é tão importante: 
+        </p>
+
+        <hr>
+
+        <h2>O que é o Foco no Teclado?</h2>
+        <p>O foco no teclado se refere ao indicador visual que aparece em um elemento interativo (como botões, links ou campos de formulário) quando o usuário navega por ele usando a tecla Tab no teclado. Isso permite que usuários naveguem pela página sem usar o mouse. <br><br>
+
+        Por exemplo, quando você pressiona a tecla Tab, o foco muda para o próximo elemento interativo, e o usuário pode interagir com ele sem precisar de um dispositivo apontador como o mouse.</p>
+
+        <hr>
+
+        <h2>Importância do Foco no Teclado</h2>
+        <ul>
+            <li>Navegação sem mouse: Muitos usuários dependem do teclado para navegar em um site, especialmente aqueles com deficiências motoras ou visuais.</li>
+            <li>Acessibilidade para deficientes visuais: O foco no teclado é essencial para usuários de leitores de tela, pois ele permite que o sistema informe ao usuário qual elemento está sendo ativado.</li>
+            <li>Experiência de navegação fluida: Garantir que o foco no teclado seja visível e esteja bem implementado torna a navegação do site mais intuitiva e fácil para todos os usuários, incluindo aqueles que usam o teclado como dispositivo principal de entrada.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Como Funciona o Foco no Teclado</h2>
+        <ul>
+            <li>Tecla Tab: Quando o usuário pressiona a tecla Tab, o foco se move de um elemento interativo (link, botão, campo de entrada) para o próximo. Ao pressionar Shift + Tab, o foco volta para o elemento anterior.</li>
+            <li>Tecla Enter ou Espaço: Uma vez que o foco está em um elemento interativo (como um botão ou link), o usuário pode pressionar Enter ou Espaço para ativá-lo.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Indicador Visual de Foco</h2>
+        <p>É fundamental que o foco seja visível para os<ul>
+            <li>Não remova o foco visível: O foco visível deve sempre ser mantido, e nunca deve ser removido sem um bom motivo.</li>
+            <li>Garanta uma sequência lógica de foco: Organize os elementos da página de forma que a navegação por teclado tenha um fluxo natural.</li>
+            <li>Utilize os eventos de foco corretamente: Ao usar JavaScript para criar interações, use eventos como focus, blur, e keydown para garantir que o foco seja tratado adequadamente.</li>
+            <li>Evite sobrecarregar o usuário com interações: Muitos elementos interativos que exigem um foco contínuo podem deixar o site difícil de navegar, então use-os com moderação.</li>
+        </ul> usuários, pois isso garante que eles saibam qual elemento estão interagindo. Normalmente, o foco é indicado por uma borda ou sombra em torno do elemento, mas o estilo pode variar dependendo do design. <br><br>
+
+        Por exemplo, sem um foco claro, um usuário de teclado pode não saber onde está na página e poderá ter dificuldades para interagir com elementos.</p>
+
+        <h3>Exemplo de foco visível (CSS):</h3>
+        <div class="code">
+            <p>
+                button:focus { <br>
+                    outline: 2px solid #0000ff; /* Borda azul ao focar no botão */ <br>
+                  }                  
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Foco no Teclado com Elementos Interativos</h2>
+        <p>Para garantir uma boa experiência de navegação com o teclado, todos os elementos interativos devem ser acessíveis. Isso inclui:</p>
+        <ul>
+            <li>Links: Os links devem ser navegáveis via teclado. Sempre que possível, use a para links, pois eles são automaticamente interativos e acessíveis.</li>
+            <li>Botões: Botões interativos devem ter uma indicação de foco clara.</li>
+            <li>Campos de Formulário: Campos como input, textarea e select devem ser focáveis e devem permitir interação com o teclado.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Foco e Navegação Composta (Sequência Lógica)</h2>
+        <p>
+            Ao planejar a navegação de um site com o teclado, a sequência de foco deve ser lógica e natural. Isso significa que o foco deve seguir uma ordem que faça sentido, como uma leitura de cima para baixo e da esquerda para a direita, para que os usuários possam navegar facilmente entre os elementos. <br><br>
+
+            Por exemplo, ao pressionar Tab, o foco pode seguir esta ordem:
+        </p>
+        <ol>
+            <li>Cabeçalho (se houver links)</li>
+            <li>Menu de navegação</li>
+            <li>Conteúdo principal</li>
+            <li>Rodapé</li>
+        </ol>
+        <p>Evitar saltos inesperados entre elementos ajuda na navegação fluida e intuitiva.</p>
+
+        <hr>
+
+        <h2>Acessibilidade com JavaScript</h2>
+        <p>Ao usar JavaScript para manipular ou criar elementos dinâmicos, é importante garantir que o foco no teclado seja mantido ou direcionado corretamente. <br><br>
+
+        Por exemplo, ao abrir um modal (caixa de diálogo), o foco deve ser movido para o primeiro elemento interativo dentro do modal, e o foco deve ser restaurado ao elemento anterior quando o modal for fechado.</p>
+
+        <h3>Exemplo de gerenciamento de foco em modal (JavaScript):</h3>
+        <div class="code">
+            <p>
+                // Ao abrir o modal, mover o foco para o primeiro botão <br>
+                document.getElementById('openModalButton').addEventListener('click', function() {  <br>
+                  const modal = document.getElementById('modal');  <br>
+                  const firstButton = modal.querySelector('button');  <br>
+                  modal.style.display = 'block';
+                  firstButton.focus();  <br>
+                }); <br><br>
+                
+                // Ao fechar o modal, restaurar o foco ao botão que abriu o modal <br>
+                document.getElementById('closeModalButton').addEventListener('click', function() {  <br>
+                  const openModalButton = document.getElementById('openModalButton');  <br>
+                  document.getElementById('modal').style.display = 'none';  <br>
+                  openModalButton.focus();  <br>
+                });                
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Pontos Importantes para Garantir uma Boa Navegação via Teclado</h2>
+        <ul>
+            <li>Não remova o foco visível: O foco visível deve sempre ser mantido, e nunca deve ser removido sem um bom motivo.</li>
+            <li>Garanta uma sequência lógica de foco: Organize os elementos da página de forma que a navegação por teclado tenha um fluxo natural.</li>
+            <li>Utilize os eventos de foco corretamente: Ao usar JavaScript para criar interações, use eventos como focus, blur, e keydown para garantir que o foco seja tratado adequadamente.</li>
+            <li>Evite sobrecarregar o usuário com interações: Muitos elementos interativos que exigem um foco contínuo podem deixar o site difícil de navegar, então use-os com moderação.</li>
+        </ul>
+    </div>
+</body>
+</html>
