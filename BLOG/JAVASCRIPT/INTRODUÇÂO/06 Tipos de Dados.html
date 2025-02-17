@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../IMG/logo amarela.png" type="image/x-icon">
+    <title>Tipos de Dados</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 850px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: rgb(243, 207, 2);
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(243, 207, 2);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="home" class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Tipos de Dados</h1>
+        <p>Em JavaScript, uma variável pode armazenar diferentes tipos de valores, como números, texto e objetos. Os tipos de dados definem o tipo de valor que pode ser atribuído a uma variável.</p>
+
+        <hr>
+
+        <h2>Principais Tipos de Dados</h2>
+        <p>Em JavaScript, existem dois grandes grupos de tipos de dados:</p>
+        <nav>
+            <a href="#01">Object</a>
+            <a href="#02">String</a>
+            <a href="#03">Number</a>
+            <a href="#04">BigInt</a>
+            <a href="#05">Boolean</a>
+            <a href="#06">Undefined</a>
+            <a href="#07">Null</a>
+            <a href="#08">Symbol</a>
+        </nav>
+    </div>
+
+
+
+
+        <div class="conteiner" id="01">
+            <nav style="text-align: start;">
+                <a href="#home">Voltar para Home</a>
+            </nav>
+            <h1>Objetos em JavaScript</h1>
+            <p>Em JavaScript, objetos são estruturas que armazenam pares chave-valor e permitem representar entidades do mundo real com propriedades e comportamentos.</p>
+
+            <hr>
+
+            <h2>Criando Objetos em JavaScript</h2>
+            <p>Um objeto pode ser criado de várias formas:</p>
+
+            <h3>Criando um Objeto Literal</h3>
+            <p>A maneira mais simples de criar um objeto é usando chaves {}.</p>
+            <div class="code">
+                <p>
+                    let pessoa = { <br>
+                        nome: "Artur", <br>
+                        idade: 18, <br>
+                        cidade: "São João de Meriti" <br>
+                      }; <br><br>
+                      
+                      console.log(pessoa); // Exibe todo o objeto <br>
+                      <p>✅ Vantagens das Template Strings: ✔️ Permitem quebras de linha sem \n.</p>
+                      <p>✔️ Interpolação mais legível com \|.</p>   console.log(pessoa.nome); // "Artur"                      
+                </p>
+            </div>
+            <p>Cada par chave-valor dentro do objeto representa uma propriedade.</p><br>
+
+            <h3>Criando um Objeto Usando new Object()</h3>
+            <p>Outra forma de criar um objeto é utilizando o construtor Object().</p>
+            <div class="code">
+                <p>
+                    let carro = new Object(); <br>
+                    carro.marca = "Toyota"; <br>
+                    carro.modelo = "Corolla"; <br>
+                    carro.ano = 2024; <br><br>
+                    
+                    console.log(carro.marca); // "Toyota"                    
+                </p>
+            </div>
+            <p>Mas a forma mais comum e recomendada é a criação via objeto literal {}.</p>
+
+            <hr>
+
+            <h2>Propriedades de um Objeto</h2>
+            <p>As propriedades de um objeto são variáveis dentro do objeto, acessadas com ponto (.) ou colchetes ([]).</p>
+
+            <h3>Acessando Propriedades</h3>
+            <div class="code">
+                <p>
+                    console.log(pessoa.nome);  // "Artur" <br>
+                    console.log(pessoa["idade"]);  // 18                    
+                </p>
+            </div>
+            <p>Se a propriedade não existir, retorna undefined:</p>
+            <div class="code">
+                <p>console.log(pessoa.altura); // Undefined</p>
+            </div> <br>
+
+            <h3>Adicionando e Modificando Propriedades</h3>
+            <p>Podemos adicionar ou modificar propriedades de um objeto assim:</p>
+            <div class="code">
+                <p>
+                    pessoa.profissao = "Desenvolvedor"; <br>
+                    pessoa.idade = 19; // Modifica a idade <br><br>
+                    
+                    console.log(pessoa);                    
+                </p>
+            </div> <br>
+
+            <h3>Removendo Propriedades</h3>
+            <p>Usamos delete para remover propriedades.</p>
+            <div class="code">
+                <p>
+                    delete pessoa.cidade; <br>
+                    console.log(pessoa);                     
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Métodos de um Objeto</h2>
+            <p>Um método é uma função dentro de um objeto.</p>
+            <div class="code">
+                <p>
+                    let aluno = { <br>
+                        nome: "Lucas", <br>
+                        idade: 20, <br>
+                        saudacao: function() { <br>
+                          return `Olá, meu nome é ${this.nome}!`; <br>
+                        } <br>
+                      }; <br><br>
+                      
+                      console.log(aluno.saudacao()); // "Olá, meu nome é Lucas!"                      
+                </p>
+            </div>
+            <p>this refere-se ao próprio objeto.</p>
+
+            <hr>
+
+            <h2>Exibindo Objetos</h2>
+            <p>Existem várias formas de exibir um objeto em JavaScript:</p>
+
+            <h3>Exibindo no Console</h3>
+            <div class="code">
+                <p>console.log(pessoa);</p>
+            </div><br>
+
+            <h3>Convertendo para String (JSON)</h3>
+            <p>Se quisermos transformar o objeto em texto, usamos JSON.stringify():</p>
+            <div class="code">
+                <p>
+                    let pessoaTexto = JSON.stringify(pessoa); <br>
+                    console.log(pessoaTexto); // {"nome":"Artur","idade":19,"profissao":"Desenvolvedor"}                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Construtores de Objetos</h2>
+            <p>Construtores são funções que criam múltiplos objetos com a mesma estrutura.</p>
+            <div class="code">
+                <p>
+                    function Carro(marca, modelo, ano) { <br>
+                        this.marca = marca; <br>
+                        this.modelo = modelo; <br>
+                        this.ano = ano; <br>
+                      } <br><br>
+                      
+                      let carro1 = new Carro("Ford", "Fiesta", 2020); <br>
+                      let carro2 = new Carro("Honda", "Civic", 2023); <br><br>
+                      
+                      console.log(carro1.marca); // "Ford" <br>
+                      console.log(carro2.modelo); // "Civic"                      
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="conteiner" id="02">
+            <nav style="text-align: start;">
+                <a href="#home">Voltar para Home</a>
+            </nav>
+            <h1>Strings em JavaScript</h1>
+            <p>Strings são sequências de caracteres usadas para representar texto em JavaScript. Elas podem ser escritas de três formas:</p>
+            <div class="code">
+                <p>
+                    let texto1 = "Isso é uma string"; <br>
+                    let texto2 = 'Isso também é uma string'; <br>
+                    let texto3 = `Isso é uma string template`;                    
+                </p>
+            </div>
+            <p>✅ Dica: Strings sempre devem estar entre **aspas simples ' ', aspas duplas " " ou crases `, dependendo do uso.</p>
+
+            <hr>
+
+            <h2>Métodos de Manipulação de Strings</h2>
+            <p>JavaScript possui vários métodos úteis para trabalhar com strings.</p><br>
+
+            <h3>length - Comprimento da String</h3>
+            <p>A propriedade length retorna o número de caracteres de uma string.</p>
+            <div class="code">
+                <p>
+                    let palavra = "JavaScript"; <br>
+                    console.log(palavra.length); // 10                    
+                </p>
+            </div> <br>
+
+            <h3>slice(start, end) - Extrai Parte da String</h3>
+            <p>Retorna uma parte da string, começando em start e terminando antes de end.</p>
+            <div class="code">
+                <p>
+                    let texto = "Hello, world!"; <br>
+                    console.log(texto.slice(0, 5)); // "Hello" <br>
+                    console.log(texto.slice(-6));   // "world!" (começa de trás para frente)                    
+                </p>
+            </div><br>
+
+            <h3>substring(start, end) - Similar ao slice()</h3>
+            <p>A diferença é que não aceita índices negativos.</p>
+            <div class="code">
+                <p>console.log(texto.substring(7, 12)); // "world"</p>
+            </div><br>
+
+            <h3>replace(old, new) - Substitui Texto</h3>
+            <p>Substitui a primeira ocorrência de old por new.</p>
+            <div class="code">
+                <p>
+                    let frase = "Eu amo JavaScript!"; <br>
+                    console.log(frase.replace("JavaScript", "Python")); // "Eu amo Python!"                    
+                </p>
+            </div>
+            <p>✅ Dica: Para substituir todas as ocorrências, use uma expressão regular com g:</p>
+            <div class="code">
+                <p>
+                    let frase2 = "JavaScript é bom, JavaScript é incrível!"; <br>
+                    console.log(frase2.replace(/JavaScript/g, "Python")); <br>
+                    // "Python é bom, Python é incrível!"                    
+                </p>
+            </div><br>
+
+            <h3>toUpperCase() e toLowerCase() - Maiúsculas e Minúsculas</h3>
+            <div class="code">
+                <p>
+                    let nome = "Artur"; <br>
+                    console.log(nome.toUpperCase()); // "ARTUR" <br>
+                    console.log(nome.toLowerCase()); // "artur"                    
+                </p>
+            </div><br>
+
+            <h3>concat() - Junta Strings</h3>
+            <p>Une duas ou mais strings.</p>
+            <div class="code">
+                <p>
+                    let parte1 = "Olá, "; <br>
+                    let parte2 = "mundo!"; <br>
+                    console.log(parte1.concat(parte2)); // "Olá, mundo!"                    
+                </p>
+            </div>
+            <p>✅ Dica: O operador + também pode ser usado para juntar strings:</p>
+            <div class="code">
+                <p>console.log(parte1 + parte2); // "Olá, mundo!"</p>
+            </div><br>
+
+            <h3>trim() - Remove Espaços Extras</h3>
+            <p>Remove espaços em branco no início e no final da string.</p>
+            <div class="code">
+                <p>
+                    let entrada = "   Texto com espaços   "; <br>
+                    console.log(entrada.trim()); // "Texto com espaços"                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Métodos de Busca em Strings</h2>
+            
+            <h3>indexOf(substring) - Primeira Ocorrência</h3>
+            <p>Retorna a posição da primeira ocorrência da substring ou -1 se não for encontrada.</p>
+            <div class="code">
+                <p>
+                    let frase3 = "A vida é bela!"; <br>
+                    console.log(frase3.indexOf("vida")); // 2 <br>
+                    console.log(frase3.indexOf("JavaScript")); // -1 (não encontrado)                    
+                </p>
+            </div> <br>
+
+            <h3>lastIndexOf(substring) - Última Ocorrência</h3>
+            <div class="code">
+                <p>
+                    let texto4 = "Eu amo JavaScript, porque JavaScript é incrível!"; <br>
+                    console.log(texto4.lastIndexOf("JavaScript")); // 25                    
+                </p>
+            </div>
+
+            <h3>search(regex) - Busca com Expressões Regulares</h3>
+            <div class="code">
+                <p>
+                    console.log(texto4.search(/JavaScript/i)); // 7 (ignora maiúsculas e minúsculas)
+                </p>
+            </div> <br>
+
+            <h3>match(regex) - Retorna Todas as Ocorrências</h3>
+            <div class="code">
+                <p>console.log(texto4.match(/JavaScript/g)); // ["JavaScript", "JavaScript"]</p>
+            </div> <br>
+
+            <h3>includes(substring) - Verifica se Contém um Texto</h3>
+            <p>Retorna true se a substring estiver presente.</p>
+            <div class="code">
+                <p>console.log(texto4.includes("amo")); // true</p>
+            </div>
+
+            <hr>
+
+            <h2>Templates Strings</h2>
+            <p>Templates strings são strings dinâmicas usando crases `, permitindo a interpolação de variáveis.</p><br>
+
+            <h3>Interpolação de Variáveis com ${}</h3>
+            <div class="code">
+                <p>
+                    let nome2 = "Artur"; <br>
+                    let idade = 18; <br>
+                    
+                    let mensagem = `Meu nome é ${nome2} e eu tenho ${idade} anos.`; <br>
+                    console.log(mensagem);                    
+                </p>
+            </div>
+            <p>✅ Vantagens das Template Strings: ✔️ Permitem quebras de linha sem \n.</p>
+            <p>✔️ Interpolação mais legível com ${}.</p>            
+        </div>
+
+
+
+
+
+        <div class="conteiner" id="03">
+            <nav style="text-align: start;">
+                <a href="#home">Voltar para Home</a>
+            </nav>
+            <h1>Números em JavaScript</h1>
+            <p>Em JavaScript, os números são sempre do tipo "number" e podem ser representados de várias formas:</p>
+            <div class="code">
+                <p>
+                    let inteiro = 42;          // Número inteiro <br>
+                    let decimal = 3.14;        // Número decimal (ponto flutuante) <br>
+                    let negativo = -10;        // Número negativo <br>
+                    let cientifico = 1.5e6;    // Notação científica (1.5 × 10⁶ = 1500000)                    
+                </p>
+            </div>
+            <p>✅ Dica: Diferente de outras linguagens, JavaScript não diferencia inteiros de decimais.</p>
+
+            <hr>
+
+            <h2>Operações com Números</h2>
+            <p>Você pode usar operadores matemáticos comuns:</p>
+            <div class="code">
+                <p>
+                    let soma = 10 + 5;    // 15 <br>
+                    let subtracao = 10 - 5; // 5 <br>
+                    let multiplicacao = 10 * 5; // 50 <br>
+                    let divisao = 10 / 2; // 5 <br>
+                    let resto = 10 % 3;   // 1 (resto da divisão) <br>
+                    let potencia = 2 ** 3; // 8 (2³)                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Métodos para Trabalhar com Números</h2>
+            <p>JavaScript oferece vários métodos úteis para manipular números.</p>
+
+            <h3>toString() - Converte Número em String</h3>
+            <div class="code">
+                <p>
+                    let num = 42; <br>
+                    console.log(num.toString()); // "42" <br>
+                    console.log((123).toString()); // "123"                    
+                </p>
+            </div><br>
+
+            <h3>toFixed(dígitos) - Formata Casas Decimais</h3>
+            <p>Retorna um número com a quantidade de casas decimais especificada.</p>
+            <div class="code">
+                <p>
+                    let pi = 3.1415926535; <br>
+                    console.log(pi.toFixed(2)); // "3.14" <br>
+                    console.log(pi.toFixed(4)); // "3.1416" (arredonda)                    
+                </p>
+            </div>
+            <p>✅ Útil para exibir valores monetários.</p> <br>
+
+            <h3>toPrecision(dígitos) - Formata Precisão Total</h3>
+            <p>Define o número total de dígitos a serem exibidos.</p>
+            <div class="code">
+                <p>
+                    let num2 = 123.456; <br>
+                    console.log(num2.toPrecision(5)); // "123.46" (arredonda) <br>
+                    console.log(num2.toPrecision(3)); // "123"                    
+                </p>
+            </div><br>
+
+            <h3>valueOf() - Retorna o Valor Numérico Puro</h3>
+            <div class="code">
+                <p>
+                    let x = 100; <br>
+                    console.log(x.valueOf()); // 100                    
+                </p>
+            </div><br>
+
+            <h3>parseInt() - Converte String para Número Inteiro</h3>
+            <div class="code">
+                <p>
+                    console.log(parseInt("100"));  // 100 <br>
+                    console.log(parseInt("100.99"));  // 100 (remove decimal) <br>
+                    console.log(parseInt("10 anos"));  // 10 (pega só o número no começo) <br>
+                    console.log(parseInt("abc"));  // NaN (não é número)                    
+                </p>
+            </div><br>
+
+            <h3>parseFloat() - Converte String para Número Decimal </h3>
+            <div class="code">
+                <p>
+                    console.log(parseFloat("100.99")); // 100.99 <br>
+                    console.log(parseFloat("10.5 anos")); // 10.5 <br>
+                    console.log(parseFloat("abc")); // NaN                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2> Propriedades do Objeto Number</h2>
+            <p>O objeto Number contém algumas constantes importantes:</p>
+            <table>
+                <tr>
+                    <th>Propriedade</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td>Number.MAX_VALUE</td>
+                    <td>Maior número possível (≈ 1.79E+308)</td>
+                </tr>
+                <tr>
+                    <td>Number.MIN_VALUE</td>
+                    <td>Menor número positivo possível (≈ 5E-324)</td>
+                </tr>
+                <tr>
+                    <td>Number.POSITIVE_INFINITY</td>
+                    <td>Infinito positivo</td>
+                </tr>
+                <tr>
+                    <td>Number.NEGATIVE_INFINITY</td>
+                    <td>Infinito negativo</td>
+                </tr>
+                <tr>
+                    <td>Number.NaN</td>
+                    <td>"Not a Number"</td>
+                </tr>
+            </table>
+            <h3>Exemplo:</h3>
+            <div class="code">
+                <p>
+                    console.log(Number.MAX_VALUE); // 1.7976931348623157e+308 <br>
+                    console.log(Number.MIN_VALUE); // 5e-324 <br>
+                    console.log(1 / 0); // Infinity <br>
+                    console.log(-1 / 0); // -Infinity <br>
+                    console.log(100 / "abc"); // NaN (Não é um número)                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Diferença entre == e === com Números</h2>
+            <p>✅ Em JavaScript, == não verifica o tipo, mas === verifica.</p>
+            <div class="code">
+                <p>
+                    console.log(10 == "10"); // true (converte string para número) <br>
+                    console.log(10 === "10"); // false (tipos diferentes)                    
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="conteiner" id="04">
+            <nav style="text-align: start;">
+                <a href="#home">Voltar para Home</a>
+            </nav>
+
+            <h1>BigInt em JavaScript</h1>
+            <p>O BigInt é um tipo de dado introduzido no ES11 (ECMAScript 2020) para representar números inteiros maiores do que Number.MAX_SAFE_INTEGER, que é 9.007.199.254.740.991 (aproximadamente 2^53 - 1). <br><br>
+
+            Com BigInt, agora podemos trabalhar com números extremamente grandes sem perder precisão.</p>
+
+            <hr>
+
+            <h2>Criando um BigInt</h2>
+            <p>Para criar um BigInt, basta adicionar um n ao final do número ou usar BigInt():</p>
+            <div class="code">
+                <p>
+                    let numeroGigante = 9007199254740991n;  // Adicionando 'n' <br>
+                    console.log(numeroGigante); // 9007199254740991n <br><br>
+                    
+                    let outroNumero = BigInt(9007199254740991); // Usando BigInt() <br>
+                    console.log(outroNumero); // 9007199254740991n
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Diferença entre Number e BigInt</h2>
+            <p>Os números normais (Number) só são seguros até 2^53 - 1, ou seja, até 9.007.199.254.740.991. <br>
+            Acima disso, os cálculos podem perder precisão.</p>
+
+            <h3>Exemplo de imprecisão com Number:</h3>
+            <div class="code">
+                <p>
+                    let numeroNormal = 9007199254740991; // Maior número seguro <br>
+                    console.log(numeroNormal + 1); // 9007199254740992 <br>
+                    console.log(numeroNormal + 2); // 9007199254740992 (Erro! Deveria ser 9007199254740993)                    
+                </p>
+            </div>
+
+            <h3>✅ Com BigInt, o problema não ocorre!</h3>
+            <div class="code">
+                <p>
+                    let numeroSeguro = 9007199254740991n; <br>
+                    console.log(numeroSeguro + 2n); // 9007199254740993n                    
+                </p>
+            </div>
+
+            <h2>Operações com BigInt</h2>
+            <p>O BigInt suporta as mesmas operações matemáticas de números normais:</p>
+            <div class="code">
+                <p>
+                    let a = 12345678901234567890n; <br>
+                    let b = 98765432109876543210n; <br><br>
+                    
+                    console.log(a + b); // Soma <br>
+                    console.log(b - a); // Subtração <br>
+                    console.log(a * b); // Multiplicação <br>
+                    console.log(b / a); // Divisão (arredonda para baixo) <br>
+                    console.log(b % a); // Módulo (resto da divisão)                    
+                </p>
+            </div>
+            <p>⚠️ Atenção: A divisão de BigInt sempre arredonda para baixo!</p>
+            <div class="code">
+                <p>
+                    console.log(10n / 3n); // 3n (não é 3.33, pois BigInt não trabalha com decimais)
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Misturando Number e BigInt</h2>
+            <p>🚨 BigInt NÃO pode ser misturado diretamente com Number.</p>
+            <div class="code">
+                <p>console.log(10n + 5); // ❌ ERRO! Não pode misturar tipos diferentes.</p>
+            </div>
+            <p>✅ Para operar entre Number e BigInt, converta um dos valores:</p>
+            <div class="code">
+                <p>
+                    console.log(10n + BigInt(5)); // ✅ 15n <br>
+                    console.log(Number(10n) + 5); // ✅ 15                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Comparação entre BigInt e Number</h2>
+            <p>Você pode comparar BigInt e Number, pois a comparação é coerente:</p>
+            <div class="code">
+                <p>
+                    console.log(10n > 5);  // true <br>
+                    console.log(10n === 10); // false (tipos diferentes!) <br>
+                    console.log(10n == 10);  // true (compara valores, ignora tipo)                    
+                </p>
+            </div>
+            <p>⚠️ Dica:</p>
+            <ul>
+                <li>=== verifica tipo e valor, então 10n === 10 retorna false.</li>
+                <li>== converte os tipos automaticamente, então 10n == 10 retorna true.</li>
+            </ul>
+
+            <hr>
+
+            <h2>Convertendo BigInt para String</h2>
+            <p>Para exibir um BigInt como string, use .toString():</p>
+            <div class="code">
+                <p>
+                    let big = 12345678901234567890n; <br>
+                    console.log(big.toString()); // "12345678901234567890"                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Convertendo BigInt para Number</h2>
+            <p>🚨 Cuidado ao converter BigInt para Number, pois pode perder precisão!</p>
+            <div class="code">
+                <p>
+                    let big = 12345678901234567890n; <br>
+                    let num = Number(big); <br>
+                    console.log(num); // 1.2345678901234567e+19 (perda de precisão!)                    
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="conteiner" id="05">
+            <nav style="text-align: start;">
+                <a href="#home">Voltar para Home</a>
+            </nav>
+            <h1>Booleanos em JavaScript</h1>
+            <p>O Boolean é um tipo de dado em JavaScript que pode ter apenas dois valores:</p>
+            <ul>
+                <li>true (verdadeiro)</li>
+                <li>false (falso)</li>
+            </ul>
+            <p>Ele é essencial para tomadas de decisão e para controlar o fluxo do código, como em estruturas condicionais e loops.</p>
+
+            <hr>
+
+            <h2>Criando Booleanos</h2>
+            <p>Podemos definir variáveis booleanas diretamente com true ou false:</p>
+            <div class="code">
+                <p>
+                    let isJavaScriptFun = true; <br>
+                    let isSkyGreen = false; <br><br>
+                    
+                    console.log(isJavaScriptFun); // true <br>
+                    console.log(isSkyGreen); // false                    
+                </p>
+            </div>
+            <p>Ou usando comparações:</p>
+            <div class="code">
+                <p>
+                    let resultado = 10 > 5; // Comparação retorna um booleano <br>
+                    console.log(resultado); // true                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Valores que São Considerados "Falsos"</h2>
+            <p>Em JavaScript, alguns valores são automaticamente convertidos para false quando avaliados em um contexto booleano. Estes valores são chamados de "Falsy Values":</p>
+            <ul>
+                <li>false</li>
+                <li>0</li>
+                <li>" " (string vazia)</li>
+                <li>null</li>
+                <li>undefined</li>
+                <li>NaN (Not a Number)</li>
+            </ul>
+            <p>✅ Qualquer outro valor é considerado true (truthy)!</p>
+
+            <h3>Exemplo de valores falsy:</h3>
+            <div class="code">
+                <p>
+                    console.log(Boolean(0));        // false <br>
+                    console.log(Boolean(""));       // false <br>
+                    console.log(Boolean(null));     // false <br>
+                    console.log(Boolean(undefined));// false <br>
+                    console.log(Boolean(NaN));      // false                    
+                </p>
+            </div>
+
+            <h3>Exemplo de valores truthy:</h3>
+            <div class="code">
+                <p>
+                    console.log(Boolean(1));        // true <br>
+                    console.log(Boolean("Hello"));  // true <br>
+                    console.log(Boolean([]));       // true <br>
+                    console.log(Boolean({}));       // true <br>
+                    console.log(Boolean(function(){})); // true                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Booleanos em Estruturas Condicionais</h2>
+            <p>Os booleanos são usados para tomar decisões no código, como em um if:</p>
+            <div class="code">
+                <p>
+                    let idade = 18; <br><br>
+
+                    if (idade >= 18) { <br>
+                        console.log("Você é maior de idade."); <br>
+                    } else { <br>
+                        console.log("Você é menor de idade."); <br>
+                    }                    
+                </p>
+            </div>
+            <p>Como idade >= 18 retorna true, a primeira mensagem será exibida.</p>
+
+            <hr>
+
+            <h2>Convertendo Valores para Booleanos</h2>
+            <p>Podemos converter qualquer valor para um booleano usando a função Boolean():</p>
+            <div class="code">
+                <p>
+                    console.log(Boolean(100));   // true <br>
+                    console.log(Boolean("Hello"));// true <br>
+                    console.log(Boolean(0));     // false <br>
+                    console.log(Boolean(null));  // false                    
+                </p>
+            </div>
+            <p>Outra maneira comum de converter valores em booleanos é usando !! (dupla negação):</p>
+            <div class="code">
+                <p>
+                    let nome = "Artur"; <br>
+                    console.log(!!nome); // true (porque a string não está vazia)                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Operadores Booleanos</h2>
+
+            <h3>Operador Lógico AND (&&)</h3>
+            <p>Retorna true apenas se ambas as condições forem true:</p>
+            <div class="code">
+                <p>
+                    console.log(true && true);   // true <br>
+                    console.log(true && false);  // false <br>
+                    console.log(5 > 3 && 10 > 5);// true (ambas são verdadeiras)                    
+                </p>
+            </div><br>
+
+            <h3>Operador Lógico OR (||)</h3>
+            <p>Retorna true se pelo menos uma das condições for true:</p>
+            <div class="code">
+                <p>
+                    console.log(true || false);  // true <br>
+                    console.log(false || false); // false <br>
+                    console.log(5 > 10 || 10 > 5);// true (uma delas é verdadeira)                    
+                </p>
+            </div><br>
+
+            <h3>Operador de Negação (!)</h3>
+            <p>Inverte o valor booleano:</p>
+            <div class="code">
+                <p>
+                    console.log(!true);  // false <br>
+                    console.log(!false); // true <br>
+                    console.log(!0);     // true (0 é `falsy`, então `!0` é `true`)                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Booleanos em Comparações</h2>
+            <p>Os operadores de comparação sempre retornam um booleano:</p>
+            <div class="code">
+                <p>
+                    console.log(10 > 5);  // true <br>
+                    console.log(10 < 5);  // false <br>
+                    console.log(10 === 10); // true <br>
+                    console.log(10 !== 10); // false <br>
+                    console.log(10 >= 10); // true <br>
+                    console.log(10 <= 9);  // false                     
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Booleanos em Ternários (Operador ? :)</h2>
+            <p>O operador ternário é uma forma curta de escrever um if:</p>
+            <div class="code">
+                <p>
+                    let idade = 20; <br>
+                    let status = (idade >= 18) ? "Adulto" : "Menor de idade"; <br>
+                    console.log(status); // "Adulto"                    
+                </p>
+            </div>
+            <p>Se idade >= 18 for true, retorna "Adulto", senão retorna "Menor de idade".</p>
+        </div>
+
+
+
+
+
+        <div class="conteiner" id="06">
+            <nav style="text-align: start;">
+                <a href="#home">Voltar para Home</a>
+            </nav>
+            
+            <h1>Undefined em JavaScript</h1>
+            <p>Em JavaScript, undefined é um valor especial que indica que uma variável foi declarada, mas ainda não tem um valor atribuído.</p>
+
+            <hr>
+
+            <h2>Quando uma Variável é undefined?</h2>
+
+            <h3>Variável sem Atribuição</h3>
+            <p>Se você declara uma variável sem inicializá-la, seu valor será undefined automaticamente:</p>
+            <div class="code">
+                <p>
+                    let nome; <br>
+                    console.log(nome); // undefined
+                </p>
+            </div> <br>
+
+            <h3>Acessando Propriedades Inexistentes</h3>
+            <p>Se tentarmos acessar uma propriedade que não existe em um objeto, o JavaScript retorna undefined:</p>
+            <div class="code">
+                <p>
+                    let pessoa = { nome: "Artur" }; <br>
+                    console.log(pessoa.idade); // undefined (a propriedade 'idade' não existe)                    
+                </p>
+            </div> <br>
+
+            <h3>Funções sem return</h3>
+            <p>Se uma função não retorna nada explicitamente, ela retorna undefined por padrão:</p>
+            <div class="code">
+                <p>
+                    function digaOi() { <br>
+                        console.log("Oi!"); <br>
+                      } <br><br>
+                      
+                      let resultado = digaOi(); // A função apenas imprime, mas não retorna nada <br>
+                      console.log(resultado); // undefined                      
+                </p>
+            </div> <br>
+
+            <h3>Parâmetros Opcionais</h3>
+            <p>Se uma função for chamada sem fornecer todos os argumentos esperados, os parâmetros ausentes serão undefined:</p>
+            <div class="code">
+                <p>
+                    function saudacao(nome) { <br>
+                        console.log("Olá, " + nome); <br>
+                      } <br> <br>
+                      
+                      saudacao(); // Olá, undefined                      
+                </p>
+            </div> <br>
+
+            <h3>undefined em Arrays</h3>
+            <p>Se tentarmos acessar um índice que não existe em um array, o JavaScript retorna undefined:</p>
+            <div class="code">
+                <p>
+                    let numeros = [10, 20, 30]; <br>
+                    console.log(numeros[5]); // undefined (pois o índice 5 não existe)                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Diferença entre undefined e null</h2>
+            <p>Muitas vezes, undefined e null podem parecer iguais, mas há uma diferença importante:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>undefined</th>
+                        <th>null</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>O valor não foi definido</td>
+                    <td>O valor foi definido como nulo propositalmente</td>
+                  </tr>
+                  <tr>
+                    <td>O JavaScript atribui automaticamente</td>
+                    <td>O programador define manualmente</td>
+                  </tr> 
+                  <tr>
+                    <td>Exemplo: let x;</td>
+                    <td>Exemplo: let x = null;</td>
+                  </tr>
+                </tbody>
+            </table>
+            <div class="code">
+                <p>
+                    let a;       // undefined (JavaScript define automaticamente) <br>
+                    let b = null; // null (valor intencionalmente vazio)                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Evitando undefined</h2>
+            <h3>✅ Sempre inicialize suas variáveis</h3>
+            <p>Em vez de deixar uma variável sem valor:</p>
+            <div class="code">
+                <p>let idade; // ❌ Pode causar problemas</p>
+            </div>
+            <p>Prefira sempre inicializá-la:</p>
+            <div class="code">
+                <p>let idade = 0; // ✅ Melhor prática</p>
+            </div> <br>
+
+            <h3>✅ Use valores padrão com || ou ??</h3>
+            <p>Se uma variável pode ser undefined, podemos definir um valor padrão usando || (OU lógico) ou ?? (nullish coalescing):</p>
+            <div class="code">
+                <p>
+                    let nome; <br>
+                    console.log(nome || "Desconhecido"); // "Desconhecido" (se for undefined, usa esse valor)                    
+                </p>
+            </div>
+            <p>Ou usando ??, que não substitui false e 0 (ao contrário do ||):</p>
+            <div class="code">
+                <p>
+                    let nome = undefined; <br>
+                    console.log(nome ?? "Usuário Anônimo"); // "Usuário Anônimo"                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Como Testar se Algo é undefined?</h2>
+            <p>Podemos verificar se um valor é undefined de várias formas:</p>
+
+            <h3>✅ Usando Comparação Direta</h3>
+            <div class="code">
+                <p>
+                    let x; <br>
+                    if (x === undefined) { <br>
+                      console.log("x é undefined"); <br>
+                    }                    
+                </p>
+            </div> <br>
+
+            <h3>✅ Usando typeof</h3>
+            <p>A função typeof retorna "undefined" quando o valor é undefined:</p>
+            <div class="code">
+                <p>
+                    let y; <br>
+                    console.log(typeof y); // "undefined"                    
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="conteiner" id="07">
+            <nav style="text-align: start;">
+                <a href="#home">Voltar para Home</a>
+            </nav>
+
+            <h1>Null em JavaScript</h1>
+            <p>Em JavaScript, null é um valor especial que significa "ausência intencional de valor". Diferente de undefined, que indica uma variável não inicializada, null deve ser atribuído manualmente.</p>
+
+            <hr>
+
+            <h2>Quando null é Usado?</h2>
+
+            <h3>Atribuição Manual</h3>
+            <p>Podemos atribuir null a uma variável para indicar que ela está vazia propositalmente:</p>
+            <div class="code">
+                <p>
+                    let nome = null; <br>
+                    console.log(nome); // null                    
+                </p>
+            </div><br>
+
+            <h3>Representando a Ausência de Objeto</h3>
+            <p>Se uma variável deveria armazenar um objeto, mas no momento não tem nenhum valor válido, podemos usar null:</p>
+            <div class="code">
+                <p>let usuario = null; // Nenhum usuário ativo no momento</p>
+            </div><br>
+
+            <h3>null em Comparações</h3>
+            <p>null é um valor falso (falsy), o que significa que ele é tratado como false em expressões condicionais:</p>
+            <div class="code">
+                <p>
+                    if (!null) { <br>
+                        console.log("null é considerado falso!"); // Será impresso <br>
+                      }                      
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Como Testar se um Valor é null?</h2>
+
+            <h3>✅ Usando Comparação Direta</h3>
+            <p>A forma mais comum de verificar se um valor é null é compará-lo diretamente com ===:</p>
+            <div class="code">
+                <p>
+                    let x = null; <br>
+                    if (x === null) { <br>
+                      console.log("x é null"); <br>
+                    }                    
+                </p>
+            </div>
+            <p>⚠ Cuidado! Não use ==, pois null == undefined retorna true (mas null === undefined retorna false).</p>
+            <div class="code">
+                <p>
+                    console.log(null == undefined);  // true (evite) <br>
+                    console.log(null === undefined); // false (recomendado)                    
+                </p>
+            </div><br>
+
+            <h3>✅ Usando typeof</h3>
+            <p>typeof não é muito útil para null, pois retorna "object", o que pode ser confuso:</p>
+            <div class="code">
+                <p>console.log(typeof null); // "object" (isso é um bug histórico do JavaScript)</p>
+            </div>
+            <p>Por isso, prefira === null para verificar.</p>
+
+            <hr>
+
+            <h2>Como Usar null de Forma Correta?</h2>
+
+            <h3>✅ Inicializar Variáveis que Serão Atribuídas Depois</h3>
+            <p>Se uma variável ainda não tem um valor, mas será preenchida depois, pode ser uma boa prática iniciá-la com null:</p>
+            <div class="code">
+                <p>let resultado = null; // Será preenchido depois</p>
+            </div><br>
+
+            <h3>✅ Apagar Dados Sem Excluir a Variável</h3>
+            <p>Se quisermos "limpar" uma variável sem removê-la completamente:</p>
+            <div class="code">
+                <p>
+                    let usuario = { nome: "Artur" }; <br>
+                    usuario = null; // O objeto foi apagado, mas a variável ainda existe                    
+                </p>
+            </div><br>
+
+            <h3>✅ Evitar null Quando Possível</h3>
+            <p>Em muitos casos, é melhor usar valores padrão em vez de null. Podemos usar || (OU lógico) ou ?? (nullish coalescing):</p>
+            <div class="code">
+                <p>
+                    let nome = null; <br>
+                    console.log(nome || "Desconhecido"); // "Desconhecido" (se for null, usa esse valor)                    
+                </p>
+            </div>
+            <p>Ou com ??, que não substitui false e 0 (ao contrário do ||):</p>
+            <div class="code">
+                <p>
+                    let idade = null; <br>
+                    console.log(idade ?? "Idade não informada"); // "Idade não informada"                    
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="conteiner" id="08">
+            <nav style="text-align: start;">
+                <a href="#home">Voltar para Home</a>
+            </nav>
+
+            <h1>Symbol em JavaScript</h1>
+            <p>O Symbol é um tipo de dado primitivo introduzido no ES6 (ECMAScript 2015). Ele é usado para criar valores únicos que podem ser utilizados como identificadores de propriedades de objetos, evitando conflitos entre nomes de propriedades.</p>
+
+            <hr>
+
+            <h2>Criando um Symbol</h2>
+            <p>A forma mais básica de criar um Symbol é chamando a função Symbol():</p>
+            <div class="code">
+                <p>
+                    let id = Symbol(); <br>
+                    console.log(id); // Symbol()                    
+                </p>
+            </div>
+            <p>Cada vez que Symbol() é chamado, um novo símbolo único é criado:</p>
+            <div class="code">
+                <p>
+                    let id1 = Symbol();<br>
+                    let id2 = Symbol(); <br><br>
+                    
+                    console.log(id1 === id2); // false (mesmo que pareçam iguais, são únicos)  
+                </p>
+            </div>
+            <p>Diferente de strings, dois símbolos nunca são iguais, mesmo que tenham a mesma descrição.</p>
+
+            <hr>
+
+            <h2>Symbol com Descrição</h2>
+            <p>Podemos fornecer uma descrição opcional para um Symbol, apenas para depuração (o valor ainda é único):</p>
+            <div class="code">
+                <p>
+                    let id = Symbol("id do usuário"); <br>
+                    console.log(id); // Symbol(id do usuário)                    
+                </p>
+            </div>
+            <p>Essa descrição não influencia a unicidade do Symbol, é apenas para referência.</p>
+
+            <hr>
+
+            <h2>Usando Symbol como Chave de Objeto</h2>
+            <p>Podemos usar Symbol como chave de propriedade em objetos. Isso é útil para criar propriedades privadas, já que símbolos não aparecem em loops normais.</p>
+
+            <div class="code">
+                <p>
+                    let id = Symbol("id"); <br><br>
+
+                    let usuario = { <br>
+                      nome: "Artur", <br>
+                      [id]: 12345, // Symbol como chave <br>
+                    }; <br><br>
+                    
+                    console.log(usuario);  <br>
+                    // { nome: 'Artur', [Symbol(id)]: 12345 } <br><br>
+                    
+                    console.log(usuario[id]); // 12345                    
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>Symbol Não Aparece em for...in e Object.keys</h2>
+            <p>Se tentarmos percorrer um objeto com um for...in ou Object.keys(), a propriedade Symbol não aparecerá:</p>
+            <div class="code">
+                <p>
+                    for (let chave in usuario) { <br>
+                        console.log(chave); // Apenas "nome", o Symbol é ignorado <br>
+                      } <br><br>
+                      
+                      console.log(Object.keys(usuario)); // ["nome"]                      
+                </p>
+            </div>
+            <p>Mas podemos acessar os Symbols de um objeto usando Object.getOwnPropertySymbols():</p>
+            <div class="code">
+                <p>console.log(Object.getOwnPropertySymbols(usuario)); // [ Symbol(id) ]</p>
+            </div>
+            <p>Ou pegar todas as propriedades, incluindo as de Symbol, com Reflect.ownKeys():</p>
+            <div class="code">
+                <p>console.log(Reflect.ownKeys(usuario)); // [ 'nome', Symbol(id) ]</p>
+            </div>
+
+            <hr>
+
+            <h2>Symbol.for() e Symbol.keyFor()</h2>
+            <p>Normalmente, cada Symbol() criado é único, mas podemos criar Symbols globais compartilhados usando Symbol.for():</p>
+            <div class="code">
+                <p>
+                    let id1 = Symbol.for("idGlobal"); <br>
+                    let id2 = Symbol.for("idGlobal"); <br><br>
+                    
+                    console.log(id1 === id2); // true (pois foram registrados no mesmo registro global)                    
+                </p>
+            </div>
+            <p>Podemos recuperar a chave de um Symbol global com Symbol.keyFor():</p>
+            <div class="code">
+                <p>console.log(Symbol.keyFor(id1)); // "idGlobal"</p>
+            </div>
+            <p>Isso só funciona para Symbol.for(), não para Symbol() normais.</p>
+
+            <hr>
+
+            <h2>Símbolos Bem Conhecidos (Well-Known Symbols)</h2>
+            <p>O JavaScript tem alguns Symbols internos usados para modificar o comportamento de objetos e classes:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Símbolo</th>
+                        <th>Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Symbol.iterator</td>
+                        <td>Define como um objeto pode ser iterado com for...of</td>
+                    </tr>
+                    <tr>
+                        <td>Symbol.toPrimitive</td>
+                        <td>Define como um objeto é convertido para primitivos (string, number, etc.)</td>
+                    </tr>
+                    <tr>
+                        <td>Symbol.toStringTag</td>
+                        <td>Define a descrição retornada por Object.prototype.toString()</td>
+                    </tr>
+                    <tr>
+                        <td>Symbol.hasInstance</td>
+                        <td>Controla o comportamento do operador instanceof</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr>
+
+            <h2>Quando Usar Symbol?</h2>
+            <h3>✅ Casos de Uso Ideais</h3>
+            <p style="line-height: 200%;">✔ Criar propriedades privadas em objetos. <br>
+               ✔ Garantir que chaves de objetos sejam únicas. <br>
+               ✔ Evitar conflitos entre propriedades de bibliotecas diferentes. <br>
+               ✔ Usar Symbols globais para armazenar identificadores reutilizáveis.</p>
+
+            <h3>Evitar Symbol Quando...</h3>
+            <p style="line-height: 200%;">❌ Você precisa converter para string com frequência (pois Symbol não é convertível diretamente). <br>
+                ❌ Você quer que a propriedade apareça em JSON.stringify(), pois Symbol é ignorado.</p>
+        </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../IMG/logo amarela.png" type="image/x-icon">
+    <title>Introdução</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 850px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: rgb(243, 207, 2);
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(243, 207, 2);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Introdução</h1>
+        <p>JavaScript é uma linguagem de programação amplamente utilizada para desenvolvimento web. Ela permite que os desenvolvedores criem páginas interativas, manipulando o Document Object Model (DOM) para alterar o conteúdo e o estilo de elementos HTML e CSS dinamicamente. Além disso, o JavaScript pode realizar cálculos, manipular e validar dados, tornando-se essencial para a criação de experiências de usuário ricas e dinâmicas.</p>
+
+        <h2>Por que estudar JavaScript?</h2>
+        <ul>
+            <li>HTML (HyperText Markup Language): Define a estrutura e o conteúdo das páginas web.</li>
+            <li>CSS (Cascading Style Sheets): Especifica a apresentação visual e o layout das páginas.</li>
+            <li>JavaScript: Programa o comportamento das páginas, permitindo interatividade e dinamismo.</li>
+        </ul>
+        <p>O JavaScript é a peça que adiciona vida às páginas estáticas, possibilitando respostas a eventos do usuário, atualizações de conteúdo sem recarregar a página e muito mais.</p>
+
+        <hr>
+
+        <h2>Capacidades do JavaScript:</h2>
+        <p><strong>Alterar o conteúdo HTML:</strong> Com métodos como getElementById(), é possível acessar elementos específicos da página e modificar seu conteúdo.</p>
+        <div class="code">
+            <p>document.getElementById("demo").innerHTML = "Olá, JavaScript!";</p>
+        </div>
+        <p>No exemplo acima, o conteúdo do elemento com o id "demo" é alterado para "Olá, JavaScript!".</p>
+        <br>
+        <p><strong>Modificar atributos HTML:</strong> O JavaScript pode alterar os atributos de elementos HTML, como a fonte de uma imagem.</p>
+        <div class="code">
+            <p>document.getElementById("minhaImagem").src = "novaImagem.jpg";</p>
+        </div>
+        <p>Aqui, o atributo src de uma imagem com o id "minhaImagem" é atualizado para "novaImagem.jpg".</p>
+        <br>
+        <p><strong>Alterar estilos CSS:</strong> É possível modificar estilos diretamente através do JavaScript.</p>
+        <div class="code">
+            <p>document.getElementById("demo").style.fontSize = "35px";</p>
+        </div>
+        <p>Este código altera o tamanho da fonte do elemento com o id "demo" para 35 pixels.</p>
+        <br>
+        <p><strong>Ocultar e mostrar elementos HTML:</strong> Manipulando a propriedade display do estilo, elementos podem ser ocultados ou exibidos.</p>
+        <div class="code">
+            <p>
+                // Para ocultar <br>
+                document.getElementById("demo").style.display = "none"; <br><br>
+                
+                // Para mostrar <br>
+                document.getElementById("demo").style.display = "block";
+            </p>
+        </div>
+        <p>Dessa forma, o elemento com o id "demo" pode ser ocultado ou exibido conforme necessário.</p>
+
+        <hr>
+
+        <h2>Diferença entre JavaScript e Java:</h2>
+        <p>Embora os nomes sejam semelhantes, JavaScript e Java são linguagens distintas, tanto em conceito quanto em design. JavaScript foi criado por Brendan Eich em 1995 e tornou-se um padrão ECMA em 1997. O nome oficial do padrão é ECMA-262, e a linguagem é formalmente conhecida como ECMAScript.</p>
+
+        <hr>
+
+        <h2>Conclusão:</h2>
+        <p>O JavaScript é uma ferramenta poderosa que, quando combinada com HTML e CSS, permite a criação de páginas web interativas e dinâmicas. Seu domínio é essencial para qualquer desenvolvedor web que deseja proporcionar experiências ricas aos usuários.</p>
+    </div>
+</body>
+</html>

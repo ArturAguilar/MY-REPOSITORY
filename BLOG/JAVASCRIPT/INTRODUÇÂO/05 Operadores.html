@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../IMG/logo verde.png" type="image/x-icon">
-    <title>Animação e Movimento</title>
+    <link rel="shortcut icon" href="../../../IMG/logo amarela.png" type="image/x-icon">
+    <title>Operadores em JavaScript</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -66,7 +66,7 @@
 
         nav > a {
             text-decoration: none;
-            color: rgb(0, 255, 64);
+            color: rgb(243, 207, 2);
             display: inline-block;
             margin-right: 10px;
             padding: 8px 12px;
@@ -77,7 +77,7 @@
         
         nav > a:hover {
             color: #ffffff;
-            background-color: rgb(0, 255, 64);
+            background-color: rgb(243, 207, 2);
         }
 
         th, td {
@@ -128,41 +128,71 @@
 <body>
     <div class="conteiner">
         <nav style="text-align: start; padding-top: 5px;"> 
-            <a href="../blog.html">Voltar para o início</a>
+            <a href="../../blog.html">Voltar para o início</a>
         </nav>
         
-        <h1>Animação e Movimento</h1>
-        <p>Animações e movimentos em interfaces web podem enriquecer a experiência do usuário, mas é crucial considerar a acessibilidade ao implementá-los. Algumas pessoas, especialmente aquelas com condições vestibulares ou neurológicas, podem sentir desconforto ou até náuseas devido a movimentos excessivos ou inesperados. Portanto, é essencial adotar práticas que tornem as animações inclusivas para todos.</p>
+        <h1>Operadores em JavaScript</h1>
+        <p>Operadores são símbolos que instruem o JavaScript a realizar operações específicas sobre valores ou variáveis. Eles são fundamentais para a manipulação de dados e controle de fluxo em programas.</p>
 
         <hr>
 
-        <h2>Evite Animações Automáticas e Intrusivas</h2>
-        <p>Animações que iniciam automaticamente ou que são muito chamativas podem distrair ou causar desconforto. É recomendável evitar animações que começam sozinhas e garantir que o usuário tenha controle sobre elas. Além disso, é importante fornecer mecanismos para pausar ou interromper animações em execução, incluindo GIFs.</p>
+        <h2>Operadores Aritméticos:</h2>
+        <ul>
+            <li>+ (Adição): Soma dois valores.</li>
+            <li>- (Subtração): Subtrai o segundo valor do primeiro.</li>
+            <li>* (Multiplicação): Multiplica dois valores.</li>
+            <li>/ (Divisão): Divide o primeiro valor pelo segundo.</li>
+            <li>% (Módulo): Retorna o restante da divisão do primeiro valor pelo segundo.</li>
+            <li>** (Exponenciação): Eleva o primeiro valor à potência do segundo.</li>
+            <li>++ (Incremento): Adiciona 1 ao valor da variável.</li>
+            <li>-- (Decremento): Subtrai 1 do valor da variável.</li>
+        </ul>
 
         <hr>
 
-        <h2>Respeite as Preferências do Usuário com prefers-reduced-motion</h2>
-        <p>Muitos sistemas operacionais oferecem configurações para reduzir movimentos. Utilize a consulta de mídia CSS @media (prefers-reduced-motion: reduce) para detectar essa preferência e ajustar ou desativar animações conforme necessário. Isso demonstra respeito pelas escolhas do usuário e melhora a acessibilidade.</p>
+        <h2>Operadores de Atribuição:</h2>
+        <ul>
+            <li>=: Atribuição simples.</li>
+            <li>+=: Adição e atribuição.</li>
+            <li>-=: Subtração e atribuição.</li>
+            <li>*=: Multiplicação e atribuição.</li>
+            <li>/=: Divisão e atribuição.</li>
+            <li>%=: Módulo e atribuição.</li>
+        </ul>
 
         <hr>
 
-        <h2>Evite Efeitos de Rolagem Excessivos</h2>
-        <p>Efeitos de rolagem, como paralaxe, podem criar movimentos que afetam negativamente usuários com sensibilidades vestibulares. Limite ou ofereça opções para desativar esses efeitos, garantindo uma experiência mais confortável para todos.</p>
+        <h2>Operadores de Comparação:</h2>
+        <p>Comparam dois valores e retornam um valor booleano (true ou false).</p>
+        <ul>
+            <li>==: Igual a.</li>
+            <li>===: Estritamente igual a (valor e tipo).</li>
+            <li>!=: Diferente de.</li>
+            <li>!==: Estritamente diferente de (valor e tipo).</li>
+            <li>>: Maior que.</li>
+            <li><: Menor que.</li>
+            <li>>=: Maior ou igual a.</li>
+            <li><=: Menor ou igual a.</li>
+        </ul>
 
         <hr>
 
-        <h2>Forneça Controles para Reprodução Automática</h2>
-        <p>Conteúdos que reproduzem automaticamente, como vídeos ou animações, podem ser problemáticos. Ofereça controles claros para que os usuários possam pausar, parar ou ajustar esses conteúdos conforme suas necessidades.</p>
+        <h2>Operadores Lógicos:</h2>
+        <p>Combinam valores booleanos e retornam um valor booleano.</p>
+        <ul>
+            <li>! (Negação): Inverte o valor booleano.</li>
+            <li>&& (E lógico): Retorna true se ambos os valores forem tru
+            <li>|| (Ou lógico): Retorna true se pelo menos um dos valores
+        </ul>
 
         <hr>
 
-        <h2>Evite Animações com Flashes ou Pisca-Piscas</h2>
-        <p>Animações com flashes rápidos podem desencadear convulsões em indivíduos com epilepsia fotossensível. É crucial evitar esse tipo de conteúdo ou fornecer avisos claros e opções para desativá-lo.</p>
-
-        <hr>
-
-        <h2>Teste com Usuários Reais</h2>
-        <p>Sempre que possível, envolva pessoas com deficiências nas fases de design e teste. Isso ajuda a identificar potenciais problemas de acessibilidade relacionados a animações e movimentos, permitindo ajustes antes do lançamento.</p>
+        <h2>Operadores de Tipo:</h2>
+        <p>Verificam o tipo de uma variável ou objeto.</p>
+        <ul>
+            <li>typeof: Retorna o tipo de uma variável.</li>
+            <li>instanceof: Verifica se um objeto é uma instância de um tipo específico.</li>
+        </ul>
     </div>
 </body>
 </html>

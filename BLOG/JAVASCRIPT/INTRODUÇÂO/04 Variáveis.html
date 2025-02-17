@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../IMG/logo amarela.png" type="image/x-icon">
+    <title>Variáveis em JavaScript</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Poppins', sans-serif  ;
+        }
+
+        .conteiner {
+            width: 90%;
+            max-width: 850px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteiner > h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px; /* Tamanho padrão */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px; /* Tamanho padrão */
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            font-size: 14px; /* Tamanho padrão */
+        }
+
+        ul {
+            list-style: inside;
+            margin-bottom: 25px;
+        }
+
+        .code p {
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            font-family: 'Fira Code', monospace;
+            padding: 10px;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: rgb(243, 207, 2);
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.5s;
+            font-size: 14px; /* Tamanho padrão */
+        }
+        
+        nav > a:hover {
+            color: #ffffff;
+            background-color: rgb(243, 207, 2);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 13px; /* Tamanho padrão */
+        }
+
+        th{
+            background-color: #757575;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .conteiner > h1 {
+                font-size: 32px; /* Ajuste para telas médias */
+            }
+
+            h2 {
+                font-size: 26px; /* Ajuste para telas médias */
+            }
+
+            p, li {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            .code p {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+
+            nav > a {
+                font-size: 16px; /* Ajuste para telas médias */
+            }
+
+            table {
+                font-size: 15px; /* Ajuste para telas médias */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <nav style="text-align: start; padding-top: 5px;"> 
+            <a href="../../blog.html">Voltar para o início</a>
+        </nav>
+        
+        <h1>Variáveis em JavaScript</h1>
+        <p>Variáveis são contêineres que armazenam dados que podem ser alterados durante a execução de um programa. Elas permitem que os desenvolvedores armazenem, recuperem e manipulem valores de forma dinâmica.</p>
+
+        <hr>
+
+        <h2>Declaração de Variáveis:</h2>
+        <p>Em JavaScript, as variáveis podem ser declaradas utilizando três palavras-chave principais: var, let e const.</p>
+
+        <h3>var:</h3>
+        <p>Introduzida nas versões iniciais do JavaScript, var tem escopo de função, o que significa que uma variável declarada com var é visível em toda a função onde foi definida.</p>
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                function exemploVar() { <br>
+                    var x = 10; <br>
+                    if (true) { <br>
+                      var x = 20; // mesma variável <br>
+                      console.log(x); // 20 <br>
+                    } <br>
+                    console.log(x); // 20 <br>
+                  }                  
+            </p>
+        </div>
+        <p>Neste exemplo, a variável x dentro do bloco if é a mesma que fora dele, devido ao escopo de função do var.</p>
+
+        <h3>let:</h3>
+        <p>Introduzida no ECMAScript 6 (ES6), let tem escopo de bloco, ou seja, a variável é limitada ao bloco onde foi declarada.</p>
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                function exemploLet() {
+                    let x = 10;
+                    if (true) {
+                      let x = 20; // variável diferente
+                      console.log(x); // 20
+                    }
+                    console.log(x); // 10
+                  }                                   
+            </p>
+        </div>
+        <p>Aqui, a variável x dentro do bloco if é distinta da variável x fora do bloco, devido ao escopo de bloco do let.</p>
+
+        <h3>const:</h3>
+        <p>Também introduzida no ES6, const é usada para declarar constantes, ou seja, variáveis cujo valor não pode ser reatribuído após a inicialização.</p>
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                const PI = 3.14159; <br>
+                PI = 3.14; // Erro: Assignment to constant variable.
+            </p>
+        </div>
+        <p>No entanto, é importante notar que, embora o identificador não possa ser reatribuído, se a constante for um objeto ou array, suas propriedades ou elementos podem ser modificados.</p>
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                const pessoa = { nome: "João", idade: 30 }; <br>
+                pessoa.idade = 31; // Válido <br>
+                pessoa = { nome: "Maria", idade: 25 }; // Erro: Assignment to constant variable.                
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Regras de Nomenclatura:</h2>
+        <p>Ao nomear variáveis em JavaScript, siga estas regras:</p>
+        <ul>
+            <li>Os nomes devem começar com uma letra, sublinhado (_) ou cifrão ($).</li>
+            <li>Os caracteres subsequentes podem ser letras, dígitos, sublinhados ou cifrões.</li>
+            <li>Nomes de variáveis são sensíveis a maiúsculas e minúsculas (idade e Idade são variáveis diferentes).</li>
+            <li>Evite usar palavras reservadas do JavaScript como nomes de variáveis (por exemplo, break, for, function, etc.).</li>
+        </ul>
+
+        <hr>
+
+        <h2>Inicialização de Variáveis:</h2>
+        <p>É uma boa prática inicializar variáveis no momento da declaração para evitar comportamentos inesperados.</p>
+        <h3>Exemplo:</h3>
+        <div class="code">
+            <p>
+                let nome = "João"; <br>
+                const idade = 30;
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Hoisting:</h2>
+        <p>Em JavaScript, declarações de variáveis e funções são "elevadas" ao topo de seu escopo durante a fase de compilação. No entanto, apenas a declaração é elevada; a inicialização permanece no local original.</p>
+        <h3>Exemplo com var:</h3>
+        <div class="code">
+            <p>
+                console.log(x); // undefined <br>
+                var x = 5;                
+            </p>
+        </div>
+        <p>Aqui, a declaração var x; é içada para o topo, mas a inicialização x = 5; não é, resultando em undefined quando x é logado antes da inicialização.</p>
+        <h3>Exemplo com let e const:</h3>
+        <div class="code">
+            <p>
+                console.log(y); // ReferenceError: Cannot access 'y' before initialization <br>
+                let y = 5;                
+            </p>
+        </div>
+        <p>Variáveis declaradas com let e const também são içadas, mas não podem ser acessadas antes de serem inicializadas, resultando em um erro de referência.</p>
+
+        <hr>
+
+        <h2>Conclusão:</h2>
+        <p>Compreender as variáveis em JavaScript é fundamental para o desenvolvimento eficaz. A escolha entre var, let e const depende do escopo desejado e da mutabilidade da variável. Recomenda-se o uso de let para variáveis que podem mudar de valor e const para constantes ou referências que não devem ser reatribuídas. O uso de var é desencorajado em código moderno devido ao seu escopo de função e possíveis comportamentos inesperados.</p>
+    </div>
+</body>
+</html>
